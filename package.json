@@ -1,0 +1,15 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/xuyangzo/blog.git",
+  "author": "xuyangzo <xuyangzo@usc.edu>",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress dev blogs",
+    "docs:build": "vuepress build blogs"
+  },
+  "dependencies": {
+    "vuepress": "^1.1.0"
+  }
+}
