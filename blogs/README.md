@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: THIS IS LYNCH
-actionText: Get Started
+actionText: GET STARTED
 actionLink: /leetcode/
 features:
 
