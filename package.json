@@ -6,9 +6,8 @@
   "author": "xuyangzo <xuyangzo@usc.edu>",
   "license": "MIT",
   "scripts": {
-    "deploy": "gh-pages -d blogs/.vuepress/dist",
-    "docs:dev": "vuepress dev blogs",
-    "docs:build": "vuepress build blogs && cp -a blogs/.vuepress/dist/. docs/"
+    "docs:dev": "vuepress dev",
+    "docs:build": "vuepress build && cp -a .vuepress/dist/. docs/"
   },
   "dependencies": {
     "gh-pages": "^2.1.1",
