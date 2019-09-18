@@ -8,7 +8,7 @@
   "scripts": {
     "deploy": "gh-pages -d blogs/.vuepress/dist",
     "docs:dev": "vuepress dev blogs",
-    "docs:build": "vuepress build blogs"
+    "docs:build": "vuepress build blogs && cp -a blogs/.vuepress/dist/. docs/"
   },
   "dependencies": {
     "gh-pages": "^2.1.1",
