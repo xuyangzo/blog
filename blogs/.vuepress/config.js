@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  base: '/blogs/',
+  base: '/',
   title: 'Lynch',
   description: 'Just playing around',
   home: true,
