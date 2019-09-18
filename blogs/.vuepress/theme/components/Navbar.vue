@@ -91,7 +91,7 @@ function css(el, property) {
 $navbar-vertical-padding = 0.7rem;
 $navbar-horizontal-padding = 1.5rem;
 
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caveat|Permanent+Marker&display=swap');
 
 // @import '/DancingScript-Regular.ttf';
 .navbar {
@@ -114,7 +114,7 @@ $navbar-horizontal-padding = 1.5rem;
     font-weight: 300;
     color: $textColor;
     position: relative;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Caveat', cursive;
   }
 
   .links {

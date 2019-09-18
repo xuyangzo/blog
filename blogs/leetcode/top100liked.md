@@ -2,6 +2,10 @@
 
 ## Three Sum
 
+### Description
+
+![three sum](/three_sum.png)
+
 ### Algorithm
 
 - Sort first
@@ -51,4 +55,3 @@ var threeSum = function(nums) {
     return ans;
 };
 ```
-

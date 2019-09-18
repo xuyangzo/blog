@@ -26,7 +26,7 @@ export default {
     padding: 0;
     margin: 0;
     list-style-type: none;
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
   }
 
   a {
@@ -53,6 +53,10 @@ export default {
   & > .sidebar-links {
     padding: 1.5rem 0;
     font-weight: 300;
+
+    & > li {
+      margin-bottom: 3rem;
+    }
 
     & > li > a.sidebar-link {
       font-size: 1.1em;

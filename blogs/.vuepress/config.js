@@ -14,14 +14,15 @@ module.exports = {
   },
   // theme: 'api',
   themeConfig: {
-    logo: '/banana_cat.png',
+    logo: '/logo.png',
     searchPlaceholder: 'Search...',
     nav: [
       { text: 'Home', link: '/' },
       {
         text: 'LeetCode',
         items: [
-          { text: 'Top 100 Liked', link: '/leetcode/top100liked' }
+          { text: 'Top 100 Liked', link: '/leetcode/top100liked' },
+          { text: 'Dynamic Programming', link: '/leetcode/dp' }
         ]
       },
       {
@@ -39,7 +40,8 @@ module.exports = {
         collapsable: false, // optional, defaults to true
         sidebarDepth: 1,    // optional, defaults to 1
         children: [
-          '/leetcode/top100liked'
+          '/leetcode/top100liked',
+          '/leetcode/dp'
         ]
       },
       {
@@ -53,39 +55,5 @@ module.exports = {
         ]
       }
     ]
-    // sidebar: {
-    //   '/leetcode/': [
-    //     '',
-    //     'top100liked'
-    //   ],
-    //   '/design-patterns/': [
-    //     '',
-    //     'singleton',
-    //     'factory'
-    //   ],
-    //   '/': [
-    //     ''
-    //   ]
-    // }
-    // sidebarGroupOrder: [
-    //   'leetcode',
-    //   'design-patterns'
-    // ],
-    // sidebar: {
-    //   leetcode: {
-    //     title: 'LeetCode',
-    //     to: '/leetcode/',
-    //     children: [
-    //       {
-    //         title: 'LeetCode - Guide',
-    //         to: '/leetcode/'
-    //       },
-    //       {
-    //         title: 'Top 100 Liked Problems',
-    //         to: '/leetcode/top100liked.html'
-    //       }
-    //     ]
-    //   }
-    // }
   }
 }

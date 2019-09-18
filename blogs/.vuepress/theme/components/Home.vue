@@ -5,7 +5,7 @@
 
       <h1 v-if="data.heroText !== null" id="main-title">{{ data.heroText || $title || 'Hello' }}</h1>
 
-      <p class="description">{{ data.tagline || $description || 'Welcome to your VuePress site' }}</p>
+      <!-- <p class="description">{{ data.tagline || $description || 'Welcome to your VuePress site' }}</p> -->
 
       <p class="action" v-if="data.actionText && data.actionLink">
         <NavLink class="action-button" :item="actionLink" />

@@ -1,5 +1,3 @@
----
-title: LeetCode - Guide
----
+# LeetCode - Guide
 
-# LeetCode
+> 09.17.2019

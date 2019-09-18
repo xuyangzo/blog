@@ -1,8 +1,7 @@
 ---
 home: true
-heroText: Hero Title
-tagline: Hero subtitle
-actionText: Get Started →
+heroText: THIS IS LYNCH
+actionText: Get Started
 actionLink: /leetcode/
 features:
 
@@ -14,6 +13,6 @@ features:
 - title: Performant
   details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
 
-footer: MIT Licensed | Copyright © 2018-present Evan You
+footer:  Copyright © 2019-present Xuyang Zou
 
 ---
