@@ -10,6 +10,8 @@
     "docs:build": "vuepress build blogs"
   },
   "dependencies": {
-    "vuepress": "^1.1.0"
+    "vuepress": "^1.1.0",
+    "vuepress-theme-api": "^0.2.3",
+    "vuetify": "^2.0.18"
   }
 }
