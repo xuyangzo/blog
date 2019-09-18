@@ -1,9 +1,8 @@
 const path = require('path');
 
 module.exports = {
-  base: '',
+  base: '/',
   title: 'Lynch',
-  description: 'Just playing around',
   home: true,
   configureWebpack: {
     resolve: {
@@ -12,17 +11,23 @@ module.exports = {
       }
     }
   },
-  // theme: 'api',
   themeConfig: {
     logo: '/logo.png',
     searchPlaceholder: 'Search...',
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Blogs', link: '/tags' },
       {
         text: 'LeetCode',
         items: [
-          { text: 'Top 100 Liked', link: '/leetcode/top100liked' },
-          { text: 'Dynamic Programming', link: '/leetcode/dp' }
+          { text: 'Two Pointers', link: '/tags.html#Two%20Pointers' },
+          { text: 'Dynamic Programming', link: '/tags.html#Dynamic%20Programming' }
+        ]
+      },
+      {
+        text: 'CSS Tricks',
+        items: [
+          { text: 'Mouseleave Animations', link: '/css-tricks/mouse-leave.md' }
         ]
       },
       {
@@ -35,20 +40,29 @@ module.exports = {
     ],
     sidebar: [
       {
-        title: 'LeetCode',   // required
-        path: '/leetcode/',      // optional, which should be a absolute path.
-        collapsable: false, // optional, defaults to true
-        sidebarDepth: 1,    // optional, defaults to 1
+        title: 'LeetCode',
+        path: '/leetcode/',
+        collapsable: false,
+        sidebarDepth: 1,
         children: [
-          '/leetcode/top100liked',
-          '/leetcode/dp'
+          '/leetcode/threeSum',
+          '/leetcode/LVP'
         ]
       },
       {
-        title: 'Design Patterns',   // required
-        path: '/design-patterns/',      // optional, which should be a absolute path.
-        collapsable: false, // optional, defaults to true
-        sidebarDepth: 1,    // optional, defaults to 1
+        title: 'CSS Tricks',
+        path: '/css-tricks/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/css-tricks/mouse-leave'
+        ]
+      },
+      {
+        title: 'Design Patterns',
+        path: '/design-patterns/',
+        collapsable: false,
+        sidebarDepth: 1,
         children: [
           '/design-patterns/singleton',
           '/design-patterns/factory'

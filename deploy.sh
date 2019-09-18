@@ -1,27 +1,25 @@
 #!/usr/bin/env sh
 
-echo 'Start Deploying'
+# abort on errors
+set -e
 
-# create static files
-echo 'vuepress build blogs'
+# build
 yarn docs:build
 
-# move into the dist file
-echo "move forwards..."
-cd ./blogs/.vuepress/dist
+# navigate into the build output directory
+cd .vuepress/dist
 
-# track all changes
-echo "git add ."
-git add .
+# if you are deploying to a custom domain
+# echo 'www.example.com' > CNAME
 
-# commit changes
-echo "git commit -m 'deploy'"
+git init
+git add -A
 git commit -m 'deploy'
 
-# push changes
-echo "git push"
-git push
+# if you are deploying to https://<USERNAME>.github.io
+git push -f https://github.com/xuyangzo/xuyangzo.github.io.git master
 
-# 返回到上一次的工作目录
-echo "Done!"
+# if you are deploying to https://<USERNAME>.github.io/<REPO>
+# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+
 cd -

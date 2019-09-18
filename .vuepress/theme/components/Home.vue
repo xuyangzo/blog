@@ -1,11 +1,15 @@
 <template>
   <main class="home" aria-labelledby="main-title">
     <header class="hero">
-      <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" />
-
+      <img
+        v-bind:class="{ 'do-flip': doFlip }"
+        v-if="data.heroImage"
+        :src="$withBase(heroImage)"
+        :alt="data.heroAlt || 'hero'"
+        @mouseenter="randomFlip"
+      />
+      <p class="description">{{ intro }}</p>
       <h1 v-if="data.heroText !== null" id="main-title">{{ data.heroText || $title || 'Hello' }}</h1>
-
-      <!-- <p class="description">{{ data.tagline || $description || 'Welcome to your VuePress site' }}</p> -->
 
       <p class="action" v-if="data.actionText && data.actionLink">
         <NavLink class="action-button" :item="actionLink" />
@@ -28,9 +32,69 @@
 <script>
 import NavLink from "@theme/components/NavLink.vue";
 
+const intro = {
+  1: "I'm single...",
+  2: "What the fuck???",
+  3: "So many stuff in front-end...",
+  4: "So many fucking stuff in front-end...",
+  5: "Great. Interesting.",
+  6: "Am I cute?",
+  7: "Hello nice to meet you.",
+  8: "Dalao!!!",
+  9: "Fuck LeetCode!!!",
+  10: "emmm...",
+  11: "OK...",
+  12: "I am not surprised at all (true)",
+  13: "Come fuck me if you can~",
+  14: "Go fuck yourself.",
+  15: "What the hack did I see!!!",
+  16: "I am done.",
+  17: "Heiheiheihei...",
+  18: "Go on. I am listening.",
+  19: "You scared me.",
+  20: "Handsome!",
+  21: "How is this possible???",
+  22: "I am not happy at all",
+  23: "Fine.",
+  24: "Yi~~~",
+  25: "I am sure.",
+  26: "I am HAPPYYYY!!!",
+  27: "TO BE ADDED.",
+  28: "Nothing special.",
+  29: "You gotta coax me.",
+  30: "Nothing works fine for me.",
+  31: "Fight on!",
+  32: "Great!",
+  33: "Why are you so cold?",
+  34: "It's normal...",
+  35: "No one loves in this world...",
+  36: "Shitttt!!!",
+  37: "Hahahahaha~",
+  38: "You deserve this.",
+  39: "Got it! Thank you so much!",
+  40: "...",
+  41: "Heng!",
+  42: "It should not come...",
+  43: "xswl",
+  44: "You cannot beat me~~~",
+  45: "You really think so???",
+  46: "Too bad.",
+  47: "OK. Continue your performance.",
+  48: "Let's not tell him how stupid he is.",
+  49: "Fuck algorithms!!!",
+  50: "There's something..."
+};
+
 export default {
   components: { NavLink },
-
+  data() {
+    return {
+      heroImage: "/01.png",
+      doFlip: false,
+      prevTime: null,
+      intro: intro[1]
+    };
+  },
   computed: {
     data() {
       return this.$page.frontmatter;
@@ -41,6 +105,22 @@ export default {
         link: this.data.actionLink,
         text: this.data.actionText
       };
+    }
+  },
+
+  methods: {
+    randomFlip: function() {
+      const time = new Date();
+      if (!this.prevTime || time - this.prevTime > 500) {
+        // throttle
+        let num = Math.floor(Math.random() * 50) + 1;
+        this.intro = intro[num];
+        if (num < 10) num = "/0".concat(num.toString());
+        else num = "/".concat(num.toString());
+        this.heroImage = num.concat(".png");
+        this.doFlip = !this.doFlip;
+        this.prevTime = time;
+      }
     }
   }
 };
@@ -59,10 +139,11 @@ export default {
     text-align: center;
 
     img {
-      max-width: 100%;
-      max-height: 280px;
+      max-width: 150px;
       display: block;
       margin: 3rem auto 1.5rem;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
     h1 {
@@ -73,9 +154,13 @@ export default {
       margin: 1.8rem auto;
     }
 
+    .do-flip {
+      transform: rotateY(360deg);
+    }
+
     .description {
       max-width: 35rem;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       line-height: 1.3;
       color: lighten($textColor, 40%);
     }
