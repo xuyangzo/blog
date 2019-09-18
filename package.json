@@ -6,10 +6,12 @@
   "author": "xuyangzo <xuyangzo@usc.edu>",
   "license": "MIT",
   "scripts": {
+    "deploy": "gh-pages -d blogs/.vuepress/dist",
     "docs:dev": "vuepress dev blogs",
     "docs:build": "vuepress build blogs"
   },
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "vuepress": "^1.1.0",
     "vuepress-theme-api": "^0.2.3",
     "vuetify": "^2.0.18"
