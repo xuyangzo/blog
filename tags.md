@@ -1,3 +1,3 @@
-# All Categories
-
-<TagList />
+<ClientOnly>
+  <TagList />
+</ClientOnly>

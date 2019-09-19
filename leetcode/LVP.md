@@ -10,7 +10,7 @@ tags: ["LeetCode", "Top 100 Liked", "Dynamic Programming"]
 
 ## Description
 
-![Longest Valid Parentheses](/lvp.png)
+![Longest Valid Parentheses](/LVP.png)
 
 ## Algorithm
 
@@ -66,3 +66,5 @@ var longestValidParentheses = function(s) {
     return Math.max.apply(Math, dp);
 };
 ```
+
+<Disqus />

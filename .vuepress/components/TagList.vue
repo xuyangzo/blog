@@ -1,50 +1,48 @@
 <!-- .vuepress/components/TagList.vue -->
 <template lang="html">
   <div>
-    <span v-for="tag in Object.keys(tags)">
-      <h2 
-        :id="tag" 
-        v-bind:class="{ red: $page.regularPath.replace(/%20/g, ' ').indexOf(tag) !== -1 }"
-      >
+    <h2 
+      :id="tag" 
+    >
+      {{tag}}
+    </h2>
+    <ul>
+      <li v-for="page in tags()" :key="page.path + tag">
         <router-link
-          :to="{ path: `/tags.html#${tag}`}"
-          class="header-anchor"
-          aria-hidden="true">#</router-link>
-        {{tag}}
-      </h2>
-      <ul>
-        <li v-for="page in tags[tag]">
-          <router-link
-            :to="{ path: page.path}">{{page.title}}</router-link>
-        </li>
-      </ul>
-    </span>
+          :to="{ path: page.path}">{{page.title}}</router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  computed: {
+  data() {
+    return {
+      tag: window.location.hash.slice(1).replace(/%20/g, " ")
+    };
+  },
+  methods: {
     tags() {
-      let tags = {};
+      const tag = window.location.hash.slice(1).replace(/%20/g, " ");
+      this.tag = tag;
+      let articles = [];
       for (let page of this.$site.pages) {
         for (let index in page.frontmatter.tags) {
-          const tag = page.frontmatter.tags[index];
-          if (tag in tags) {
-            tags[tag].push(page);
-          } else {
-            tags[tag] = [page];
+          const currtag = page.frontmatter.tags[index];
+          if (currtag === this.tag) {
+            articles.push(page);
+            break;
           }
         }
       }
-      return tags;
+      return articles;
+    }
+  },
+  watch: {
+    $route: function() {
+      this.$forceUpdate();
     }
   }
 };
 </script>
-
-<style lang="css">
-.red {
-  color: palevioletred;
-}
-</style>
