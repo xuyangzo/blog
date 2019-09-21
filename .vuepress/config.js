@@ -124,7 +124,9 @@ module.exports = {
           '/leetcode/slidingWindowMax',
           '/leetcode/minStack',
           '/leetcode/removeInvalidParen',
-          '/leetcode/taskScheduler'
+          '/leetcode/taskScheduler',
+          '/leetcode/serializeBST',
+          '/leetcode/invertBT'
         ]
       },
     ]
