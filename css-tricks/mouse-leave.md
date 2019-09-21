@@ -1,5 +1,5 @@
 ---
-tags: ["css animations", "css tiny issues"]
+tags: ["CSS Animations", "CSS Tiny Issues"]
 ---
 
 # Mouseleave with Rotate Animation
