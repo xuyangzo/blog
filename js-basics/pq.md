@@ -1,5 +1,5 @@
 ---
-tags: ['JS Basics', 'Data Structure']
+tags: ['Data Structure']
 ---
 
 # Priority Queue with ES6

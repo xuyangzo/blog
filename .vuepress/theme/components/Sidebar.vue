@@ -55,7 +55,7 @@ export default {
     font-weight: 300;
 
     & > li {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     & > li > a.sidebar-link {

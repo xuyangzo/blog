@@ -40,30 +40,26 @@ module.exports = {
       { text: 'Home', link: '/' },
       { text: 'Tags', link: '/all-tags' },
       {
-        text: 'JS Basics',
+        text: 'JS',
         items: [
-          { text: 'Type Comparison', link: '/js-basics/typeComp' },
-          { text: 'Priprity Queue with ES6', link: '/js-basics/pq' },
-          { text: 'Check if An Object is Array', link: '/js-basics/checkArray' }
+          { text: 'JS Basics', link: '/tags.html#JS%20Basics' },
+          { text: 'DOM', link: '/tags.html#JS%20DOM' },
+          { text: 'Data Structure', link: '/tags.html#Data%20Structure' },
+          { text: 'Vue', link: '/tags.html#Vue' }
         ]
       },
       {
-        text: 'CSS Basics',
+        text: 'CSS',
         items: [
-          { text: 'Mouseleave Animations', link: '/css-tricks/mouse-leave' },
-          { text: 'Three Column Layout', link: '/css-tricks/3col' }
+          { text: 'CSS Animations', link: '/tags.html#CSS%20Animations' },
+          { text: 'CSS Layout', link: '/tags.html#CSS%20Layout' },
+          { text: 'CSS Tricks', link: '/tags.html#CSS%20Tricks' }
         ]
       },
       {
         text: 'Network',
         items: [
           { text: 'Https', link: '/tags.html#Https' }
-        ]
-      },
-      {
-        text: 'JS Frameworks',
-        items: [
-          { text: 'Vue', link: '/tags.html#Vue' }
         ]
       },
       {
@@ -94,18 +90,61 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           '/js-basics/typeComp',
-          '/js-basics/pq',
           '/js-basics/checkArray'
         ]
       },
       {
-        title: 'CSS Basics',
+        title: 'DOM',
+        path: '/js-basics/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/js-basics/dragDrop',
+        ]
+      },
+      {
+        title: 'Data Structure',
+        path: '/js-basics/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/js-basics/pq'
+        ]
+      },
+      {
+        title: 'Vue',
+        path: '/js-basics/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/js-frameworks/hashChangeEvents'
+        ]
+      },
+      {
+        title: 'CSS Animations',
         path: '/css-tricks/',
         collapsable: false,
         sidebarDepth: 1,
         children: [
-          '/css-tricks/mouse-leave',
+          '/css-tricks/mouse-leave'
+        ]
+      },
+      {
+        title: 'CSS Layout',
+        path: '/css-tricks/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
           '/css-tricks/3col'
+        ]
+      },
+      {
+        title: 'CSS Tricks',
+        path: '/css-tricks/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/css-tricks/pure5star'
         ]
       },
       {
@@ -115,15 +154,6 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           '/network/https'
-        ]
-      },
-      {
-        title: 'JS Frameworks',
-        path: '/js-framworks/',
-        collapsable: false,
-        sidebarDepth: 1,
-        children: [
-          '/js-frameworks/hashChangeEvents'
         ]
       },
       {

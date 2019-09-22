@@ -1,1 +1,1 @@
-# Singleton
+# Singleton with TypeScript
