@@ -19,8 +19,8 @@ tags: ['LeetCode', 'Top 100 Liked', 'Tree']
   at each node, you can swap it's left child and right child and such process starts from bottom level
   - Check the graph in description, you will find each node swaps it's children
 - During postorder traversal
-  - preorder(node.left)
-  - preorder(node.right)
+  - postorder(node.left)
+  - postorder(node.right)
   - Swap left and right children
   - Do not need to return here
 

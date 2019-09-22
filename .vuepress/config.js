@@ -5,7 +5,34 @@ module.exports = {
   head: [
     ['link', { rel: "shortcut icon", href: "/favicon.ico" }]
   ],
-  plugins: ['demo-code'],
+  plugins: [
+    ['vuepress-plugin-code-copy', true],
+    ['demo-code', {
+      jsLibs: [
+        // umd
+        'https://unpkg.com/tua-storage/dist/TuaStorage.umd.js',
+      ],
+      cssLibs: [
+        'https://unpkg.com/animate.css@3.7.0/animate.min.css',
+      ],
+      showText: 'show code',
+      hideText: 'hide',
+      styleStr: 'text-decoration: underline;',
+      minHeight: 200,
+      onlineBtns: {
+        codepen: false,
+        jsfiddle: true,
+        codesandbox: true,
+      },
+      codesandbox: {
+        deps: { 'lodash': 'latest' },
+        json: '',
+        query: '',
+        embed: '',
+      },
+      demoCodeMark: 'demo-code',
+    }]
+  ],
   themeConfig: {
     logo: '/logo.png',
     searchPlaceholder: 'Search...',
@@ -16,13 +43,15 @@ module.exports = {
         text: 'JS Basics',
         items: [
           { text: 'Type Comparison', link: '/js-basics/typeComp' },
-          { text: 'Priprity Queue with ES6', link: '/js-basics/pq' }
+          { text: 'Priprity Queue with ES6', link: '/js-basics/pq' },
+          { text: 'Check if An Object is Array', link: '/js-basics/checkArray' }
         ]
       },
       {
         text: 'CSS Basics',
         items: [
-          { text: 'Mouseleave Animations', link: '/css-tricks/mouse-leave' }
+          { text: 'Mouseleave Animations', link: '/css-tricks/mouse-leave' },
+          { text: 'Three Column Layout', link: '/css-tricks/3col' }
         ]
       },
       {
@@ -65,7 +94,8 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           '/js-basics/typeComp',
-          '/js-basics/pq'
+          '/js-basics/pq',
+          '/js-basics/checkArray'
         ]
       },
       {
@@ -74,7 +104,8 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 1,
         children: [
-          '/css-tricks/mouse-leave'
+          '/css-tricks/mouse-leave',
+          '/css-tricks/3col'
         ]
       },
       {

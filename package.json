@@ -12,6 +12,7 @@
   "dependencies": {
     "gh-pages": "^2.1.1",
     "vuepress": "^1.1.0",
+    "vuepress-plugin-code-copy": "^1.0.3-alpha",
     "vuepress-theme-api": "^0.2.3",
     "vuetify": "^2.0.18"
   },
