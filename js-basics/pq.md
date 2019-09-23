@@ -145,7 +145,7 @@ output: [ -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5 ]
 ```javascript
 // custom comparator
 function compare(a, b) {
-  return b > a ? true : false;
+  return a > b ? true : false;
 }
 
 input: [ -5, 4, 3, -2, 1, -1, 0, 5, -3, 2, -4 ]

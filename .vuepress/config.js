@@ -66,7 +66,10 @@ module.exports = {
         children: [
           '/js-basics/typeComp',
           '/js-basics/checkArray',
-          '/js-basics/thisBind'
+          '/js-basics/thisBind',
+          '/js-basics/prototype',
+          '/js-basics/new',
+          '/js-basics/es5inheritance'
         ]
       },
       {
@@ -76,6 +79,7 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           '/js-basics/dragDrop',
+          '/js-basics/consolelog'
         ]
       },
       {

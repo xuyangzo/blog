@@ -16,7 +16,7 @@
         open,
         'active': isActive($route, item.path)
       }"
-      :to="item.path"
+      :to="$page.path"
       @click.native="$emit('toggle')"
     >
       <span>{{ item.title.toUpperCase() }}</span>

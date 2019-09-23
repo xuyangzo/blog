@@ -1,8 +1,8 @@
 ---
-tags: ['JS Basics']
+tags: ['JS Basics', 'Interview Problems']
 ---
 
-# this Keyword Binding
+# THIS Keyword Binding
 
 > Posted: 09.22.2019
 

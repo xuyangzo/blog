@@ -4,7 +4,7 @@ heroText: ALL IS LYNCH
 heroIntro: Front end developer
 heroImage: /01.png
 actionText: GET STARTED
-actionLink: /js-basics/
+actionLink: /guide
 # features:
 
 # - title: Simplicity First
