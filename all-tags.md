@@ -1,3 +1,0 @@
-# All Tags
-
-<AllTags />

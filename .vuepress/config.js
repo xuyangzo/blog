@@ -7,38 +7,13 @@ module.exports = {
   ],
   plugins: [
     ['vuepress-plugin-code-copy', true],
-    ['demo-code', {
-      jsLibs: [
-        // umd
-        'https://unpkg.com/tua-storage/dist/TuaStorage.umd.js',
-      ],
-      cssLibs: [
-        'https://unpkg.com/animate.css@3.7.0/animate.min.css',
-      ],
-      showText: 'show code',
-      hideText: 'hide',
-      styleStr: 'text-decoration: underline;',
-      minHeight: 200,
-      onlineBtns: {
-        codepen: false,
-        jsfiddle: true,
-        codesandbox: true,
-      },
-      codesandbox: {
-        deps: { 'lodash': 'latest' },
-        json: '',
-        query: '',
-        embed: '',
-      },
-      demoCodeMark: 'demo-code',
-    }]
+    ['demo-code']
   ],
   themeConfig: {
     logo: '/logo.png',
     searchPlaceholder: 'Search...',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Tags', link: '/all-tags' },
       {
         text: 'JS',
         items: [
@@ -90,7 +65,8 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           '/js-basics/typeComp',
-          '/js-basics/checkArray'
+          '/js-basics/checkArray',
+          '/js-basics/thisBind'
         ]
       },
       {
@@ -121,21 +97,13 @@ module.exports = {
         ]
       },
       {
-        title: 'CSS Animations',
-        path: '/css-tricks/',
-        collapsable: false,
-        sidebarDepth: 1,
-        children: [
-          '/css-tricks/mouse-leave'
-        ]
-      },
-      {
         title: 'CSS Layout',
         path: '/css-tricks/',
         collapsable: false,
         sidebarDepth: 1,
         children: [
-          '/css-tricks/3col'
+          '/css-tricks/3col',
+          '/css-tricks/verticalCenter'
         ]
       },
       {
@@ -144,6 +112,7 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 1,
         children: [
+          '/css-tricks/mouse-leave',
           '/css-tricks/pure5star'
         ]
       },

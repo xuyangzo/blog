@@ -1,5 +1,5 @@
 ---
-tags: ['JS Basics']
+tags: ['JS Basics', 'Interview Problems']
 ---
 
 # Check if An Object is Array

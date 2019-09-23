@@ -1,5 +1,5 @@
 ---
-tags: ['CSS Tricks']
+tags: ['CSS Tricks', 'Interview Problems']
 ---
 
 # Pure CSS Five-Star Bar
@@ -208,7 +208,7 @@ But some interviewers will ask you to write this (or at least talk about ideas) 
     left: 80px;
   }
 
-  /*
+  /**
    * ~: this css selector means, select all .middle after .radio-1
    * Therefore, we are able to select middle layer for each radio button
    * We change the width of middle layer based on different radio button
