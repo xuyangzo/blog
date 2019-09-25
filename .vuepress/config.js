@@ -3,7 +3,14 @@ module.exports = {
   title: 'Lynch',
   home: true,
   head: [
-    ['link', { rel: "shortcut icon", href: "/favicon.ico" }]
+    ['link', { rel: "shortcut icon", href: "/favicon.ico" }],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "http://at.alicdn.com/t/font_1433990_ifszlsjjs6.css"
+      }
+    ]
   ],
   plugins: [
     ['vuepress-plugin-code-copy', true],
@@ -14,7 +21,7 @@ module.exports = {
     searchPlaceholder: 'Search...',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Resume', link: '/resume' },
+      { text: 'About Me', link: '/resume' },
       {
         text: 'JS',
         items: [
