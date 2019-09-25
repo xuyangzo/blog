@@ -14,11 +14,12 @@ module.exports = {
     searchPlaceholder: 'Search...',
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Resume', link: '/resume' },
       {
         text: 'JS',
         items: [
           { text: 'JS Basics', link: '/tags.html#JS%20Basics' },
-          { text: 'DOM', link: '/tags.html#JS%20DOM' },
+          { text: 'DOM', link: '/tags.html#DOM' },
           { text: 'Data Structure', link: '/tags.html#Data%20Structure' },
           { text: 'Vue', link: '/tags.html#Vue' }
         ]
@@ -79,7 +80,8 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           '/js-basics/dragDrop',
-          '/js-basics/consolelog'
+          '/js-basics/consolelog',
+          '/js-basics/throttle'
         ]
       },
       {
@@ -117,7 +119,8 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           '/css-tricks/mouse-leave',
-          '/css-tricks/pure5star'
+          '/css-tricks/pure5star',
+          '/css-tricks/textOverflow'
         ]
       },
       {

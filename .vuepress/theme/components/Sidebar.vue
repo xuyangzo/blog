@@ -1,10 +1,13 @@
 <template>
-  <aside class="sidebar">
-    <NavLinks />
-    <slot name="top" />
-    <SidebarLinks :depth="0" :items="items" />
-    <slot name="bottom" />
-  </aside>
+  <div>
+    <aside v-if="$page.regularPath === '/resume.html'"></aside>
+    <aside v-else class="sidebar">
+      <NavLinks />
+      <slot name="top" />
+      <SidebarLinks :depth="0" :items="items" />
+      <slot name="bottom" />
+    </aside>
+  </div>
 </template>
 
 <script>
