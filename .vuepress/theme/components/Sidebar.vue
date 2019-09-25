@@ -1,6 +1,6 @@
 <template>
   <div>
-    <aside v-if="$page.regularPath === '/resume.html'"></aside>
+    <aside v-if="$page.regularPath === '/resume.html' || $page.regularPath === '/zh/resume.html'"></aside>
     <aside v-else class="sidebar">
       <NavLinks />
       <slot name="top" />

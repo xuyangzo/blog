@@ -10,7 +10,6 @@ website: https://xuyangzo.github.io
 wechatQR: /wechat.jpeg
 
 skills:
-
 - title: JavaScript
   percent: 90
 
@@ -65,8 +64,8 @@ skills:
 - title: PHP
   percent: 30
 
-experiences:
 
+experiences:
 - company: Alibaba Group
   job: Software Engineer Internship
   time: 05.2019 ~ 08.2019

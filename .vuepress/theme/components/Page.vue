@@ -1,5 +1,8 @@
 <template>
-  <main class="page" :style="{ paddingLeft: $page.regularPath === '/resume.html' ? 0 : '300px'}">
+  <main
+    class="page"
+    :style="{ paddingLeft: $page.regularPath === '/resume.html' || $page.regularPath === '/zh/resume.html' ? 0 : '300px'}"
+  >
     <slot name="top" />
 
     <Content class="theme-default-content" />

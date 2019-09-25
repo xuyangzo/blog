@@ -5,7 +5,7 @@
         class='tag'
         v-bind:style="{ color: colors[index % 7] }"
         :key="tag"
-        :to="{ path: `/tags.html#${tag}`}"
+        :to="{ path: `${isZH}/tags.html#${tag}`}"
       >
         {{'#' + tag}}
       </router-link>
@@ -32,6 +32,12 @@ export default {
       currIdx: 0,
       colors
     };
+  },
+  computed: {
+    isZH() {
+      console.log(this.$page.regularPath);
+      return this.$page.regularPath.indexOf("/zh/") !== -1 ? "/zh" : "";
+    }
   },
   methods: {
     getColor: function() {
