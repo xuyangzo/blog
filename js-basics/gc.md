@@ -2,7 +2,7 @@
 tags: ['JS Basics', 'Interview Problems']
 ---
 
-# JS's Garbage Collection
+# Garbage Collection
 
 > Posted: 09.25.2019
 

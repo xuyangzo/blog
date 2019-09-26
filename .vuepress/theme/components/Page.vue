@@ -31,4 +31,10 @@ export default {
   padding-bottom: 2rem;
   display: block;
 }
+
+@media (max-width: 400px) {
+  .page {
+    padding-left: 0 !important;
+  }
+}
 </style>

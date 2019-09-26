@@ -35,7 +35,6 @@ export default {
   },
   computed: {
     isZH() {
-      console.log(this.$page.regularPath);
       return this.$page.regularPath.indexOf("/zh/") !== -1 ? "/zh" : "";
     }
   },
