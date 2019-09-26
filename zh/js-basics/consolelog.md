@@ -2,7 +2,7 @@
 tags: ['DOM操作', '工具的使用']
 ---
 
-# 浏览器中console.log的打印问题
+# 浏览器中 console.log 的打印问题
 
 > Posted: 09.23.2019
 

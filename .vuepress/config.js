@@ -91,7 +91,8 @@ module.exports = {
               '/js-basics/thisBind',
               '/js-basics/prototype',
               '/js-basics/new',
-              '/js-basics/es5inheritance'
+              '/js-basics/es5inheritance',
+              '/js-basics/gc'
             ]
           },
           {
@@ -249,7 +250,8 @@ module.exports = {
               '/zh/js-basics/thisBind',
               '/zh/js-basics/prototype',
               '/zh/js-basics/new',
-              '/zh/js-basics/es5inheritance'
+              '/zh/js-basics/es5inheritance',
+              '/zh/js-basics/gc'
             ]
           },
           {

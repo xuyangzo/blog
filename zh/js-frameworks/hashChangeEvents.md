@@ -2,7 +2,7 @@
 tags: ['Vue']
 ---
 
-# Vue的Hashchange事件
+# Vue 的 Hashchange 事件
 
 > Posted: 09.19.2019
 
