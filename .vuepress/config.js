@@ -93,7 +93,8 @@ module.exports = {
               '/js-basics/new',
               '/js-basics/es5inheritance',
               '/js-basics/gc',
-              '/js-basics/arrayLike'
+              '/js-basics/arrayLike',
+              '/js-basics/eventLoop'
             ]
           },
           {
@@ -253,7 +254,8 @@ module.exports = {
               '/zh/js-basics/new',
               '/zh/js-basics/es5inheritance',
               '/zh/js-basics/gc',
-              '/zh/js-basics/arrayLike'
+              '/zh/js-basics/arrayLike',
+              '/zh/js-basics/eventLoop'
             ]
           },
           {
