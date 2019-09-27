@@ -105,7 +105,8 @@ module.exports = {
             children: [
               '/js-basics/dragDrop',
               '/js-basics/consolelog',
-              '/js-basics/throttle'
+              '/js-basics/throttle',
+              '/js-basics/webWorker'
             ]
           },
           {
@@ -266,7 +267,8 @@ module.exports = {
             children: [
               '/zh/js-basics/dragDrop',
               '/zh/js-basics/consolelog',
-              '/zh/js-basics/throttle'
+              '/zh/js-basics/throttle',
+              '/zh/js-basics/webWorker'
             ]
           },
           {
