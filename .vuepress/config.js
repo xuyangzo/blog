@@ -250,14 +250,14 @@ module.exports = {
             children: [
               '/zh/js-basics/typeComp',
               '/zh/js-basics/checkArray',
+              '/zh/js-basics/arrayLike',
               '/zh/js-basics/thisBind',
               '/zh/js-basics/prototype',
               '/zh/js-basics/new',
               '/zh/js-basics/es5inheritance',
               '/zh/js-basics/gc',
-              '/zh/js-basics/arrayLike',
-              '/zh/js-basics/eventLoop',
               '/zh/js-basics/memoryLeak',
+              '/zh/js-basics/eventLoop',
               '/zh/js-basics/deepcopy'
             ]
           },
@@ -297,6 +297,7 @@ module.exports = {
             collapsable: false,
             sidebarDepth: 1,
             children: [
+              '/zh/css-tricks/documentFlow',
               '/zh/css-tricks/3col',
               '/zh/css-tricks/verticalCenter'
             ]
