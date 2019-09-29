@@ -256,7 +256,8 @@ module.exports = {
               '/zh/js-basics/es5inheritance',
               '/zh/js-basics/gc',
               '/zh/js-basics/arrayLike',
-              '/zh/js-basics/eventLoop'
+              '/zh/js-basics/eventLoop',
+              '/zh/js-basics/memoryLeak'
             ]
           },
           {
