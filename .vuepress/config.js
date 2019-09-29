@@ -257,7 +257,8 @@ module.exports = {
               '/zh/js-basics/gc',
               '/zh/js-basics/arrayLike',
               '/zh/js-basics/eventLoop',
-              '/zh/js-basics/memoryLeak'
+              '/zh/js-basics/memoryLeak',
+              '/zh/js-basics/deepcopy'
             ]
           },
           {
