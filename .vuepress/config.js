@@ -203,6 +203,7 @@ module.exports = {
             items: [
               { text: 'JS基础', link: '/zh/tags.html#JS基础' },
               { text: 'DOM操作', link: '/zh/tags.html#DOM操作' },
+              { text: 'ES6', link: '/zh/tags.html#ES6' },
               { text: '数据结构', link: '/zh/tags.html#数据结构' },
               { text: 'Vue', link: '/zh/tags.html#Vue' }
             ]
@@ -271,6 +272,15 @@ module.exports = {
               '/zh/js-basics/consolelog',
               '/zh/js-basics/throttle',
               '/zh/js-basics/webWorker'
+            ]
+          },
+          {
+            title: 'ES6',
+            path: '/zh/js-basics/',
+            collapsable: false,
+            sidebarDepth: 1,
+            children: [
+              '/zh/js-basics/promise'
             ]
           },
           {

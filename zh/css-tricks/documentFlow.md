@@ -188,17 +188,18 @@ tags: ['CSS布局', '面试问题 - CSS']
   position: relative;
 }
 
-.box1, .box2 {
+.flow-container .box1, .flow-container .box2 {
   width: 100px;
   height: 100px;
   display: inline-block;
+  position: static;
 }
 
-.box1 {
+.flow-container .box1 {
   background: pink;
 }
 
-.box2 {
+.flow-container .box2 {
   background: lightgreen;
   opacity: 0.5;
 }
@@ -216,8 +217,10 @@ tags: ['CSS布局', '面试问题 - CSS']
 </div>
 
 <style>
-.box1-absolute {
+.flow-container .box1-absolute {
   position: absolute;
+  top: 0;
+  left: 0;
 }
 </style>
 
@@ -247,7 +250,7 @@ tags: ['CSS布局', '面试问题 - CSS']
 </div>
 
 <style>
-.box2-float {
+.flow-container .box2-float {
   float: left;
 }
 </style>
@@ -278,7 +281,7 @@ tags: ['CSS布局', '面试问题 - CSS']
 </div>
 
 <style>
-.box1-relative {
+.flow-container .box1-relative {
   position: relative;
   top: 20px;
   left: 20px;
