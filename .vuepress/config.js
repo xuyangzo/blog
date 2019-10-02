@@ -225,19 +225,14 @@ module.exports = {
             text: '设计模式',
             items: [
               { text: '单例模式', link: '/zh/design-patterns/singleton' },
-              { text: '工厂模式', link: '/zh/design-patterns/factory' }
+              { text: '简单工厂', link: '/zh/design-patterns/factory' }
             ]
           },
           {
-            text: 'LeetCode',
+            text: '算法',
             items: [
-              { text: 'Top 100 Liked', link: '/zh/tags.html#Top%20100%20Liked' },
-              { text: 'Two Pointers', link: '/zh/tags.html#Two%20Pointers' },
-              { text: 'Dynamic Programming', link: '/zh/tags.html#Dynamic%20Programming' },
-              { text: 'Tree', link: '/zh/tags.html#Tree' },
-              { text: 'Sliding Window', link: '/zh/tags.html#Sliding%20Window' },
-              { text: 'Divide and Conquer', link: '/zh/tags.html#Divide%20and%20Conquer' },
-              { text: 'Backtracking', link: '/zh/tags.html#Backtracking' }
+              { text: '排序方法', link: '/zh/tags.html#排序方法' },
+              { text: 'LeetCode', link: '/zh/tags.html#LeetCode' }
             ]
           }
         ],
@@ -334,11 +329,13 @@ module.exports = {
             ]
           },
           {
-            title: 'LeetCode',
+            title: '算法',
             path: '/zh/leetcode/',
             collapsable: false,
             sidebarDepth: 1,
             children: [
+              '/zh/leetcode/bubblesort',
+              '/zh/leetcode/selectionsort',
               '/zh/leetcode/threeSum',
               '/zh/leetcode/LVP',
               '/zh/leetcode/bstLevelTraversal',
