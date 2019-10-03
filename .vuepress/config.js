@@ -231,7 +231,7 @@ module.exports = {
           {
             text: '算法',
             items: [
-              { text: '排序方法', link: '/zh/tags.html#排序方法' },
+              { text: '排序算法', link: '/zh/tags.html#排序算法' },
               { text: 'LeetCode', link: '/zh/tags.html#LeetCode' }
             ]
           }
@@ -336,6 +336,8 @@ module.exports = {
             children: [
               '/zh/leetcode/bubblesort',
               '/zh/leetcode/selectionsort',
+              '/zh/leetcode/insertionsort',
+              '/zh/leetcode/arrayToTree',
               '/zh/leetcode/threeSum',
               '/zh/leetcode/LVP',
               '/zh/leetcode/bstLevelTraversal',
