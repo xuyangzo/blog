@@ -18,6 +18,15 @@ body
 
 .page
   padding-left $sidebarWidth
+  ul
+    margin 5px 0
+  li
+    margin: 5px 0
+  h2 
+    margin-top -2rem !important
+    margin-bottom 1rem !important
+  p 
+    margin 20px 0
 
 .navbar
   position fixed
@@ -221,6 +230,11 @@ div[class*="language-"]
     .page
       padding-left 0
 
+@media (max-width 400px) {
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+}
 
 @require 'mobile.styl'
 

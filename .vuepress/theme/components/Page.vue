@@ -10,7 +10,7 @@
     <Content
       class="theme-default-content"
       :style="{
-        maxWidth: $page.regularPath === '/resume.html' || $page.regularPath === '/zh/resume.html' ? '1000px' : '740px'  
+        maxWidth: $page.regularPath === '/resume.html' || $page.regularPath === '/zh/resume.html' ? '1000px' : '900px'  
       }"
     />
     <PageEdit />

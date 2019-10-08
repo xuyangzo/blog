@@ -144,8 +144,6 @@ HTML:
 </div>
 ```
 
-<br />
-
 CSS:
 
 ```css
@@ -183,8 +181,6 @@ CSS:
   top: 200px;
 }
 ```
-
-<br />
 
 JavaScript:
 

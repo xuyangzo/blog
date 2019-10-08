@@ -10,13 +10,7 @@ module.exports = {
         rel: "stylesheet",
         href: "https://at.alicdn.com/t/font_1433990_ifszlsjjs6.css"
       }
-    ],
-    // [
-    //   'meta', {
-    //     name: 'viewport',
-    //     content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
-    //   }
-    // ]
+    ]
   ],
   plugins: [
     ['vuepress-plugin-code-copy', true],
@@ -269,6 +263,7 @@ module.exports = {
             collapsable: false,
             sidebarDepth: 1,
             children: [
+              '/zh/js-basics/crossOrigin',
               '/zh/js-basics/dragDrop',
               '/zh/js-basics/consolelog',
               '/zh/js-basics/throttle',

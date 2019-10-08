@@ -1,7 +1,6 @@
 <template>
   <div>
-    <aside v-if="showSidebar"></aside>
-    <aside v-else class="sidebar">
+    <aside class="sidebar" :style="{ display: showSidebar ? 'block' : null} ">
       <NavLinks />
       <slot name="top" />
       <SidebarLinks :depth="0" :items="items" />
@@ -24,9 +23,8 @@ export default {
   computed: {
     showSidebar() {
       return (
-        (this.$page.regularPath === "/resume.html" ||
-          this.$page.regularPath === "/zh/resume.html") &&
-        window.innerWidth > 400
+        this.$page.regularPath !== "/resume.html" &&
+        this.$page.regularPath !== "/zh/resume.html"
       );
     }
   }
@@ -95,6 +93,12 @@ export default {
     & > .sidebar-links {
       padding: 1rem 0;
     }
+  }
+}
+
+@media (min-width: 400px) {
+  .sidebar {
+    display: none;
   }
 }
 </style>

@@ -143,7 +143,6 @@ HTML:
 </div>
 ```
 
-<br />
 
 CSS:
 
@@ -182,8 +181,6 @@ CSS:
   top: 200px;
 }
 ```
-
-<br />
 
 JavaScript:
 
