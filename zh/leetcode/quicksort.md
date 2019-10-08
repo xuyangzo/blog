@@ -37,12 +37,6 @@ tags: ['排序算法', '面试问题 - 算法']
 
 也就是说，对于空间最优的算法来说，在每层都花费 O(1) 的空间。
 
-<span style="color: palevioletred">**但是！！！**</span>
-
-**虽然 Big-O Notation 的空间复杂度是一样的，两者的表现是完全不一样的！！！**
-
-想要明白原理的话，请耐心地看下去。
-
 ```javascript
 // 对于这种空间复杂度优化的算法来说，swap 是必须的
 function swap(arr, i, j) {

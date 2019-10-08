@@ -29,7 +29,12 @@
         <a :href="profile.website" target="_blank">{{ profile.website }}</a>
       </div>
     </div>
-    <img v-if="profile.wechatQR" :src="$withBase(profile.wechatQR)" class="wechat-qr" />
+    <img
+      v-if="profile.wechatQR"
+      :src="$withBase(profile.wechatQR)"
+      class="wechat-qr"
+      :style="{ opacity: 0 }"
+    />
   </div>
 </template>
 

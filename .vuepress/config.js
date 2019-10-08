@@ -10,7 +10,13 @@ module.exports = {
         rel: "stylesheet",
         href: "https://at.alicdn.com/t/font_1433990_ifszlsjjs6.css"
       }
-    ]
+    ],
+    // [
+    //   'meta', {
+    //     name: 'viewport',
+    //     content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+    //   }
+    // ]
   ],
   plugins: [
     ['vuepress-plugin-code-copy', true],
@@ -339,6 +345,7 @@ module.exports = {
               '/zh/leetcode/selectionsort',
               '/zh/leetcode/insertionsort',
               '/zh/leetcode/quicksort',
+              '/zh/leetcode/mergesort',
               '/zh/leetcode/arrayToTree',
               '/zh/leetcode/threeSum',
               '/zh/leetcode/LVP',

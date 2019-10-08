@@ -1,6 +1,6 @@
 <template>
   <div>
-    <aside v-if="$page.regularPath === '/resume.html' || $page.regularPath === '/zh/resume.html'"></aside>
+    <aside v-if="showSidebar"></aside>
     <aside v-else class="sidebar">
       <NavLinks />
       <slot name="top" />
@@ -19,7 +19,17 @@ export default {
 
   components: { SidebarLinks, NavLinks },
 
-  props: ["items"]
+  props: ["items"],
+
+  computed: {
+    showSidebar() {
+      return (
+        (this.$page.regularPath === "/resume.html" ||
+          this.$page.regularPath === "/zh/resume.html") &&
+        window.innerWidth > 400
+      );
+    }
+  }
 };
 </script>
 

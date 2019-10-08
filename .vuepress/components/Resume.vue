@@ -1,8 +1,12 @@
 <template>
   <div class="resume">
-    <Header :profile="profile"></Header>
+    <Header :profile="profile" />
     <br />
-    <Skill :skills="skill"></Skill>
+    <br />
+    <Intro :intros="intro" />
+    <br />
+    <br />
+    <Skill :skills="skill" />
     <br />
     <br />
     <Experience :experiences="experience"></Experience>
@@ -11,10 +15,16 @@
 
 <script>
 import Header from "./Header";
+import Intro from "./Intro";
 import Skill from "./Skill";
 import Experience from "./Experience";
 
 export default {
+  data() {
+    return {
+      isVisible: false
+    };
+  },
   computed: {
     profile() {
       const {
@@ -39,6 +49,10 @@ export default {
         wechat,
         wechatQR
       };
+    },
+    intro() {
+      const { intros } = this.$page.frontmatter;
+      return intros;
     },
     skill() {
       const { skills } = this.$page.frontmatter;

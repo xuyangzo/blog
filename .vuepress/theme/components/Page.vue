@@ -1,11 +1,18 @@
 <template>
   <main
     class="page"
-    :style="{ paddingLeft: $page.regularPath === '/resume.html' || $page.regularPath === '/zh/resume.html' ? 0 : '300px'}"
+    :style="{ 
+      paddingLeft: $page.regularPath === '/resume.html' || $page.regularPath === '/zh/resume.html' ? 0 : '300px'
+    }"
   >
     <slot name="top" />
 
-    <Content class="theme-default-content" />
+    <Content
+      class="theme-default-content"
+      :style="{
+        maxWidth: $page.regularPath === '/resume.html' || $page.regularPath === '/zh/resume.html' ? '1000px' : '740px'  
+      }"
+    />
     <PageEdit />
 
     <PageNav v-bind="{ sidebarItems }" />

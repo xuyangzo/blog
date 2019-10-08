@@ -1,33 +1,51 @@
 <template>
-  <div>
-    <div v-if="skills.length" class="resume-skill">
-      <h2>SKILL</h2>
-      <div v-for="skill in skills" :key="skill.title" class="resume-skill-single">
-        <div class="skill-title">{{ skill.title }}</div>
-        <div class="skill-percent">
-          <div
-            class="skill-progress-bar"
-            :class="{ red: skill.percent <= 50}"
-            :style="{ width: skill.percent + '%' }"
-          ></div>
-          <div
-            class="skill-progress-circle"
-            :class="{ red: skill.percent <= 50}"
-            :style="{ left: (skill.percent - 5) + '%' }"
-          ></div>
-        </div>
+  <div
+    v-observe-visibility="{
+      callback: visibilityChanged,
+      intersection: {
+        threshold: 0.2
+      },
+      once: true
+    }"
+    v-if="skills.length"
+    class="resume-skill"
+    :class="{ 'resume-skill-appear': isVisible }"
+  >
+    <div v-for="skill in skills" :key="skill.title" class="resume-skill-single">
+      <div class="skill-title">{{ skill.title }}</div>
+      <div class="skill-percent">
+        <div
+          class="skill-progress-bar"
+          :class="{ red: skill.percent <= 50}"
+          :style="{ width: skill.percent + '%' }"
+        ></div>
+        <div
+          class="skill-progress-circle"
+          :class="{ red: skill.percent <= 50}"
+          :style="{ left: (skill.percent - 5) + '%' }"
+        ></div>
       </div>
-      <div style="clear: both"></div>
     </div>
+    <div style="clear: both"></div>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      isVisible: false
+    };
+  },
   props: {
     skills: {
       type: Array,
-      default: []
+      default: () => []
+    }
+  },
+  methods: {
+    visibilityChanged(isVisible) {
+      this.isVisible = isVisible;
     }
   }
 };
@@ -53,11 +71,18 @@ export default {
   }
 }
 
+.resume-skill-appear {
+  animation: fadeInUp 1s forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 .resume-skill {
-  h2 {
-    font-family: 'Karla', sans-serif;
-    border-bottom: 2px solid black;
-  }
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  background: rgba(248, 248, 255, 0.5);
+  text-align: center;
+  opacity: 0;
 
   .resume-skill-single {
     position: relative;
@@ -72,6 +97,7 @@ export default {
     .skill-title {
       width: 160px;
       white-space: nowrap;
+      text-align: left;
     }
 
     .skill-percent {
@@ -109,6 +135,22 @@ export default {
         position: absolute;
         top: -5px;
         animation: moveRight 1s ease-in-out forwards;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .resume-skill {
+    .resume-skill-single {
+      .skill-title {
+        width: 120px;
+        position: relative;
+      }
+
+      .skill-percent {
+        width: 100px;
+        left: -10px;
       }
     }
   }

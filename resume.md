@@ -6,7 +6,7 @@ website: https://xuyangzo.github.io
 # address: 1250 W. 37th St, LA, CA, 90007
 # phone: (+1)2137137527
 # github: https://github.com/xuyangzo
-# photo: /02.png
+photo: /cry.GIF
 wechatQR: /wechat.jpeg
 
 skills:
@@ -64,13 +64,6 @@ skills:
 - title: PHP
   percent: 30
 
-
-experiences:
-- company: Alibaba Group
-  job: Software Engineer Internship
-  time: 05.2019 ~ 08.2019
-  location: Hangzhou, China
-  description: ['Working as ...']
 ---
 
 <Resume />

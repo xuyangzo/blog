@@ -52,7 +52,8 @@ export default {
           themeConfig.repo ||
           themeConfig.nav ||
           this.$themeLocaleConfig.nav) &&
-        this.$page.regularPath !== "/"
+        this.$page.regularPath !== "/" &&
+        this.$page.regularPath !== "/zh/"
       );
     },
 
@@ -96,6 +97,7 @@ export default {
   methods: {
     toggleSidebar(to) {
       this.isSidebarOpen = typeof to === "boolean" ? to : !this.isSidebarOpen;
+      console.log("toggle!", this.isSidebarOpen);
       this.$emit("toggle-sidebar", this.isSidebarOpen);
     },
 
