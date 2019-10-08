@@ -42,7 +42,7 @@ Worker 线程在后台运行，与主线程互不干扰。
 
 我们先新建一个 HTML 文件，然后展示一个简单的动画。
 
-<div class="container"></div>
+<div class="anim-container"></div>
 <style>
 @keyframes flashAndGrow {
   0% {
@@ -58,7 +58,7 @@ Worker 线程在后台运行，与主线程互不干扰。
     background: pink;
   }
 }
-.container {
+.anim-container {
   width: 0px;
   height: 100px;
   animation: flashAndGrow 2s ease-in-out infinite;

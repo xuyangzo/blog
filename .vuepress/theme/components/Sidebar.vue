@@ -24,7 +24,9 @@ export default {
     showSidebar() {
       return (
         this.$page.regularPath !== "/resume.html" &&
-        this.$page.regularPath !== "/zh/resume.html"
+        this.$page.regularPath !== "/zh/resume.html" &&
+        this.$page.regularPath !== "/" &&
+        this.$page.regularPath !== "/zh/"
       );
     }
   }

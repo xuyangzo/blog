@@ -264,6 +264,7 @@ module.exports = {
             sidebarDepth: 1,
             children: [
               '/zh/js-basics/crossOrigin',
+              '/zh/js-basics/coJSONP',
               '/zh/js-basics/dragDrop',
               '/zh/js-basics/consolelog',
               '/zh/js-basics/throttle',
