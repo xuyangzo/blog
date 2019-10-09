@@ -266,9 +266,10 @@ module.exports = {
               '/zh/js-basics/crossOrigin',
               '/zh/js-basics/coJSONP',
               '/zh/js-basics/dragDrop',
-              '/zh/js-basics/consolelog',
               '/zh/js-basics/throttle',
-              '/zh/js-basics/webWorker'
+              '/zh/js-basics/webWorker',
+              '/zh/js-basics/ajax',
+              '/zh/js-basics/consolelog'
             ]
           },
           {
