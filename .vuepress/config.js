@@ -267,6 +267,7 @@ module.exports = {
               '/zh/js-basics/coJSONP',
               '/zh/js-basics/dragDrop',
               '/zh/js-basics/throttle',
+              '/zh/js-basics/timer',
               '/zh/js-basics/webWorker',
               '/zh/js-basics/ajax',
               '/zh/js-basics/consolelog'
