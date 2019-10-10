@@ -1,39 +1,43 @@
 ---
-tags: ["LeetCode", "Top 100 Liked", "Dynamic Programming"]
+tags: ["LeetCode", "Top 100 Liked", "动态规划"]
 ---
 
-# Longest Valid Parentheses
+# 最长有效括号
 
 > Posted: 09.18.2019
 
 <Tag />
 
-## Description
+## 描述
 
 ![Longest Valid Parentheses](/LVP.png)
 
-## Algorithm
+## 算法
 
-> dp[i]: the longest valid parentheses **ending at** i  
-> dp array stores the longest valid parentheses at each index
+> dp[i]: 在位置 i **结束的**，最长的有效括号  
+> 并且从 0 ~ i 位置开始的最长有效括号，而是只考虑 i  
+> 这一点很重要，一定要先理解了才行  
 
-- Iterate from 0 to n
-  - If encounters `(`, current string cannot be valid, therefore dp[i] = 0
-  - If encounters `)`
-    - If encounters `()`, current string depends on string at index i - 2, so dp[i] = d[i - 2] + 2
-    - If encounters `))`
-      - We look at the character at index (i - 1 - dp[i - 1]). i - 1 means previous character, and then we
-      subtract the longest valid parentheses ending at that index, which is dp[i - 1]. Therefore, the index we
-      check is the character that should become "pair" with current character s[i]
-      - If `s[i - 1 - dp[i - 1]] === '('`, this character can pair with current character, which means from index
-      to i, the slice of string is valid, we can always append such length `dp[i - 1] + 2` to former longest valid
-      parentheses, which is `dp[i - 2 - dp[i - 1]]`, the character before s[index]. As a result:
-        - dp[i] = dp[i - 1] + dp[i - 2 - dp[i - 1]] + 2
-      - Otherwise, that s[index] cannot pair with current character, which means from index to i, we cannot form a
-      valid parentheses string, therefore dp[i] = 0
+- 从 0 开始一直遍历到 n
+  - 如果碰见了 `(`，在当前位置结束的括号，不可能是有效的，因此设置 dp[i] = 0
+  - 如果碰见了 `)`
+    - 如果碰见的是 `()`，那么当前最长有效括号取决于位置在 i - 2 的最长有效括号，dp[i] = d[i - 2] + 2
+    - 如果碰见的是 `))`
+      - 我们需要查看位于 (i - 1 - dp[i - 1]) 的字符，为什么是这个位置呢？
+        - i - 1 是当前字符的前一个字符，dp [i - 1] 为结束在前一个字符的，最长有效括号
+        - (i - 1 - dp[i - 1]) 代表了：在前一个字符的位置，减去其对应的最长有效括号
+        - 因此，s[i - 1 - dp[i - 1]] 位置的字符，是与当前 s[i] 字符所对应的字符
+      - 如果该字符为 `(`，这就说明这个位置的字符可以和当前的字符配对起来
+        - 也就是说，从该字符（假如说位置为 index）一直到当前字符的括号，都是有效的
+        - 这一段的距离是 dp[i - 1] + 2，因此我们可以在前面最长有效括号的基础上，加上这段距离
+        - 而在 index 这个位置之前，最长的有效括号为 dp[i - 2 - dp[i - 1]]
+        - 因此，我们最终所得到的最长有效括号为 dp[i] = dp[i - 1] + dp[i - 2 - dp[i - 1]] + 2
+      - 如果该字符为 `)`，那么就说明该字符无法和当前的字符配对
+        - 因此，从 index 到 i 这段，我们无法形成一段在 i 结束的有效字符
+        - 因此，我们需要设置 dp[i] = 0
 
 
-## Code
+## 代码
 
 ```javascript
 /**
@@ -46,7 +50,7 @@ var longestValidParentheses = function(s) {
     const dp = [0];
     
     for (let i = 1; i < s.length; i++) {
-        // only check when encounters (
+        // 只有当碰见 ( 时，才开始检查
         if (s[i] === ')') {
             if (s[i - 1] === '(') {
                 dp[i] = (dp[i - 2] || 0) + 2;
