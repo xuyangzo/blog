@@ -1,39 +1,52 @@
 ---
-tags: ['LeetCode', 'Top 100 Liked', 'Divide and Conquer']
+tags: ['LeetCode', 'Top 100 Liked', '分治法']
 ---
 
-# Median of Two Sorted Arrays
+# 寻找两个有序数组的中位数
 
 > Posted: 09.20.2019
 
 <Tag />
 
-## Description
+## 描述
 
 ![Median of Two Sorted Arrays](/medianOfSA.png)
 
-## Algorithm
+## 算法
 
-- The key idea is still binary search in order to get O(logn) runtime
-  - But in this case, we need to apply binary seach on both arrays at the same time
-  - Each time, we divide the left part and right part to equal size (or left - right = 1)
-- If nums1.length > num2.length, return same funciton with inversely ordered parameters
-- Calculate `total = (len1 + len2 + 1) / 2`, number of left part elements should equal to total
-- While `l <= r || r < 0 || l >= len1`
-  - Apply binary search based on nums1, calculate four corners first
-    - topLeft = (l + r) / 2, if < 0, set nums[topLeft] to -∞ (make sure it < bottomRight)
-    - topRight = topLeft + 1, if >= len1, set nums[topRight] to ∞ (make sure it > bottomLeft)
-    - bottomLeft = total - topLeft - 2, if < 0, set nums[bottomLeft] to -∞
-    - bottomRight = bottomLeft + 1, if >= len2, set nums[bottomRight] to ∞
-  - After that, compare four corners
-    - If nums1[topLeft] <= nums2[bottomRight] && nums2[bottomLeft] <= nums1[topRight], found
-      - If their total length is odd, return `max(nums1[topLeft], nums2[bottomLeft])`
-      - If their total length is even, return `(max(nums1[topLeft], nums2[bottomLeft]) + min(nums1[topRight],
-       nums2[bottomRight])) / 2`
-    - Else if nums1[topLeft] > nums2[bottomRight], r = topLeft - 1
-    - Else if nums2[bottomLeft] > nums1[topRight], l = topLeft + 1
+- 核心思想：由于时间复杂度为 O(logn)，肯定还是得用二分搜索实现
+  - 但是这次，我们需要同时对两个数组使用二分搜索
+  - 每次搜索的时候，我们都区分出两个大小相等的部分（或者 left - right = 1）
+  - 想象有上下两个数组，然后划一刀，将数组分为左上、左下、右上、右下
+  - 原本二分搜索比较当前节点和 target
+  - 而我们现在比较这四个角与target
+- 首先，我们要保证 num1 的长度比 num2 短，因此如果反了的话，则返回当前函数，并且参数交换
+- 计算左侧部分的元素数量，total = (len1 + len2 + 1) / 2
+- While l <= r || r < 0 || l >= len1，条件和普通的二叉搜索差不多，但是 l 和 r 自身有限制
+  - 对 nums1 施展二分搜索，找到的位置便是左上角，然后根据这个位置计算出四个角落的位置
+    - topLeft = (l + r) / 2
+      - 如果 topLeft < 0，说明这一刀划在了 nums1 的开头
+      - 因此需要设置 nums[topLeft] = -∞，来保证左上的元素 < 右下的元素
+    - topRight = topLeft + 1
+      - 如果 topRight >= len1，说明这一刀划在了 nums1 的结尾
+      - 因此需要设置 nums[topRight] = ∞，来保证右上的元素 > 左下的元素
+    - bottomLeft = total - topLeft - 2
+      - 如果 bottomLeft < 0，说明这一刀划在了 num2 的开头
+      - 因此需要设置 nums[bottomLeft] = -∞，来保证左下的元素 < 右上的元素
+    - bottomRight = bottomLeft + 1
+      - 如果 bottomRight >= len2，说明这一刀划在了 nums2 的结尾
+      - 因此需要设置 nums[bottomRight] = ∞，来保证右下的元素 > 左上的元素
+  - 在把四个角落都设置好之后，再开始比较
+    - 如果 nums1[topLeft] <= nums2[bottomRight] && nums2[bottomLeft] <= nums1[topRight]
+      - 目前我们处于正确的位置，中位数就在这四个角落里诞生
+      - 如果这俩数组的长度之和为奇数，返回 max(nums1[topLeft], nums2[bottomLeft])
+      - 如果这俩数组的长度之和为偶数，返回 (max(nums1[topLeft], nums2[bottomLeft]) + min(nums1[topRight],
+       nums2[bottomRight])) / 2
+    - 如果 nums1[topLeft] > nums2[bottomRight]，设置 r = topLeft - 1，相当于把刀逆时针旋转
+    - 如果 nums2[bottomLeft] > nums1[topRight]，设置 l = topLeft + 1，相当于把刀顺时针旋转
+  - 继续施展二分搜索，直到找到中位数
 
-## Code
+## 代码
 
 ```javascript
 /**
@@ -55,11 +68,11 @@ var findMedianSortedArrays = function(nums1, nums2) {
     }
     
     const len1 = nums1.length, len2 = nums2.length;
-    // reverse order
+    // 反向调用，保证 num1 更短
     if (len1 > len2) return findMedianSortedArrays(nums2, nums1);
     
     const total = parseInt((len1 + len2 + 1) / 2);
-    // do binary search based on nums1
+    // 根据 nums1，施展二分搜索
     let l = 0, r = len1 - 1;
     while (l <= r || r < 0 || l >= len1) {
         const topMid = Math.floor((l + r) / 2);
@@ -70,11 +83,10 @@ var findMedianSortedArrays = function(nums1, nums2) {
         const botLeft = botMid >= 0 ? nums2[botMid] : -Number.MAX_VALUE;
         const botRight = botMid+1 < len2 ? nums2[botMid+1] : Number.MAX_VALUE;
 
-        // if satisfy requirement
+        // 如果目前的位置正确
         if (topLeft <= botRight &&
             botLeft <= topRight) 
         {
-            // if the merged array is odd length
             if ((len1 + len2) % 2 === 1) {
                 return Math.max(topLeft, botLeft);
             } else {
