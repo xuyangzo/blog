@@ -265,6 +265,7 @@ module.exports = {
             children: [
               '/zh/js-basics/crossOrigin',
               '/zh/js-basics/coJSONP',
+              '/zh/js-basics/coDomain',
               '/zh/js-basics/dragDrop',
               '/zh/js-basics/throttle',
               '/zh/js-basics/timer',

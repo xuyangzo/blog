@@ -10,7 +10,7 @@ tags: ['DOM操作', '面试问题 - JS']
 
 ## 介绍
 
-震惊！这年头竟然还有人手写 AJAX！
+震惊！9102 年了竟然还有人手写 AJAX！
 
 axios 不知道，好歹也知道 jQuery，不然就别搞前端了，养猪去吧。
 
@@ -44,6 +44,8 @@ xhr.onreadystatechange = function () {
    * readyState 和 status 是不相关的
    * readyState 代表了 AJAX 是否完成
    * status 代表了状态码，就算 AJAX 已完成也可以是 404 之类的
+   * 
+   * 每次 readyState 改变的时候，都会触发回调函数
    */
   if (xhr.readyState === 4 && xhr.status === 200) {
     console.log(xhr.responseText);
@@ -67,6 +69,7 @@ xhr.open('post', 'MyServlet', true);
  */
 xhr.send(JSON.stringify(data));
 
+// 每次 readyState 改变的时候，都会触发回调函数
 xhr.onreadystatechange = function() {
   if (xhr.readyState === 4 && xhr.status === 200) {
     console.log(xhr.responseText);

@@ -1,5 +1,5 @@
 ---
-tags: ['设计模式', 'TypeScript']
+tags: ['设计模式', 'TypeScript', '面试问题 - 设计模式']
 ---
 
 # TypeScript 实现单例模式
