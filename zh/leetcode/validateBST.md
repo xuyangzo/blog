@@ -1,29 +1,29 @@
 ---
-tags: ['LeetCode', 'Top 100 Liked', 'Tree']
+tags: ['LeetCode', 'Top 100 Liked', '树']
 ---
 
-# Validate Binary Search Tree
+# 验证二叉搜索树
 
 > Posted: 09.18.2019
 
 <Tag />
 
-## Description
+## 描述
 
 ![Validate Binary Search Tree](/validateBST.png)
 
-## Algorithm
+## 算法
 
-- The key idea is, during each recursion, pass upper and lower bounds
-- In main function, call helper function without lower and upper (foor root)
-- In helper function, check current node and upper and lower
-  - If val > upper, set result to false
-  - If val < lower, set result to false
-- When calling function on children
-  - Left child: pass val as upper, and current lower
-  - Right child: pass val as lower, and current upper
+- 核心思想是，在每次递归的时候，传递下一层递归所要比较的上下限
+- 在主函数里，调用辅助函数，并且不传递任何上下限
+- 在辅助函数里，比较当前节点和传递来的上下限
+  - 如果 val > upper，设置 result = false
+  - 如果 val < lower，设置 result = false
+  - 接着，在传递参数给下一层递归的时候的
+    - 对于左侧的子节点来说，传递 val 为上限，当前的下限为下限
+    - 对于右侧的子节点来说，传递 val 为下限，当前的上限为上限
 
-## Code
+## 代码
 
 ```javascript
 /**
