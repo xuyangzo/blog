@@ -26,7 +26,7 @@ tags: ['CSS小技巧', 'CSS布局']
     padding: 10px;
     border-radius: 5px;
     width: 150px;
-    height: 30px;
+    height: 50px;
     line-height: 30px;
     overflow: hidden;
     white-space: nowrap;
@@ -82,7 +82,7 @@ tags: ['CSS小技巧', 'CSS布局']
     padding: 10px;
     border-radius: 5px;
     width: 150px;
-    height: 150px;
+    height: 168px;
     line-height: 30px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     overflow: hidden;
@@ -92,10 +92,11 @@ tags: ['CSS小技巧', 'CSS布局']
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     float: left;
+    margin-right: 50px !important;
   }
 
   .shorter {
-    height: 118px;
+    height: 138px;
     float: left;
     margin-left: 50px;
   }
