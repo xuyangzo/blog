@@ -1,5 +1,5 @@
 ---
-tags: ['DOM操作', '面试问题 - JS']
+tags: ['DOM相关', '面试问题 - JS']
 ---
 
 # Web Worker

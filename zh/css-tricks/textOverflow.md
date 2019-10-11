@@ -48,7 +48,7 @@ tags: ['CSS小技巧', 'CSS布局']
 
 多行文本溢出只适用于使用 webkit 内核的浏览器
 
-- Chrome, Safari, Edge, Opera 有限
+- Chrome, Safari, Edge, Opera 有效
 - IE, Firefox 无效
 
 <p class='overflow-2'>

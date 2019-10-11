@@ -202,7 +202,7 @@ module.exports = {
             text: 'JS',
             items: [
               { text: 'JS基础', link: '/zh/tags.html#JS基础' },
-              { text: 'DOM操作', link: '/zh/tags.html#DOM操作' },
+              { text: 'DOM相关', link: '/zh/tags.html#DOM相关' },
               { text: 'ES6', link: '/zh/tags.html#ES6' },
               { text: 'Vue', link: '/zh/tags.html#Vue' }
             ]
@@ -258,7 +258,7 @@ module.exports = {
             ]
           },
           {
-            title: 'DOM操作',
+            title: 'DOM相关',
             path: '/zh/js-basics/',
             collapsable: false,
             sidebarDepth: 1,
