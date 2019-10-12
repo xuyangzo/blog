@@ -17,7 +17,7 @@ tags: ['DOM相关', '面试问题 - JS']
 - ondragend 事件：当拖拽完成后触发的事件，此事件作用在被拖曳元素上
 
 
-<span style='color: palevioletred'>**据说腾讯会有类似的笔试题**</span>
+<span v-red>**据说腾讯会有类似的笔试题**</span>
 
 ## 实战
 

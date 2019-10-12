@@ -72,6 +72,47 @@ document.onscroll = function() {
 }
 ```
 
+## 节流与防抖相结合
+
+那么问题来了，节流函数与防抖函数可以结合吗？
+
+答案是肯定的，因为这两者其实负责的是完全不同的东西，没有任何冲突。
+
+那么，如果将两者结合，实现的是什么效果呢？
+
+那就是：在一定时间内，如果连续触发的话，只会生效一次，并且只有最后一次触发生效。
+
+```javascript
+function hello() {
+  console.log('hello');
+}
+
+var timer = false;
+var start = new Date();
+
+function throttle(method, delay, atleast) {
+  var current = new Date();
+  var context = this;
+  var args = arguments;
+
+  return function() {
+    if (current - start > atleast) {
+      // 函数节流
+      method.call(context, args);
+      start = current;
+    } else {
+      // 函数防抖
+      clearTimeout(timer);
+      timer = setTimeout(function() {
+        method.call(context, args);
+      }, delay);
+    }
+  }
+}
+
+document.getElementById('app').onscroll = throttle(hello, 200, 1000);
+```
+
 ## 参考资料
 
 [JavaScript函数节流和函数防抖之间的区别](https://www.cnblogs.com/walls/p/6399837.html)

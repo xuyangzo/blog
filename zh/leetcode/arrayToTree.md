@@ -342,6 +342,6 @@ fs.writeFile("test.json", JSON.stringify(arrayToTree(array), null, 2), () => {
 
 <br />
 
-<span style="color: palevioletred">**是不是贼牛逼！**</span>
+<span v-red>**是不是贼牛逼！**</span>
 
 <Disqus />

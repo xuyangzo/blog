@@ -10,7 +10,7 @@ tags: ['JS基础', '面试问题 - JS']
 
 ## 内存泄漏的定义
 
-<span style="color: palevioletred">应用程序不再需要占用内存的时候，由于某些原因，内存没有被操作系统或可用内存池回收。</span>
+<span v-red>应用程序不再需要占用内存的时候，由于某些原因，内存没有被操作系统或可用内存池回收。</span>
 
 这句话到底是什么意思？
 
@@ -36,7 +36,7 @@ tags: ['JS基础', '面试问题 - JS']
 
 因此你需要一脚把”新垣结衣“踢了。这样的话被占据的内存就会被释放，你又可以找七个新的老婆了。
 
-<span style="color: palevioletred">**所以说程序本质上就是渣男。什么情意不情意的，没有利用价值了就得抛弃。**</span>
+<span v-red>**所以说程序本质上就是渣男。什么情意不情意的，没有利用价值了就得抛弃。**</span>
 
 
 ## 垃圾回收机制
@@ -195,7 +195,7 @@ setInterval(replaceThing, 1000);
 4. theThing 是全局变量，其指向的内存一直可达，因此该内存不会被删除
 5. 内存泄漏没有发生（假设接下来还要用到 theThing）
 
-<span style="color: palevioletred">**一切看起来很正常是吧。那么如果加上第二步呢？**</span>
+<span v-red>**一切看起来很正常是吧。那么如果加上第二步呢？**</span>
 
 1. originalThing 指向 theThing
 2. 分配内存给 unused，unused 需要用到 originalThing 的引用

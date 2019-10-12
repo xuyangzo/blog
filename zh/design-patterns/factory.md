@@ -22,7 +22,7 @@ tags: ['设计模式', 'TypeScript', '面试问题 - 设计模式']
 
 我们明确地计划不同条件下创建不同实例时。
 
-<span style="color: palevioletred">**例子1：**</span>
+<span v-red>**例子1：**</span>
 
 设计一个连接服务器的框架，需要三个协议，"POP3"、"IMAP"、"HTTP"，可以把这三个作为产品类，共同实现一个接口。
 

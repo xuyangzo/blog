@@ -31,7 +31,7 @@ Worker 线程在后台运行，与主线程互不干扰。
 ## Web Worker 的限制
 
 1. 同源限制：分配给 Worker 线程运行的脚本文件，必须与主线程的脚本文件同源。
-2. DOM 限制：Worker 线程所在的对象与主线程不一样，无法读取主线程所在网页的 DOM 对象，也无法使用 document、window、parent 这些对象。但是，Worker 线程可以读取 navigator 对象和 location 对象。<span style="color: palevioletred">**（因此，Web Worker 一般用于计算）**</span>
+2. DOM 限制：Worker 线程所在的对象与主线程不一样，无法读取主线程所在网页的 DOM 对象，也无法使用 document、window、parent 这些对象。但是，Worker 线程可以读取 navigator 对象和 location 对象。<span v-red>**（因此，Web Worker 一般用于计算）**</span>
 3. 通信联系：Worker 线程和主线程不在同一个上下文环境，它们不能直接通信，必须通过消息完成。
 4. 脚本限制：Worker 线程不能执行alert()方法和confirm()方法，但可以使用 XMLHttpRequest 对象发出 AJAX 请求。
 5. 文件限制：Worker 线程无法读取本地文件，即不能打开本机的文件系统（file://），它所加载的脚本，必须来自网络
@@ -165,7 +165,7 @@ Worker 的计算同样花了差不多 30 秒左右。
 
 但是在这个过程中，主线程的动画并没有受到影响。
 
-<span style="color: palevioletred">**这下你明白 Web Worker 的牛逼之处了吗？**</span>
+<span v-red>**这下你明白 Web Worker 的牛逼之处了吗？**</span>
 
 ## 参考资料
 

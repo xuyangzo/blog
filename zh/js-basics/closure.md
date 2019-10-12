@@ -12,7 +12,7 @@ tags: ['JS基础', '面试问题 - JS']
 
 那么问题来了，什么是闭包？
 
-我们现在给一个定义：<span style="color: palevioletred">**闭包就是能够读取其他函数内部变量的函数**</span>。
+我们现在给一个定义：<span v-red>**闭包就是能够读取其他函数内部变量的函数**</span>。
 
 等等，这是什么意思？别急，往下看。
 
@@ -69,7 +69,7 @@ hasA(); // 会打印 sb
 
 ## 深入一点
 
-<span style="text-decoration: line-through">标题并没有在搞黄色</span>
+<span v-line>标题并没有在搞黄色</span>
 
 在上面的代码中，我们成功打印出了 a。
 
@@ -79,7 +79,7 @@ hasA(); // 会打印 sb
 
 然而，在出函数作用域的时候，本地变量应该是被销毁的。
 
-因此，通过闭包，我们其实实现了这么一个功能：<span style="color: palevioletred">**本地变量持久化（让本地变量停留在内存中）**</span>
+因此，通过闭包，我们其实实现了这么一个功能：<span v-red>**本地变量持久化（让本地变量停留在内存中）**</span>
 
 因为当垃圾处理器从 root 出发，到达 hasA，发现 hasA 有对 a 的引用，因此不会释放 a 的内存。
 
@@ -128,7 +128,7 @@ hasA();
 
 ## 再深入一点
 
-<span style="text-decoration: line-through">标题真没有在搞黄色</span>
+<span v-line>标题真没有在搞黄色</span>
 
 那么问题来了，闭包所获取的 a，是引用吗？
 

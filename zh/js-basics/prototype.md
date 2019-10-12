@@ -10,7 +10,7 @@ tags: ['JS基础']
 
 ## prototype
 
-- `prototype` 是一个特殊的<span style='color: palevioletred'>**指针**</span>，其指向了一个只有函数（Function）才具有的对象
+- `prototype` 是一个特殊的<span v-red>**指针**</span>，其指向了一个只有函数（Function）才具有的对象
 - 当函数被声明时，该对象被创建
 - `prototype` 包含了以下的对象：
   - 所有实例共享的属性和方法
@@ -65,7 +65,7 @@ console.log(obj.prototype);
 
 ## \_\_proto\_\_
 
-- `__proto__` 是一个特殊的<span style='color: palevioletred'>**指针**</span>，每个对象都有 \_\_proto\_\_
+- `__proto__` 是一个特殊的<span v-red>**指针**</span>，每个对象都有 \_\_proto\_\_
   - `prototype` 本身是一个对象，所以它也会有 `__proto__` 这个属性
 - 其所属的对象被创建时，\_\_proto\_\_ 也被创建
 - 其默认值是一个指针，指向创建其的函数的 `prototype` 对象

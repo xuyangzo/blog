@@ -105,7 +105,7 @@ const arguments = {
 
 为什么 `arguments` 没有数组的方法，比如说：forEach、push、pop... 等等
 
-<span style="color: palevioletred">**这是因为**</span>: 这些方法属于 `Array.prototype`，但 arguments 的 `__proto__` 指向了 `Object.prototype`，这玩意儿可没有这些数组的方法。
+<span v-red>**这是因为**</span>: 这些方法属于 `Array.prototype`，但 arguments 的 `__proto__` 指向了 `Object.prototype`，这玩意儿可没有这些数组的方法。
 
 别的类数组对象也是类似的。
 

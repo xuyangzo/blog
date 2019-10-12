@@ -11,4 +11,18 @@ export default ({
   Vue.use(Vuetify);
   Vue.use(VueObserveVisibility);
   options.vuetify = new Vuetify({});
+
+  // set color to be palevioletred
+  Vue.directive('red', {
+    bind(el) {
+      el.style.color = 'palevioletred';
+    }
+  });
+
+  // set line through
+  Vue.directive('line', {
+    bind(el) {
+      el.style.textDecoration = 'line-through';
+    }
+  })
 }

@@ -133,7 +133,7 @@ function quickSort(arr) {
 }
 ```
 
-<span style="color: palevioletred">**那么问题就来了，到底为什么这种算法的空间更优呢？**</span>
+<span v-red>**那么问题就来了，到底为什么这种算法的空间更优呢？**</span>
 
 ## 一般人的写法
 
@@ -211,7 +211,7 @@ emmm...但看这个好像也不知道表现怎么样。
 
 ![quicksort cai](/quicksort-cai.png)
 
-<span style="color: palevioletred">**卧槽！！内存溢出了！！**</span>
+<span v-red>**卧槽！！内存溢出了！！**</span>
 
 这是为啥？？？明明是一模一样的数组啊？？？
 
@@ -225,6 +225,6 @@ emmm...但看这个好像也不知道表现怎么样。
 
 **怎么样，看到这里是不是豁然开朗了？**
 
-<span style="color: palevioletred">**下次面试被问到，就把这玩意儿砸面试官脸上吧（笑**</span>
+<span v-red>**下次面试被问到，就把这玩意儿砸面试官脸上吧（笑**</span>
 
 <Disqus />

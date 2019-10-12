@@ -52,7 +52,7 @@ methods: {
 
 从上图可以看出，鼠标的确没有离开图片...
 
-<span style='color: palevioletred'>等等，真的是这样吗？</span>
+<span v-red>等等，真的是这样吗？</span>
 
 真正的问题在于... **动画**!
 
