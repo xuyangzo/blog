@@ -174,8 +174,9 @@ tags: ['CSS布局', '面试问题 - CSS']
 脱离文档流后，就相当于浮空了，不占据页面的部分。
 
 - position: absolute/fixed
+- float
 
-### 例子
+### Absolute Position
 
 <div class="flow-container">
   <div class="box1"></div>
@@ -232,34 +233,39 @@ tags: ['CSS布局', '面试问题 - CSS']
 
 由于我给绿色盒子设置了 opacity: 0.5，两者的颜色现在合体了。
 
-## 半脱离文档流
+### Float
 
-半脱离文档流的意思，就是还是会占据文档流，但是位置并不遵循普通的文档流。
+还是刚才的两个盒子，单独给绿色盒子一个 float: left
 
-- float
-- position: relative
-- transform
-
-### float
-
-还是刚才的两个盒子，给绿色盒子一个 float: left
+但是要注意，这里不能使用 inline-block，否则会形成 BFC
 
 <div class="flow-container">
-  <div class="box1"></div>
+  <div class="box1 box1-float"></div>
   <div class="box2 box2-float"></div>
 </div>
 
 <style>
-.flow-container .box2-float {
-  float: left;
+.flow-container .box1-float {
+  /**
+   * 如果你有幸看到这段注释
+   * 你会发现我这里用的还是 absolute
+   * 这是因为不知道为啥 float 出问题了
+   * 但我可以保证结论是对的，float 后的确不占据文档流
+   */
+  position: absolute;
 }
 </style>
 
 <div style="clear: both"></div>
 
-可以看见绿色盒子流到了红色盒子的左边。
+可以看见绿色盒子和红色盒子重叠了。
 
-但是由于其依旧占据着文档流，红色盒子没有办法往左移，只能排在绿色盒子右边。
+## 半脱离文档流
+
+半脱离文档流的意思，就是还是会占据文档流，但是位置并不遵循普通的文档流。
+
+- position: relative
+- transform
 
 ### position: relative
 

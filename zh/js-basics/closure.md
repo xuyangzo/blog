@@ -87,7 +87,7 @@ hasA(); // 会打印 sb
 
 我们反复调用 hasA，然后看看结果。
 
-![hasA](/hasA.png)
+![hasA](/hasa.png)
 
 我们可以看见 sb 一直在被打印，这就说明 a 一直停留在内存中。
 

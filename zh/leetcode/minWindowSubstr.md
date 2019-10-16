@@ -1,5 +1,5 @@
 ---
-tags: ['LeetCode', 'Top 100 Liked', '滑动窗口']
+tags: ['LeetCode', 'Top 100 Liked', '滑动窗口', '面试问题 - 算法']
 ---
 
 # 最小窗口子序列

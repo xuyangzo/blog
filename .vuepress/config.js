@@ -198,6 +198,7 @@ module.exports = {
         nav: [
           { text: 'Home', link: '/zh/' },
           { text: '关于我', link: '/zh/resume' },
+          { text: '面试问题', link: '/zh/interview' },
           {
             text: 'JS',
             items: [
@@ -303,7 +304,8 @@ module.exports = {
             children: [
               '/zh/css-tricks/documentFlow',
               '/zh/css-tricks/3col',
-              '/zh/css-tricks/verticalCenter'
+              '/zh/css-tricks/verticalCenter',
+              '/zh/css-tricks/clearFloat'
             ]
           },
           {
