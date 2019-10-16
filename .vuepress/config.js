@@ -198,7 +198,7 @@ module.exports = {
         nav: [
           { text: 'Home', link: '/zh/' },
           { text: '关于我', link: '/zh/resume' },
-          { text: '面试问题', link: '/zh/interview' },
+          { text: '前端面试', link: '/zh/interview' },
           {
             text: 'JS',
             items: [
@@ -297,7 +297,7 @@ module.exports = {
             ]
           },
           {
-            title: 'CSS布局',
+            title: 'CSS基础',
             path: '/zh/css-tricks/',
             collapsable: false,
             sidebarDepth: 1,
@@ -305,18 +305,11 @@ module.exports = {
               '/zh/css-tricks/documentFlow',
               '/zh/css-tricks/3col',
               '/zh/css-tricks/verticalCenter',
-              '/zh/css-tricks/clearFloat'
-            ]
-          },
-          {
-            title: 'CSS小技巧',
-            path: '/zh/css-tricks/',
-            collapsable: false,
-            sidebarDepth: 1,
-            children: [
-              '/zh/css-tricks/mouse-leave',
+              '/zh/css-tricks/clearFloat',
+              '/zh/css-tricks/triangle',
               '/zh/css-tricks/pure5star',
-              '/zh/css-tricks/textOverflow'
+              '/zh/css-tricks/textOverflow',
+              '/zh/css-tricks/mouse-leave',
             ]
           },
           {

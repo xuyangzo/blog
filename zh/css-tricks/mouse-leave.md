@@ -2,7 +2,7 @@
 tags: ["CSS动画"]
 ---
 
-# Mouseleave 和 Rotate 之间的问题
+# Mouseleave 以及 Rotate
 > Posted: 09.18.2019
 
 <Tag />
