@@ -253,6 +253,8 @@ tags: ['CSS布局', '面试问题 - CSS']
    * 但我可以保证结论是对的，float 后的确不占据文档流
    */
   position: absolute;
+  top: 0;
+  left: 0;
 }
 </style>
 
