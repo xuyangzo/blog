@@ -44,7 +44,7 @@ tags: ['CSS小技巧', 'CSS布局']
 }
 ```
 
-## Multiple Lines
+## 多行文本溢出
 
 多行文本溢出只适用于使用 webkit 内核的浏览器
 

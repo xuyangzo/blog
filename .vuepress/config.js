@@ -303,6 +303,8 @@ module.exports = {
             sidebarDepth: 1,
             children: [
               '/zh/css-tricks/documentFlow',
+              '/zh/css-tricks/boxModel',
+              '/zh/css-tricks/bfc',
               '/zh/css-tricks/3col',
               '/zh/css-tricks/verticalCenter',
               '/zh/css-tricks/clearFloat',
