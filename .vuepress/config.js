@@ -283,6 +283,7 @@ module.exports = {
             collapsable: false,
             sidebarDepth: 1,
             children: [
+              '/zh/js-basics/scope',
               '/zh/js-basics/promise',
               '/zh/js-basics/pq'
             ]

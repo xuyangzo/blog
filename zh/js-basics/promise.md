@@ -1,5 +1,5 @@
 ---
-tags: ['ES6']
+tags: ['ES6', '面试问题 - JS']
 ---
 
 # Promise
