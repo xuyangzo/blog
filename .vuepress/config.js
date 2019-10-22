@@ -219,7 +219,10 @@ module.exports = {
           {
             text: '网络',
             items: [
-              { text: 'Https', link: '/zh/tags.html#Https' }
+              { text: 'Http', link: '/zh/tags.html#Http' },
+              { text: 'TCP', link: '/zh/tags.html#TCP' },
+              { text: 'UDP', link: '/zh/tags.html#UDP' },
+              { text: '网络安全', link: '/zh/tags.html#网络安全' }
             ]
           },
           {
@@ -321,6 +324,8 @@ module.exports = {
             collapsable: false,
             sidebarDepth: 1,
             children: [
+              '/zh/network/xss-all',
+              '/zh/network/xss',
               '/zh/network/https'
             ]
           },

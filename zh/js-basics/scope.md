@@ -212,6 +212,10 @@ let a = 0;
 
 因此，变量提升的的确确发生了。
 
+### 兼容性
+
+![compatibility let](/comp-let.png)
+
 ## const 关键词
 
 const 关键词和 {} 结合起来，可以形成针对单一变量的块级作用域。
@@ -254,6 +258,10 @@ console.log(obj); // 会打印 {}
 ### 暂时性死区
 
 这一点和 let 关键词一样，就不提了。
+
+### 兼容性
+
+![compatibility let](/comp-let.png)
 
 ## 参考资料
 
