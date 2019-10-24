@@ -59,9 +59,12 @@ xhr.onreadystatechange = function () {
 var data = { test: 'OK' };
 
 var xhr = new XMLHttpRequest();
-// post请求一定要添加请求头才行不然会报错
-xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 xhr.open('post', 'MyServlet', true);
+/**
+ * post 请求一定要添加请求头才行，不然会报错
+ * 而且一定要在 open 后设置才行，不然会报错
+ */
+xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 /**
  * 发送的时候，需要将数据转化成字符串的形式
  * 因为这里是 form-urlencoded，不是必须为字符串

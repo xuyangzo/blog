@@ -326,6 +326,8 @@ module.exports = {
             children: [
               '/zh/network/xss-all',
               '/zh/network/xss',
+              '/zh/network/xss-stored',
+              '/zh/network/xss-dom',
               '/zh/network/https'
             ]
           },

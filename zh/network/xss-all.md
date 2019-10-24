@@ -134,6 +134,16 @@ function MyComponent() {
 
 但如果需要直接渲染 HTML，一定要进行过滤，或者确保输入内容的用户位于白名单中。
 
+## 额外资源
+
+这个网站关于 XSS 攻击讲得特别详细：[Excess XSS](https://excess-xss.com/)
+
+有空的话可以去过一遍。
+
+什么？看不懂英文？
+
+那关我屁事。
+
 ## 参考资料
 
 [前端安全之XSS攻击](https://www.cnblogs.com/unclekeith/p/7750681.html)
