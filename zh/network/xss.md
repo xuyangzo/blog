@@ -14,15 +14,19 @@ tags: ['网络安全', '面试问题 - 网络']
 
 反射型 XSS，也叫非持久型 XSS。
 
-是指发生请求时，XSS代码出现在请求URL中，作为参数提交到服务器，服务器解析并响应。
+是指发生请求时，XSS 代码出现在请求 URL 中，作为参数提交到服务器，服务器解析并响应。
 
 响应结果中包含XSS代码，最后浏览器解析并执行。
 
-因此，反射型 XSS 攻击的流程如下：
+因此，使用服务端渲染时，收到的 XSS 有极大概率为反射型 XSS。
+
+反射型 XSS 攻击的流程如下：
 
 1. 攻击者寻找具有漏洞的网站
-2. 攻击者发送带有恶意链接的邮件
-3. 被害者点击链接后，触发 XSS 攻击
+2. 攻击者给用户发了一个带有恶意字符串的链接
+3. 用户点击了该链接
+4. 服务器返回 HTML 文档，此时该文档已经包含了那个恶意字符串
+5. 客服端执行了植入的恶意脚本，XSS攻击就发生了
 
 ![xss](/xss.png)
 
@@ -49,27 +53,48 @@ const app = express();
 app.use(express.static("./xss.html"));
 app.use(express.static("./xss-result.html"));
 
+app.set('view engine', 'pug');
+
 app.get("/index", (req, res) => {
   res.sendFile(path.join(__dirname, './xss.html'));
 });
 
 app.get("/result", (req, res) => {
-  res.sendFile(path.join(__dirname, './xss-result.html'));
-});
-
-app.get("/search", (req, res) => {
   // 做一个简单的搜索
   const obj = {
     a: 'this is a',
     b: 'this is b'
   }
   const { q } = req.query;
-  if (obj[q]) res.status(200).end(`found: ${obj[q]}`);
-  else res.status(200).end(`${q} not found`);
+
+  /**
+   * SSR
+   * 使用 SSR 的目的是为了将恶意代码直接注入 HTML
+   * result.pug 在下一个 section 会讲
+   */
+  res.render(path.join(__dirname, './result.pug'), {
+    query: q,
+    result: obj[q],
+    found: obj[q] !== undefined && obj[q] !== null
+  });
 });
 
 app.listen(8081, () => console.log("SB server running on port 8081"));
 ```
+
+大家可以发现，在这里我用了 SSR。
+
+那么，为什么要用 SSR 呢？
+
+是因为反射型 XSS 攻击中，恶意的代码是作为 HTML 文档的一部分从服务器发送回来的。
+
+也就是说，当我们来到 /result 这个页面的时候，文档解析完成，恶意代码便会执行。
+
+如果用客户端渲染的话，当我们来到 /result 这个页面，服务器返回的 HTML 文档是安全的。
+
+只不过，我们接下来通过 AJAX 获取到了恶意的脚本，但这就不是反射型 XSS 了，而是 DOM 型 XSS。
+
+DOM 型 XSS 接下来会讲，这里只要记住我们必须得用 SSR 才能触发反射型 XSS 攻击就行了。
 
 ### 被攻击的客户端
 
@@ -96,31 +121,21 @@ app.listen(8081, () => console.log("SB server running on port 8081"));
 </body>
 ```
 
-搜索后跳转到结果页面：
+搜索后跳转到结果页面。
 
-```html
-<body>
-  结果：
-  <div class="result"></div>
-  <script>
-    var urlParams = new URLSearchParams(window.location.search);
-    var value = urlParams.get('q');
-    // 原生 AJAX 方法
-    var xhr = new XMLHttpRequest();
-    xhr.open('get', `http://localhost:8081/search?q=${value}`, true);
-    xhr.send();
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        /**
-         * 注意，这里是 innerHTML，而不是 innerText
-         * 后者会讲 responseText 作为字符串渲染
-         * 因此不会触发 XSS 攻击
-         */
-        document.querySelector('.result').innerHTML = xhr.responseText;
-      }
-    }
-  </script>
-</body>
+由于是 SSR，我用的模板引擎是 pug
+
+```pug
+<!-- result.pug -->
+doctype html
+html
+  head
+    meta(charset="utf-8")
+  body
+    if (found)
+      div#container found: !{result}
+    else
+      div#container !{query} not found
 ```
 
 最终实现的效果是这样的：
@@ -235,6 +250,14 @@ app.listen(8082, () => console.log("Attacker running on port 8082"));
 （出于伪装目的，可以使用 CORS 来避免报错）
 
 ![xss-error](/xss-finalerror.png)
+
+## 反射型 XSS 的请求数
+
+在反射型 XSS 执行的过程中，一共只发送了一个请求。
+
+![xss-network](/xss-network.png)
+
+恶意的代码已经被植入到了返回的 HTML 文档中。
 
 ## 参考资料
 

@@ -10,6 +10,8 @@
   "dependencies": {
     "gh-pages": "^2.1.1",
     "material-design-icons": "^3.0.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "vue-observe-visibility": "^0.4.4",
     "vuepress": "^1.1.0",
     "vuepress-plugin-code-copy": "^1.0.3-alpha",
