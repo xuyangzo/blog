@@ -51,7 +51,6 @@ const path = require('path');
 const app = express();
 
 app.use(express.static("./xss.html"));
-app.use(express.static("./xss-result.html"));
 
 app.set('view engine', 'pug');
 
@@ -139,6 +138,8 @@ html
 ```
 
 最终实现的效果是这样的：
+
+（图片就复用 DOM 型 XSS 的图片了，反正这俩对于用户来说是一样的）
 
 ![xss-vic](/xss-victim.gif)
 

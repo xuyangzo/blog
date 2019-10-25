@@ -288,6 +288,7 @@ module.exports = {
             children: [
               '/zh/js-basics/scope',
               '/zh/js-basics/promise',
+              '/zh/js-basics/weakMapSet',
               '/zh/js-basics/pq'
             ]
           },

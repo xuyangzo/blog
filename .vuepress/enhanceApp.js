@@ -21,7 +21,7 @@ export default ({
 
   // set line through
   Vue.directive('line', {
-    bind(el) {
+    bind(el, binding) {
       el.style.textDecoration = 'line-through';
       if (binding.modifiers['red']) {
         el.style.color = 'palevioletred';
