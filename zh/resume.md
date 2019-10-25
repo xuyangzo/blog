@@ -98,7 +98,7 @@ experiences:
     '明年再来，我有信心！'
   ]
 
-- company: 阿里巴巴集团
+- company: 阿里巴巴
   color: orange
   job: 前端实习
   time: 05.2019 ~ 08.2019
@@ -111,7 +111,7 @@ experiences:
 
 - company: Facebook
   color: skyblue
-  job: 前端实习被拒
+  job: 前端实习挂
   time: 09.2019 ~ 09.2019
   logo: /facebook-logo.png
   description: [
@@ -123,7 +123,7 @@ experiences:
 
 - company: Amazon
   color: darkorange
-  job: SDE 实习被拒
+  job: SDE 实习挂
   time: 09.2019 ~ 09.2019
   logo: /amazon-logo.jpg
   description: [

@@ -3,7 +3,7 @@
     v-observe-visibility="{
       callback: visibilityChanged,
       intersection: {
-        threshold: 0.2
+        threshold: 0.1
       },
       once: true
     }"
@@ -72,7 +72,7 @@ export default {
 }
 
 .resume-experience-appear {
-  animation: fadeInUp 1s forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: fadeInUp 2s forwards cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .resume-experience {
@@ -105,6 +105,40 @@ export default {
   .overwrite-card-text {
     color: rgb(60, 60, 60) !important;
     font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .resume-experience {
+    padding: 10px !important;
+
+    /* overwrite vuetify css */
+    .v-timeline-item {
+      position: relative;
+      padding-top: 40px;
+      padding-bottom: 80px;
+
+      .v-timeline-item__divider {
+        position: absolute;
+        left: -45px;
+        top: -10px;
+      }
+    }
+
+    /* overwrite vuetify css */
+    .v-timeline:not(.v-timeline--dense):not(.v-timeline--reverse):before {
+      left: 0 !important;
+    }
+
+    /* overwrite vuetify css */
+    .v-timeline:not(.v-timeline--dense):not(.v-timeline--reverse), .v-timeline-item--after .v-timeline-item__body, .v-timeline:not(.v-timeline--dense):not(.v-timeline--reverse), .v-timeline-item:nth-child(odd):not(.v-timeline-item--before), .v-timeline-item__body {
+      max-width: 97% !important;
+    }
+
+    /* overwrite vuetify css */
+    .v-timeline-item__body {
+      transform: translateX(15px);
+    }
   }
 }
 </style>

@@ -29,12 +29,7 @@
         <a :href="profile.website" target="_blank">{{ profile.website }}</a>
       </div>
     </div>
-    <img
-      v-if="profile.wechatQR"
-      :src="$withBase(profile.wechatQR)"
-      class="wechat-qr"
-      :style="{ opacity: 0 }"
-    />
+    <img v-if="profile.wechatQR" :src="$withBase(profile.wechatQR)" class="wechat-qr" />
   </div>
 </template>
 
@@ -52,6 +47,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 
   .profile-image {
     width: 130px;
@@ -63,7 +59,9 @@ export default {
 
   .wechat-qr {
     height: 150px;
-    margin-left: 100px;
+    opacity: 0;
+    position: absolute;
+    right: 200px;
   }
 
   .right {
@@ -85,6 +83,30 @@ export default {
       border-bottom: none;
       margin-top: 0px;
       margin-bottom: 10px;
+      padding-top: 0 !important;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .resume-header {
+    flex-direction: column;
+
+    .profile-image {
+      text-align: center;
+    }
+
+    .right {
+      margin-left: 0 !important;
+
+      h2 {
+        text-align: center;
+        padding-top: 2rem !important;
+      }
+    }
+
+    .wechat-qr {
+      display: none;
     }
   }
 }

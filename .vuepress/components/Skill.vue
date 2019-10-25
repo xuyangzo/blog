@@ -151,6 +151,16 @@ export default {
       .skill-percent {
         width: 100px;
         left: -10px;
+
+        .skill-progress-bar {
+          animation: none;
+          -webkit-animation: none;
+        }
+
+        .skill-progress-circle {
+          animation: none;
+          -webkit-animation: none;
+        }
       }
     }
   }
