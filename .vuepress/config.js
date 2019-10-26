@@ -326,6 +326,7 @@ module.exports = {
             sidebarDepth: 1,
             children: [
               '/zh/network/status-code',
+              '/zh/network/301vs302',
               '/zh/network/xss-all',
               '/zh/network/xss',
               '/zh/network/xss-stored',
