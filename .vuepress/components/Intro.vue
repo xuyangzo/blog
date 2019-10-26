@@ -15,7 +15,7 @@
       <v-container>
         <v-row>
           <v-col v-for="card in cards" :key="card.image" cols="12" md="4">
-            <v-card class="d-flex align-center custom-card" height="200" @click="toggle">
+            <v-card class="d-flex align-center custom-card" height="200">
               <img :src="$withBase(card.image)" class="resume-sign" />
               <v-card-title>{{ card.title }}</v-card-title>
               <v-card-text class="text-center">{{ card.text }}</v-card-text>
@@ -51,7 +51,7 @@ export default {
           text: "没有什么比身体更重要，钱也不行"
         },
         {
-          title: "十八流网文写手",
+          title: "网文写手",
           image: "/writer.jpeg",
           text: "水平还行的半途而废型十八流写手"
         },

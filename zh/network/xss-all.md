@@ -61,13 +61,16 @@ XSS = Cross-Site Scripting（跨站脚本）
 
 ## XSS 攻击的防御
 
-### cookie 设置 httpOnly
+### cookie 设置 HTTPOnly 以及 secure 属性
+
+- HttpOnly：只允许在 HTTP/HTTPS 请求中使用 cookie，禁止脚本获取cookie，如：document.cookie
+- secure：只允许在 HTTPS 请求中使用 cookie
 
 以 node 为例（添加一个中间件）
 
 ```javascript
 app.use((req, res, next) => {
-  res.setHeader("Set-Cookie", "cookiename=httponlyTest;Path=/;Domain=domainvalue;Max-Age=seconds;HTTPOnly");
+  res.setHeader("Set-Cookie", "cookiename=httponlyTest;Path=/;Domain=domainvalue;Max-Age=seconds;HTTPOnly;secure");
   next();
 });
 ```
@@ -149,5 +152,7 @@ function MyComponent() {
 [前端安全之XSS攻击](https://www.cnblogs.com/unclekeith/p/7750681.html)
 
 [Cookie中的httponly的属性和作用](https://blog.csdn.net/qq_38553333/article/details/80055521)
+
+[这可能是2019年最全的前端面试题](https://github.com/javascriptchen/interviews)
 
 <Disqus />

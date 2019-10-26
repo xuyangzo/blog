@@ -47,7 +47,8 @@ a = 'test';
 
 关于变量 a 的声明会被提升到作用域顶部。
 
-而赋值的操作不变。
+- 变量提升的顺序是：变量声明在函数声明上面，而赋值的操作位置不变
+- 并且如果是在浏览器的全局作用域下（node 不行），用 var 声明变量的时候，会导致变量挂载在 window 对象上
 
 因此会打印 undefined，而不是报错。
 
@@ -270,5 +271,7 @@ console.log(obj); // 会打印 {}
 [浅谈ES6 let命令](https://blog.csdn.net/zhouziyu2011/article/details/68067609)
 
 [浅谈ES6的let和const的异同点](https://blog.csdn.net/zhouziyu2011/article/details/71366078)
+
+[这可能是2019年最全的前端面试题](https://github.com/javascriptchen/interviews)
 
 <Disqus />

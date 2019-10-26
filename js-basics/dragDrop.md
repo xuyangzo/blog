@@ -33,7 +33,7 @@ Here is the demo:
 ::: demo vue
 <template>
   <div
-    class="container"
+    class="test-container"
     @dragover="dragOver"
     @drop="dropInContainer"
   >
@@ -60,7 +60,7 @@ Here is the demo:
 </template>
 
 <style>
-  .container {
+  .test-container {
     width: 100%;
     height: 500px;
     position: relative;

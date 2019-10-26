@@ -14,6 +14,8 @@ tags: ['JS基础', '面试问题 - JS']
 
 众所周知，JS 是一门单线程的语言。（关于JS的多线程，请参考[Web Worker](/zh/js-basics/webWorker.md)）
 
+这是为什么呢？因为 JS 会直接操作 DOM，如果多线程的话，DOM 操作会出现问题。
+
 所以 JS 会有事件轮询机制。
 
 而且，浏览器的事件轮询机制，与 Node 的，本质上是不同的。
@@ -118,5 +120,7 @@ setTimeout(function() {
 ## 参考资料
 
 [这一次，彻底弄懂 JavaScript 执行机制](https://juejin.im/post/59e85eebf265da430d571f89)
+
+[这可能是2019年最全的前端面试题](https://github.com/javascriptchen/interviews)
 
 <Disqus />

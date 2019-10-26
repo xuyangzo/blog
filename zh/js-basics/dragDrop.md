@@ -34,7 +34,7 @@ tags: ['DOM相关', '面试问题 - JS']
 ::: demo vue
 <template>
   <div
-    class="container"
+    class="test-container"
     @dragover="dragOver"
     @drop="dropInContainer"
   >
@@ -61,7 +61,7 @@ tags: ['DOM相关', '面试问题 - JS']
 </template>
 
 <style>
-  .container {
+  .test-container {
     width: 100%;
     height: 500px;
     position: relative;
