@@ -325,11 +325,11 @@ module.exports = {
             collapsable: false,
             sidebarDepth: 1,
             children: [
+              '/zh/network/status-code',
               '/zh/network/xss-all',
               '/zh/network/xss',
               '/zh/network/xss-stored',
-              '/zh/network/xss-dom',
-              '/zh/network/https'
+              '/zh/network/xss-dom'
             ]
           },
           {
