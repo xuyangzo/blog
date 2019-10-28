@@ -1,5 +1,6 @@
 ---
 tags: ['JS基础']
+date: '09.23.2019'
 ---
 
 # prototype 和 \_\_proto\_\_ 的区别

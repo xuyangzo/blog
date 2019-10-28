@@ -1,5 +1,6 @@
 ---
 tags: ['DOM相关', '面试问题 - JS']
+date: '10.09.2019'
 ---
 
 # 跨域请求 - document.domain

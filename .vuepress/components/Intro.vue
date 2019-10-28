@@ -97,14 +97,6 @@ export default {
 </script>
 
 <style lang="stylus">
-/* overwrite vuetify css */
-.custom-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .resume-intro-appear {
   animation: fadeInUp 1s forwards cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -124,6 +116,14 @@ export default {
     .v-card__text {
       text-align: center;
     }
+  }
+
+  /* overwrite vuetify css */
+  .custom-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   h2 {

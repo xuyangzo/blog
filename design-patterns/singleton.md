@@ -1,5 +1,6 @@
 ---
 tags: ['设计模式', 'TypeScript', '面试问题 - 设计模式']
+date: '09.28.2019'
 ---
 
 # TypeScript 实现单例模式

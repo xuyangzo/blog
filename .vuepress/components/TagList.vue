@@ -19,12 +19,12 @@
 export default {
   data() {
     return {
-      tag: decodeURI(window.location.hash.slice(1))
+      tag: decodeURI(this.$route.hash.slice(1))
     };
   },
   methods: {
     tags() {
-      const tag = decodeURI(window.location.hash.slice(1));
+      const tag = decodeURI(this.$route.hash.slice(1));
       this.tag = tag;
       let articles = [];
       for (let page of this.$site.pages) {

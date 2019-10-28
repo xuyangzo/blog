@@ -1,5 +1,6 @@
 ---
 tags: ['Vue']
+date: '09.19.2019'
 ---
 
 # Vue 的 Hashchange 事件
@@ -51,7 +52,7 @@ watch: {
 ```javascript
 methods: {
   tags() {
-    const tag = window.location.hash.slice(1).replace(/%20/g, " ");
+    const tag = this.$route.hash.slice(1).replace(/%20/g, " ");
     let articles = [];
     
     // 在这里更新...

@@ -1,5 +1,6 @@
 ---
 tags: ['设计模式', 'TypeScript', '面试问题 - 设计模式']
+date: '10.10.2019'
 ---
 
 # TypeScript 实现简单工厂
@@ -86,6 +87,7 @@ try {
 ## 参考资料
 
 [从ES6重新认识JavaScript设计模式(二): 工厂模式](https://www.jianshu.com/p/11918dd0f694)
+
 [工厂模式](https://www.runoob.com/design-pattern/factory-pattern.html)
 
 <Disqus />

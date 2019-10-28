@@ -29,6 +29,7 @@
         <a :href="profile.website" target="_blank">{{ profile.website }}</a>
       </div>
     </div>
+    <!-- 能发现这段代码的都不是一般人 -->
     <img v-if="profile.wechatQR" :src="$withBase(profile.wechatQR)" class="wechat-qr" />
   </div>
 </template>
@@ -61,7 +62,7 @@ export default {
     height: 150px;
     opacity: 0;
     position: absolute;
-    right: 200px;
+    right: 0;
   }
 
   .right {

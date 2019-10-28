@@ -1,5 +1,6 @@
 ---
 tags: ['ES6', '面试问题 - JS']
+date: '10.24.2019'
 ---
 
 # WeakMap 和 WeakSet
