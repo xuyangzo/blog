@@ -43,7 +43,7 @@ tags: ['JS基础', '面试问题 - JS']
 
 要明白 JS 的内存泄漏究竟是怎么产生的，首先得明白 JS 的垃圾回收机制。
 
-详情可以参考这篇文章：[JS 的垃圾回收机制](/zh/js-basics/gc.md)
+详情可以参考这篇文章：[JS 的垃圾回收机制](/js-basics/gc.md)
 
 ## 意外的全局变量
 
@@ -88,7 +88,7 @@ function foo(arg) {
 
 在 JavaScript 文件头部加上 'use strict'，可以避免此类错误发生。
 
-至于严格模式究竟能干些什么，可以参考这篇文章：[严格模式](/zh/js-basics/strict.md)
+至于严格模式究竟能干些什么，可以参考这篇文章：[严格模式](/js-basics/strict.md)
 
 ## 被遗忘的计时器或回调函数
 
@@ -155,7 +155,7 @@ console.log(elements.container); // 原 container 节点
 
 ## 闭包
 
-不知道闭包是什么的小伙伴可以参考这篇文章：[闭包](/zh/js-basics/closure.md)
+不知道闭包是什么的小伙伴可以参考这篇文章：[闭包](/js-basics/closure.md)
 
 以下是一段关于闭包导致内存泄漏的代码。
 

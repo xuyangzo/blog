@@ -1,41 +1,43 @@
 ---
-tags: ['LeetCode', 'Top 100 Liked', 'Tree']
+tags: ['LeetCode', 'Top 100 Liked', '树', '面试问题 - 算法']
 ---
 
-# Serialize and Deserialize Binary Tree
+# 序列化和反序列化二叉搜索树
 
 > Posted: 09.21.2019
 
 <Tag />
 
-## Description
+## 描述
 
 ![Serialize and Deserialize Binary Tree](/serializeBST.png)
 
-## Algorithm
+## 算法
 
-- Key idea is to use DFS and preorder traversal
-  - BFS will also work here, but BFS requires the whole level to be complete,
-  which means the serialized string will contain a lot of unnecessary `null`.
-  Such waste can be avoided by DFS
-- Serialize
-  - Use DFS
-  - If current node is null, concat `null` to string
-  - Leave the trailing unnecessary `null`
-    - Because for the bottom of right subtree, we will always have unnecessary `null`
-- Deserialize
-  - Use preorder traversal
-    - Preorder traversal will work, because for preorder traversal, it goes deep down to
-    the bottom first, so the order of values in string is same as the orde of DFS
-  - Split the string into list of values
-  - During recursion
-    - Init current node
+- 核心思想是使用深度遍历和前序遍历
+  - 广度遍历在这里也可以，但是广度遍历要求每一层都完整地体现
+  - 因此，假如说某一层只有一个节点，而别的都是 null，那么广度遍历就会需要你把这一层所有的 null 都算上
+  - 因此广度遍历会带有很多不必要的 null，而深度遍历可以避免这一点
+- 序列化
+  - 使用深度遍历
+    - 如果当前节点为 null，那么就添加 null 到字符串里
+  - 当我们结束时，字符串的最后会有不必要的 null，这个先不用管
+- 反序列化
+  - 使用前序遍历
+    - 前序遍历的顺序是：父节点 -> 左侧子节点 -> 右侧子节点
+    - 这也就意味着，如果左侧子节点一直存在，那么就会先一路走左侧
+    - 这和深度遍历的顺序其实是一样的
+  - 把字符串给 split 成数组
+    - 这一步是必要的，因为数组作为引用对象，是所有递归的函数共享的
+    - 因此，每当一个元素从数组中被移除，所有递归的函数共享变化
+  - 在递归的过程中
+    - 设置当前的节点
     - node.left = preorder(list)
     - node.right = preorder(list)
-    - Return current node
+    - 返回当前的节点
 
 
-## Code
+## 代码
 
 ```javascript
 /**
@@ -56,7 +58,7 @@ var serialize = function(root) {
     // edge case
     if (!root) return '';
     
-    // level order traversal
+    // 深度遍历
     const stack = [];
     stack.push(root);
     let ans = '';
@@ -85,7 +87,7 @@ var deserialize = function(data) {
     // edge case
     if (!data.length) return null;
     
-    // preorder traversal
+    // 前序遍历
     const lists = data.split(',');
     return deserializeHelper(lists);
 };

@@ -16,7 +16,7 @@ tags: ['CSS小技巧', '面试问题 - CSS']
 
 ![box](/box.png)
 
-这张图如果看不懂的话，可以参考：[CSS 盒模型](/zh/css-tricks/cssBox.md)
+这张图如果看不懂的话，可以参考：[CSS 盒模型](/css-tricks/cssBox.md)
 
 画三角形的核心，就是利用 border 那一圈。
 

@@ -1,26 +1,26 @@
 ---
-tags: ['JS Basics', 'Interview Problems']
+tags: ['JS基础', '面试问题 - JS']
 ---
 
-# Array-Like Object
+# 类数组对象
 
 > Posted: 09.25.2019
 
 <Tag />
 
-## Properties
+## 类数组对象的属性
 
-1. The element is of type Object and is not empty
-2. It has `length` property
-3. The `length` property is a non-negative finite integer
+1. 该对象类型为 Object，并且不为空
+2. 该对象具有 `length` 属性
+3. 该对象的 `length` 属性为有限非负整数
 
-If satisfies the above condition, then the object is an array-like object.
+如果满足以上三种条件，那么该对象便是类数组。
 
-## Check Array-Like Object
+## 检查一个对象是否为类数组
 
-> The function is written in Javascript: The Definitive Guide
+> 这个例子直接来自于[《javascript权威指南》](https://www.inkling.com/read/javascript-definitive-guide-david-flanagan-6th/chapter-7/array-like-objects)
 
-The most significant idea is: regardless of other properties, the deterministic property is the **LENGTH**!!!
+其最重要的思想是：不管别的属性怎么样，最终决定性的属性还是**length**！！！
 
 ```javascript
 // Determine if o is an array-like object.
@@ -41,7 +41,7 @@ function isArrayLike(o) {
 }
 ```
 
-## Check Function Examples
+## 检查函数的例子
 
 ```javascript
 const obj = {
@@ -66,17 +66,17 @@ function arrayLike() {
 arrayLike('test', 1, [-1, 0]);
 ```
 
-## Typical Array-Like Object: Arguments
+## 典型的类数组：Arguments
 
-### Properties of `arguments`
+### arguments 的属性
 
-`arguments` is a typical array-like object.
+`arguments` 是一个典型的类数组对象。
 
-Let's see what properties it has:
+我们来看一下它有哪些属性：
 
 ![arguments](/arguments.png)
 
-Basically, the object is like the following:
+本质上，arguments 具有以下的属性：
 
 ```javascript
 const arguments = {
@@ -84,44 +84,46 @@ const arguments = {
   1: 1,
   2: [-1, 0],
   length: 3,
-  callee: arrayLike, // the function that arguments belongs to
+  callee: arrayLike, // arguments 属于的函数
   /**
-   * see here, the __proto__ does not points to Array's prototype
-   * instead, it points to Object's prototype
+   * 在这里，__proto__ 对象并没有指向 Array 的 prototype
+   * 而是指向了 Object 的 prototype
    */
   __proto__: Object.prototype
 }
 ```
 
-### Properties of Object.prototype
+### Object.prototype 的属性
 
-Below is the `__proto__` property of arguments (= Object.prototype)
+我们可以看一下 `__proto__` 对象具体的属性（也就是 Object.prototype 的属性）
 
 ![arguments __proto__](/args-proto.png)
 
 <br />
 
-Why `arguments` does not have Array methods like forEach, push, pop...?
+那么其实我们可以得出结论了。
 
-<span style="color: palevioletred">**That's the reason**</span>: those methods belongs to `Array.prototype`, but arguments' `__proto__` points to `Object.prototype`, which does not have those methods.
+为什么 `arguments` 没有数组的方法，比如说：forEach、push、pop... 等等
 
-It is similar for other array-like objects.
+<span v-red>**这是因为**</span>: 这些方法属于 `Array.prototype`，但 arguments 的 `__proto__` 指向了 `Object.prototype`，这玩意儿可没有这些数组的方法。
 
-### Properties of A True Array
+别的类数组对象也是类似的。
 
-The `__proto__` of an Array points to Array.prototype
+### 真正的数组的属性
+
+真正的数组的 `__proto__` 对象指向了 Array.prototype
 
 ![array __proto__](/array-proto.png)
 
-## Cast Array-Like Object to Array
+## 类数组转化成数组
 
 ### Array.prototype.slice.call()
 
-We know that `arr.slice()` will return the array itself if we do not pass parameters to slice method.
+我们知道在没有参数的情况下，`array.slice()` 会返回原来的数组。
 
-The array-like objects do not have `slice` method.
+类数组对象当然没有 `slice` 方法。
 
-But we can execute the slice method from Array.prototype
+但我们可以通过 `call` 来执行 Array.prototype 的 slice 方法
 
 ```javascript
 function arrayLike() {
@@ -135,10 +137,10 @@ arrayLike('test', 1, [-1, 0]);
 
 ### Array.from()
 
-There is compatibility issue with IE for this approach.
+这个方法存在着兼容性的问题（但很小）
 
-- IE 11 and all prevous versions do not support
-- Other modern browsers all support
+- IE 这弱智玩意儿，版本11以及之前都不支持
+- 别的浏览器较新的版本都支持
 
 ```javascript
 function arrayLike() {
@@ -152,9 +154,9 @@ arrayLike('test', 1, [-1, 0]);
 
 ### Spread Operator
 
-This is ES6's feature.
+这是 ES6 的特性
 
-Make sure to compile to ES5 first, otherwise will have large compatibility issues.
+在浏览器使用前，要编译为 ES5 的代码，否则会有兼容性的问题
 
 ```javascript
 function arrayLike() {
@@ -166,6 +168,6 @@ function arrayLike() {
 arrayLike('test', 1, [-1, 0]);
 ```
 
-## Reference
+## 参考资料
 
 [javascript 类数组](https://segmentfault.com/a/1190000000415572)

@@ -1,16 +1,16 @@
 ---
-tags: ['CSS Tricks', 'CSS Layout']
+tags: ['CSS小技巧', 'CSS布局']
 ---
 
-# Text Overflow
+# 文本溢出
 
 > Posted: 09.23.2019
 
 <Tag />
 
-## Single Line
+## 单行文本溢出
 
-Single line text overflow does not have any compatibility issue.
+单行文本溢出没有兼容性的问题。
 
 <p class='overflow'>
   ThisismyfirsttimethatIwouldliketoinformyouthat
@@ -26,7 +26,7 @@ Single line text overflow does not have any compatibility issue.
     padding: 10px;
     border-radius: 5px;
     width: 150px;
-    height: 30px;
+    height: 50px;
     line-height: 30px;
     overflow: hidden;
     white-space: nowrap;
@@ -44,12 +44,12 @@ Single line text overflow does not have any compatibility issue.
 }
 ```
 
-## Multiple Lines
+## 多行文本溢出
 
-Multiple line text overflow only works for browsers that have a webkit core.
+多行文本溢出只适用于使用 webkit 内核的浏览器
 
-- Chrome, Safari, Edge, Opera do work
-- IE, Firefox do not work
+- Chrome, Safari, Edge, Opera 有效
+- IE, Firefox 无效
 
 <p class='overflow-2'>
   ThisismyfirsttimethatIwouldliketoinformyouthatasdhjasdyqwgagvsdfqwejhasdftsadbhj123asdgh
@@ -62,18 +62,20 @@ Multiple line text overflow only works for browsers that have a webkit core.
 <div style="clear: both"></div>
 
 <p class='overflow-2'>
-  Hello my name is lynch and my hobby is not writing code. I like to find an internship
+  Hello my name is lynch and my hobby is not writing code. I like to find a girlfriend
 </p>
 
 <p class='overflow-2 shorter'>
-  Hello my name is lynch and my hobby is not writing code. I like to find an internship
+  Hello my name is lynch and my hobby is not writing code. I like to find a girlfriend
 </p>
 
 <div style="clear: both"></div>
 
-<span style='color: palevioletred'>As you can see from above, setting text overflow will not
-affect the following words, which means if the height is enough high, the user is still able
-to see unexpected words (able to see the whole line).</span>
+<span v-red>**从上面的例子可以看出，设置多行文本溢出后，剩下的内容并没有消失，而是在下面一行继续展示。**</span>
+
+这也就意味着，我们必须控制好 container 的高度。
+
+如果高度过高，我们会把不希望展示的内容一起展示出来。
 
 <style>
   .overflow-2 {
@@ -81,7 +83,7 @@ to see unexpected words (able to see the whole line).</span>
     padding: 10px;
     border-radius: 5px;
     width: 150px;
-    height: 150px;
+    height: 168px;
     line-height: 30px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     overflow: hidden;
@@ -91,10 +93,11 @@ to see unexpected words (able to see the whole line).</span>
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     float: left;
+    margin-right: 50px !important;
   }
 
   .shorter {
-    height: 118px;
+    height: 138px;
     float: left;
     margin-left: 50px;
   }
@@ -105,10 +108,10 @@ to see unexpected words (able to see the whole line).</span>
 .overflow {
   overflow: hidden;
   text-overflow: ellipsis;
-  word-wrap: break-word; /* break the word, see examples above */
+  word-wrap: break-word; /* 用来打破某个单词 */
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4; /* line number */
+  -webkit-line-clamp: 4; /* 行数 */
 }
 ```
 

@@ -1,3 +1,0 @@
-<ClientOnly>
-  <TagList />
-</ClientOnly>

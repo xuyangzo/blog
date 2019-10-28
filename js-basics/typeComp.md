@@ -1,24 +1,23 @@
 ---
-tags: ['JS Basics', 'Interview Problems']
+tags: ['JS基础', '面试问题 - JS']
 ---
 
-# Type Comparison
+# 类型比较
 
 > Posted: 09.21.2019
 
 <Tag />
 
-## JS Types
+## JS类型
 
-First, we need to understand variable types of JS.
+这篇文章不是关于JS类型的细节的，所以只会简单地涉及到JS的类型。 
 
-This article is not just about types, so I will just give a brief introduction on type itself.  
-For more information, please refer to [More JS Types](/js-basics/moreTypes.md)
+更多关于JS类型的内容，可以参考：[JS类型详解](/js-basics/moreTypes.md)
 
 
-### Primitive Types
+### 基本类型
 
-> Primitive types are immutable, which means they can be replaced, but not mutated
+> 基本类型的对象是无法更改的。它们可以被替换，但是无法被更改
 
 - String
 - Number
@@ -27,25 +26,25 @@ For more information, please refer to [More JS Types](/js-basics/moreTypes.md)
 - Null
 - Symbol
 
-1. All primitive type objects have `valueOf` method, which returns its primitive value  
-2. And all primitive type obecjts have `toString` method, which returns a string that indicates it
+1. 所有基本类型的对象都有 `valueOf` 方法，该方法会返回它的 primitive value
+2. 所有基本类型的对象都有 `toString` 方法，该方法会返回一个指定了其 value(类型)的字符串
 
 ```javascript
 'test'.valueOf(); // returns 'test'
 'test'.toString(); // returns 'test'
 ```
 
-### Complex Types
+### 引用类型
 
-> Complex types are mutable
+> 引用类型的对象式可以更改的
 
-JS only has one complex type: `Object`
+JS只有一种引用类型: `Object`
 
-Array is an object, Function is an object.  
-Everything in JS can be considered as an object.
+数组是Object, 函数是Object  
+任何JS的类型都可以被认为是Object
 
-1. All objects have `toString` method, but only primitive type objects have `valueOf` method
-2. All objects have address that are stored in stack memory which points to values in heap memory
+1. 所有对象都有 `toString` 方法，但只有基本类型的对象有 `valueOf` 方法
+2. 所有对象的指针都存在栈内存中，其指向的 value 则是存在堆内容中
 
 ```javascript
 const obj = {
@@ -66,28 +65,27 @@ say.toString();
 
 ## `==` vs. `===`
 
-### comparator `==`
+### 比较符号 `==`
 
-1. Cast the left part and right part to the same type
-2. Call `valueOf` method and compare both sides' values
+1. 将左侧与右侧的内容转换成相同类型的 value
+2. 调用 `valueOf` 方法，然后比较两侧的 value
 
-### comparator `===`
+### 比较符号 `===`
 
-1. Compare type first (for object, compare their address)
-2. Execute `==`
+1. 首先比较两者的类型（对于对象来说，比较它们的地址）
+2. 执行 `==`
 
-## Type Castc During `==`
+## `==` 中的类型转换
 
-JS's `==` has 5 rules for type casting before comparison
+JS `==` 导致的类型转换，有5条原则：
 
-1. If a party is Boolean, cast it to true -> 1/false -> 0 before comparison
-2. If a party is String and another is Number, cast String to Number (call `Number(str)`)
-3. If a party is Object and another is not, call `Object.prototype.valueOf`. If object does 
-not have valueOf method (not primitive type), call `Object.prototype.toString` instead
-4. If both parties are Object, compare their address
-5. NaN compares with anything (using == or ===) will be false, even itself
+1. 如果有一侧是 Boolean，将其转换为： true -> 1/false -> 0
+2. 如果有一侧是 String， 另一侧是Number，将 String 转换为 Number（调用 `Number(str)`）
+3. 如果有一侧是 Object，另一侧不是，那么调用 `Object.prototype.valueOf`。如果该对象没有 valueOf 方法（不是基本类型），调用 `Object.prototype.toString` 方法
+4. 如果两侧都是 Object，那么比较它们的地址
+5. NaN 和任何数据比较(用 == 或者 === 比较)，都会返回 false，甚至和它自己比较也是
 
-## Examples
+## 例子
 
 ```javascript
 // rule 1
@@ -123,7 +121,7 @@ console.log(obj == { a: 2 }); // false
 // complex examples
 
 /**
- * Premises, type casts without ==
+ * 前提：非 == 比较下的类型转换
  */
 if ([]) { /* will execute */ } 
 if ({}) { /* will execute */ } 
@@ -164,7 +162,7 @@ console.log([] == ![]); // true
 console.log({} == !{}); // false
 ```
 
-## Reference
+## 参考资料
 
 [为什么 \[\] 是 false 而 !!\[\] 是 true](https://www.h5jun.com/post/why-false-why-true.html)
 

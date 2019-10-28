@@ -52,8 +52,7 @@ export default {
           themeConfig.repo ||
           themeConfig.nav ||
           this.$themeLocaleConfig.nav) &&
-        this.$page.regularPath !== "/" &&
-        this.$page.regularPath !== "/zh/"
+        this.$page.regularPath !== "/"
       );
     },
 

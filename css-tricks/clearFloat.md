@@ -167,7 +167,7 @@ tags: ['CSS布局', '面试问题 - CSS']
 
 ## 利用 BFC
 
-关于 BFC 是啥，可以参考我的这篇文章：[BFC](/zh/css-tricks/bfc.md)
+关于 BFC 是啥，可以参考我的这篇文章：[BFC](/css-tricks/bfc.md)
 
 简单来说，我们希望在 box1 和 box2 外面套一个 container，然后把那个 container 变成 BFC。
 
@@ -237,7 +237,7 @@ visible 以外（hidden、auto、scroll）的值都可以触发 BFC。
 
 我们可以发现，在第一行和第二行之间，有一段很小的空白。
 
-至于为什么会有这一段空白，可以参考我的这篇文章：[标准文档流](/zh/css-tricks/documentFlow.md)
+至于为什么会有这一段空白，可以参考我的这篇文章：[标准文档流](/css-tricks/documentFlow.md)
 
 而剩下两种方法则没有这样的问题。
 

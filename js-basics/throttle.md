@@ -1,26 +1,26 @@
 ---
-tags: ['DOM', 'Interview Problems']
+tags: ['DOM相关', '面试问题 - JS']
 ---
 
-# Throttle and Debounce
+# 节流和防抖函数
 
 > Posted: 09.23.2019
 
 <Tag />
 
-## Throttle
+## 节流函数
 
-> Purpose: limit number of events triggered in a certain amount of time
+> 目的：限定一定时间内，某个特定事件触发的次数
 
-### When to Use
+### 什么时候用
 
-When you want to restrict the trigger of events within a certain amount of time.
+当你想要限制某个特定事件，在某段时间内的触发次数时。
 
-For example, trigger `onscroll` events once per second
+例如，在1秒内，仅仅触发一次`onscroll`
 
-### Code
+### 代码
 
-With setTimeout:
+使用 setTimeout:
 ```javascript
 var canRun = true;
 document.onscroll = function() {
@@ -36,7 +36,7 @@ document.onscroll = function() {
 
 <br />
 
-Without setTimeout:
+不使用 setTimeout:
 ```javascript
 var startTime = new Date();
 document.onscroll = function() {
@@ -48,18 +48,19 @@ document.onscroll = function() {
 }
 ```
 
-## Debounce
+## 防抖函数
 
-> Execute certain code after an event stop being triggered for a certain amount of time
+> 在某个事件停止触发后的一段时间后，执行代码
 
-### When to use
+### 什么时候用
 
-When you want to postpone an event until it is not repeatedly triggered.
+在某个事件一直被触发时，你不想执行特定的代码。  
+而当该事件停止触发一段时间后，你想要执行该代码。
 
-For example, when the user keeps typing in the search bar, show nothing.  
-As long as he/she finishes typing for 1 second, show the result.
+例如，当用户在搜索框输入的时候，不要展示搜索的结果。  
+在用户输完1秒后，展示搜索的结果。
 
-### Code
+### 代码
 
 ```javascript
 var timer = false;
@@ -71,7 +72,48 @@ document.onscroll = function() {
 }
 ```
 
-## Reference
+## 节流与防抖相结合
+
+那么问题来了，节流函数与防抖函数可以结合吗？
+
+答案是肯定的，因为这两者其实负责的是完全不同的东西，没有任何冲突。
+
+那么，如果将两者结合，实现的是什么效果呢？
+
+那就是：在一定时间内，如果连续触发的话，只会生效一次，并且只有最后一次触发生效。
+
+```javascript
+function hello() {
+  console.log('hello');
+}
+
+var timer = false;
+var start = new Date();
+
+function throttle(method, delay, atleast) {
+  var current = new Date();
+  var context = this;
+  var args = arguments;
+
+  return function() {
+    if (current - start > atleast) {
+      // 函数节流
+      method.call(context, args);
+      start = current;
+    } else {
+      // 函数防抖
+      clearTimeout(timer);
+      timer = setTimeout(function() {
+        method.call(context, args);
+      }, delay);
+    }
+  }
+}
+
+document.getElementById('app').onscroll = throttle(hello, 200, 1000);
+```
+
+## 参考资料
 
 [JavaScript函数节流和函数防抖之间的区别](https://www.cnblogs.com/walls/p/6399837.html)
 

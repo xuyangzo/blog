@@ -131,7 +131,7 @@ BFC 内部的 box 会在垂直方向，从顶部开始一个接着一个地放�
 
 准确来说，BFC 的区域不会与浮动元素的区域重叠。
 
-我们知道设置浮动后，元素会脱离文档流。关于这一点，可以参考我的这篇文章：[标准文档流](/zh/css-tricks/documentFlow.md)。
+我们知道设置浮动后，元素会脱离文档流。关于这一点，可以参考我的这篇文章：[标准文档流](/css-tricks/documentFlow.md)。
 
 脱离文档流后，接下去的元素会占据该元素本来的位置。
 
@@ -242,7 +242,7 @@ BFC 内部的 box 会在垂直方向，从顶部开始一个接着一个地放�
 
 即使存在浮动也是如此。
 
-不知道啥是 margin box 和 border box 的，可以参考我这篇文章：[CSS盒模型](/zh/css-tricks/boxModel.md)
+不知道啥是 margin box 和 border box 的，可以参考我这篇文章：[CSS盒模型](/css-tricks/boxModel.md)
 
 ```css
 .bfc-parent {

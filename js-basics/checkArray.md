@@ -1,19 +1,19 @@
 ---
-tags: ['JS Basics', 'Interview Problems']
+tags: ['JS基础', '面试问题 - JS']
 ---
 
-# Check if An Object is Array
+# 检查一个对象是否为数组
 
 > Posted: 09.21.2019
 
 <Tag />
 
-## Facts to Know
+## 一些事实
 
-1. An array is a kind of object
-2. There is no type called `Array`
+1. 数组其实本质上就是对象
+2. JS没有一种名叫 `Array` 的类型
 
-## Ways to Check if An Object is Array
+## 检查对象是否为数组的方法
 
 ### Array.isArray
 
@@ -25,7 +25,7 @@ console.log(Array.isArray({ 1: 'x', 2: 'y' })); // false
 ### instanceof
 
 ```javascript
-// will search array's __proto__ chain to look for Array.prototype
+// 该方法会搜索 array 的 __proto__ chain（原型链），去寻找 Array.prototype
 console.log([] instanceof Array); // true
 console.log({} instanceof Object); // true
 ```
@@ -33,7 +33,6 @@ console.log({} instanceof Object); // true
 ### constructor
 
 ```javascript
-// each object (including primitive types) has constructor
 console.log([].constructor == Array); // true
 console.log({}.constructor == Object); // true
 console.log(''.constructor == String); // true

@@ -1,57 +1,57 @@
 ---
-tags: ['JS Basics', 'Interview Problems']
+tags: ['JS基础', '面试问题 - JS']
 ---
 
-# ES5 Inheritance
+# ES5 的继承
 
 > Posted: 09.23.2019
 
 <Tag />
 
-## Preparation
+## 开始前的准备
 
-Create a parent object to use for all the following situations.
+创建一个接下来所有例子都会共享的父类
 
 ```javascript
 function Animal(type) {
-  // basic type
+  // 基本类型
   this.type = type;
-  // reference type
+  // 引用类型
   this.features = [];
-  // method
+  // 方法
   this.greeting = function() {
     console.log(this.type + ' greets you!');
   }
 }
 
-// method on prototype
+// 加在 prototype 上的方法
 Animal.prototype.eat = function() {
   console.log(this.type + ' is eating!');
 }
 ```
 
-## Prototype Inheritance
+## 原型链继承
 
-> Key idea: use parent's instance as child's prototype
+> 核心思想：把父类的实例用作子类的 prototype
 
-**Advantages:**
+**优点：**
 
-1. Easy to write
-2. All child instances can have access to parent's newly added prototype attributes/methods
+1. 写起来简单
+2. 所有子类的实例，都能够获取父类 prototype 上新增的属性和方法
 
-**Disadvantages:**
+**缺点：**
 
-1. All attributes from parent's prototype will be shared by all instances, so if we change the reference type of values in one instance, all values in all instances will be changed
-2. If want to add new attributes/methods to prototype, has to do that after `new`
-3. Cannot implement multiple inheritance (an instance has more than one parent)
-4. When creating child instance, cannot pass parameters to parent function
+1. 所有来自父类 prototype 的属性都会被子类的实例共享，所以如果我们在某个实例中更改了来自父类的某个引用类型的属性，所有子类的实例都会共享这个改变
+2. 如果我们想要在子类的 prototype 上添加属性/方法，必须在 `new` 之后做
+3. 无法实现多继承（一个子类继承多个父类）
+4. 创建子类实例时，无法把参数传入到父类的构造函数
 
 ```javascript
 function Cat(color, type) {
   /**
-   * Disadvantage 4
-   * Cannot do something like: super(type);
-   * Has to manually set this.type
+   * 缺点 4
+   * 无法实现类似这样的效果: super(type);
+   * 必须手动设置 this.type
    */
   this.type = type;
   this.color = color;
@@ -59,101 +59,101 @@ function Cat(color, type) {
 Cat.prototype = new Animal('cat');
 
 /**
- * Disadvantage 2
- * Has to add attributes/methods to prototype after new operation
+ * 缺点 2
+ * 必须在 `new` 之后，添加属性/方法
  */
 Cat.prototype.greeting = function() {
   console.log(this.color + ' cat says hello');
 };
 
-// instantiate 1
+// 实例化 - 1
 var cat = new Cat('blue', 'big-cat');
-// will log 'Cat {type: "big-cat", color: "blue"}'
+// 会打印 'Cat {type: "big-cat", color: "blue"}'
 console.log(cat);
 
-// instantiate 2
+// 实例化 - 2
 var cat2 = new Cat('red', 'small-cat');
-// will log 'red cat says hello'
+// 会打印 'red cat says hello'
 cat2.greeting();
 
 /**
- * Disadvantage 1
- * Will log ['cute'], but that's cat1's feature, not cat2's
+ * 缺点 1
+ * 会打印 ['cute']，但这是 cat1 的 feature，而不是 cat2 的
  * 
- * Because by setting cat.features, 
- * it is actually setting Cat.prototype.features
+ * 因为当我们设置 cat.features 时，
+ * 我们本质上在设置 Cat.prototype.features
  * 
- * And when logging cat2.features,
- * it is actually logging Cat.prototype.features
+ * 而当我们打印 cat2.features 时，
+ * 我们本质上在打印 Cat.prototype.features
  */
 cat.features.push('cute');
 console.log(cat2.features);
 
-console.log(cat instanceof Animal); //true 
-console.log(cat instanceof Cat); //true
+console.log(cat instanceof Animal); // true 
+console.log(cat instanceof Cat); // true
 ```
 
-## Constructor Inheritance
+## 构造函数继承
 
-> Key idea: call parent's constructor, namely copy parent's instance to child
+> 核心思想：调用父类的构造函数, 简单来说就是把父类的实例复制给子类
 
-**Advantages:**
+**优点：**
 
-1. Solve the shared reference problem in Prototype Inheritance
-2. Solve the inability for multiple inheritance problem in Prototype Inheritance
-3. Able to pass parameters to parent for instantiation
+1. 解决了原型链继承中，共享引用类型的问题
+2. 可以实现多继承（调用多个父类的构造函数）
+3. 实例化时，可以给父类的构造函数传递参数
 
-**Disadvantages:**
+**缺点：**
 
-1. Child's instance is only its instance, not parent's instance
-2. Cannot inherit parent's prototype's methods/attributes
-3. Every child has a copy of parent's instance, which affects the efficiency
+1. 子类的的实例只是子类的实例，而不是父类的实例
+2. 无法继承父类 prototype 的属性及方法
+3. 每个子类都有父类的复制，影响了效率
 
 ```javascript
 function Cat(type, age) {
   /**
-   * Advantage 1
-   * Able to pass parameters to parent's constructor
-   * Same as: Animal.prototype.constructor.call(this, type)
+   * 优点 1
+   * 可以给父类的构造函数传递参数
+   * 等同于: Animal.prototype.constructor.call(this, type)
    */
   Animal.call(this, type);
   this.age = age;
 }
 
 var cat = new Cat('big-cat', 2);
-// will log 'Cat {type: "big-cat", features: Array(0), greeting: ƒ, age: 2}'
+// 会打印 'Cat {type: "big-cat", features: Array(0), greeting: ƒ, age: 2}'
 console.log(cat);
 
 /**
- * Disadvantage 1
- * cat is only the instance of Cat, not Animal
+ * 缺点 1
+ * cat 不是 父类 Animal 的实例
  */
 console.log(cat instanceof Animal); // false
 console.log(cat instanceof Cat); // true
 
 /**
- * Disadvantage 2
- * Cannot inherit parent's prototype's methods/attributes
- * Will throw a TypeError, 'cat.eat is not a function'
+ * 缺点 2
+ * 无法继承父类 prototype 的属性及方法
+ * 会 throw 一个 TypeError, 'cat.eat is not a function'
  */
 cat.eat();
 ```
 
-## Instance Inheritance
+## 实例继承
 
-> Key Idea: Add new attributes/methods to parent's instance, return as child's instance
+> 核心思想：在父类的实例上添加属性/方法，然后作为子类的实例返回
 
-**Advantages:**
+**优点：**
 
-1. Does not need `new` keyword, Child() = new Child()
-2. Solve the shared reference problem in Prototype Inheritance
-3. Able to pass parameters to parent for instantiation
-4. All child instances can have access to parent's newly added prototype attributes/methods
+1. 不需要 `new` 关键字，Child() = new Child()
+2. 解决了原型链继承中，共享引用类型的问题
+3. 实例化时，可以给父类的构造函数传递参数
+4. 所有子类的实例，都能够获取父类 prototype 上新增的属性和方法
 
-**Disadvantages:**
+**缺点：**
 
-1. The instance is parent's instance not child's instance
-2. Does not support multiple inheritance
+1. 子类的的实例只是子类的实例，而不是父类的实例
+2. 不支持多继承
 
 ```javascript
 function Cat(type) {
@@ -163,39 +163,39 @@ function Cat(type) {
 }
 
 var cat = new Cat('dog-cat');
-// will log '{type: "dog-cat", features: Array(0), greeting: ƒ, color: "pink"}'
+// 会打印 '{type: "dog-cat", features: Array(0), greeting: ƒ, color: "pink"}'
 console.log(cat);
 
 /**
- * Disadvantage 1
- * cat is only the instance of Cat, not Animal
+ * 缺点 1
+ * cat 不是父类 Animal 的实例
  */
 console.log(cat instanceof Animal); // true
 console.log(cat instanceof Cat); // false
 ```
 
-## Copy Inheritance
+## 拷贝继承
 
-> Key idea: copy every enumerable properties in parent to child's prototype
+> 核心思想：复制父类实例所有可枚举的属性/方法，添加到子类的 prototype 上
 
-**Advantages:**
+**优点：**
 
-1. Solve the shared reference problem in Prototype Inheritance
-2. Able to pass parameters to parent for instantiation
-3. Support multiple inheritance
+1. 解决了原型链继承中，共享引用类型的问题
+2. 实例化时，可以给父类的构造函数传递参数
+3. 支持多继承
 
-**Disadvantages:**
+**缺点：**
 
-1. The instance is parent's instance not child's instance
-2. The efficiency is low because need to copy most properties
-3. Cannot obtain parent's non-enumerable properties
+1. 子类的的实例只是子类的实例，而不是父类的实例
+2. 因为需要复制属性，所以效率比较低
+3. 无法获取到父类实例无法枚举的属性/方法
 
 ```javascript
 function Cat(type){
   var animal = new Animal(type);
   /**
-   * Disadvantage 2
-   * for ... in only counts for enumerable properties
+   * 缺点 2
+   * for ... in 只会遍历可枚举的属性/方法
    */
   for(var p in animal){
     Cat.prototype[p] = animal[p];
@@ -205,33 +205,33 @@ function Cat(type){
 
 
 var cat = new Cat('dinosaur-cat');
-// will log '{type: "dinosaur-cat", features: Array(0),
+// 会打印 '{type: "dinosaur-cat", features: Array(0),
 //             greeting: ƒ, eat: ƒ, constructor: ƒ}'
 console.log(cat.__proto__);
 
 /**
- * Disadvantage 1
- * cat is only the instance of Cat, not Animal
+ * 缺点 1
+ * cat 不是父类 Animal 的实例
  */
 console.log(cat instanceof Animal); // false
 console.log(cat instanceof Cat); // true
 ```
 
-## Combination Inheritance
+## 组合继承
 
-> Key idea: combine Prototype Inheritance and Constructor Inheritance
+> 核心思想：原型链继承与构造函数继承的组合体
 
-**Advantages:**
+**优点：**
 
-1. Solve the shared reference problem in Prototype Inheritance
-2. Able to pass parameters to parent for instantiation
-3. All child instances can have access to parent's newly added prototype attributes/methods
-4. Instance of both parent's instance and child's instance
-5. The function can be used more than once
+1. 解决了原型链继承中，共享引用类型的问题
+2. 实例化时，可以给父类的构造函数传递参数
+3. 所有子类的实例，都能够获取父类 prototype 上新增的属性和方法
+4. 子类的实例同时是父类与子类的实例
+5. 函数可以复用
 
-**Disadvantages:**
+**缺点：**
 
-1. Calls parent's constructor twice, thus created 2 instances, which is unnecessary
+1. 调用了2次父类的构造函数，生成了两份父类的实例，其中一份不是必须的
 
 ```javascript
 function Cat(type, age) {
@@ -241,36 +241,36 @@ function Cat(type, age) {
 
 Cat.prototype = new Animal();
 /**
- * At this time, Cat's constructor points to Animal's constructor
- * Because Cat inherits Animal's prototype
- * Therefore, need to redirect the constructor
+ * 在这时，Cat 的 constructor 指向 Animal 的 constructor
+ * 因为 Cat 继承了 Animal 的 prototype
+ * 因此，需要将 constructor 指向 Cat 的 constructor
  */
 Cat.prototype.constructor = Cat;
 
 var cat = new Cat('dinosaur-cat-2', 3);
-// will log 'Cat {type: "dinosaur-cat-2", features: Array(0), greeting: ƒ, age: 3}'
+// 会打印 'Cat {type: "dinosaur-cat-2", features: Array(0), greeting: ƒ, age: 3}'
 console.log(cat);
 
 console.log(cat instanceof Animal); // true
 console.log(cat instanceof Cat); // true
 ```
 
-## Parasitic Combination Inheritance
+## 寄生组合继承
 
-> Based on Combination Inheritance, 
+> 基于组合继承
 
-**Advantages:**
+**优点：**
 
-1. Solve the shared reference problem in Prototype Inheritance
-2. Able to pass parameters to parent for instantiation
-3. All child instances can have access to parent's newly added prototype attributes/methods
-4. Instance of both parent's instance and child's instance
-5. The function can be used more than once
-6. Parent's constructor is called only once
+1. 解决了原型链继承中，共享引用类型的问题
+2. 实例化时，可以给父类的构造函数传递参数
+3. 所有子类的实例，都能够获取父类 prototype 上新增的属性和方法
+4. 子类的实例同时是父类与子类的实例
+5. 函数可以复用
+6. 父类的构造函数只被调用了一次
 
-**Disadvantages:**
+**缺点：**
 
-1. Complicated to write
+1. 写起来很复杂
 
 ```javascript
 function Cat(type, age) {
@@ -278,8 +278,8 @@ function Cat(type, age) {
   this.age = age;
 }
 
-// what we are trying to accomplish: Cat.prototype = new Animal();
-// use IIFE, so the memory will be released right after function executes
+// 我们想要实现的效果：Cat.prototype = new Animal();
+// 用立即执行函数, 所以出了函数定义域后，内存就被释放了
 (function() {
   // create a class with no instance methods
   var temp = function() {};
@@ -288,21 +288,21 @@ function Cat(type, age) {
 })();
 
 /**
- * At this time, Cat's constructor points to Animal's constructor
- * Because Cat inherits Animal's prototype
- * Therefore, need to redirect the constructor
+ * 在这时，Cat 的 constructor 指向 Animal 的 constructor
+ * 因为 Cat 继承了 Animal 的 prototype
+ * 因此，需要将 constructor 指向 Cat 的 constructor
  */
 Cat.prototype.constructor = Cat;
 
 var cat = new Cat('jellyfish-cat', 100);
-// will log 'Cat {type: "jellyfish-cat", features: Array(0), greeting: ƒ, age: 100}'
+// 会打印 'Cat {type: "jellyfish-cat", features: Array(0), greeting: ƒ, age: 100}'
 console.log(cat);
 
 console.log(cat instanceof Animal); // true
 console.log(cat instanceof Cat); // true
 ```
 
-## Reference
+## 参考资料
 
 [JS实现继承的几种方式](https://www.cnblogs.com/humin/p/4556820.html#!comments)
 

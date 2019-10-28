@@ -1,34 +1,35 @@
 ---
-tags: ['DOM', 'Interview Problems']
+tags: ['DOM相关', '面试问题 - JS']
 ---
 
-# DOM Element Drag and Drop
+# DOM 元素的拖拽实现
 
 > Posted: 09.22.2019
 
 <Tag />
 
-## Drag Events
+## 拖拽事件
 
-- ondragstart: when draggable item starts to be dragged, target is draggable item
-- ondragenter: when draggable item enters particular element, target is that element
-- ondragover: when draggable item moves within particular element, target is that element
-- ondrop: when draggable item is released on destination element, target is destination element
-- ondragend: when dragging finishes, target is element being dragged
+- ondragstart 事件：当拖拽元素开始被拖拽的时候触发的事件，此事件作用在被拖曳元素上
+- ondragenter 事件：当拖曳元素进入目标元素的时候触发的事件，此事件作用在目标元素上
+- ondragover 事件：拖拽元素在目标元素上移动的时候触发的事件，此事件作用在目标元素上
+- ondrop 事件：被拖拽的元素在目标元素上同时鼠标放开触发的事件，此事件作用在目标元素上
+- ondragend 事件：当拖拽完成后触发的事件，此事件作用在被拖曳元素上
 
-<span style='color: palevioletred'>**As far as I know, Tencent might have problems of dragging and dropping!**</span>
 
-## Assignment
+<span v-red>**据说腾讯会有类似的笔试题**</span>
 
-Complete the following drap/drop functionalities:
+## 实战
 
-1. There is an outer container
-2. There are two 200px * 200px boxes inside the container
-3. The 100px * 100px element being dragged is inside the first box
-4. That element can be dragged into each box and its position inside box is top left corner
-5. When outside the box, its position can be set to any point
+实现以下的拖拽功能（老子原创的）:
 
-Here is the demo:
+1. 有一个outer container
+2. Container里有两个 200px * 200px 的盒子
+3. 被拖拽的 100px * 100px 的元素会首先在第一个盒子里
+4. 该元素被拖拽到盒子中时，其位置自动黏着到左上角
+5. 该元素被拖拽到盒子外时，其位置便是松开鼠标时的位置
+
+这是 demo:
 
 ::: demo vue
 <template>
@@ -130,7 +131,7 @@ Here is the demo:
 :::
 
 
-## Code
+## 代码
 
 HTML:
 
@@ -142,7 +143,6 @@ HTML:
   <div class="box2" ondragover="dragOver" ondrop="dropInBox"></div>
 </div>
 ```
-
 
 CSS:
 
@@ -185,36 +185,36 @@ CSS:
 JavaScript:
 
 ```javascript
-// offsetX/offsetY represents the cursor position relative to the element
+// offsetX/offsetY 是相对于被拖拽元素的鼠标位置
 var offsetX = 0;
 var offsetY = 0;
 
 function dragStart(e) {
   e.dataTransfer.setData('text', e.target.id);
-  // Record the cursor position for dragging
+  // 记录下鼠标的位置
   offsetX = e.offsetX;
   offsetY = e.offsetY;
 }
 
 function dragOver(e) {
   /**
-   * For ondragenter and ondragover events
-   * Has topreventDefault，otherwise ondrop will not trigger
+   * 对于 ondragenter 和 ondragover 事件来说
+   * 一定要记得 preventDefault，不然 ondrop 事件无法触发
    */
   e.preventDefault();
 }
 
 function dropInContainer(e) {
-  // append node to outer container
+  // 在 container 上 append 该元素
   var data = e.dataTransfer.getData('text');
   var node = document.getElementById(data);
   e.target.appendChild(node);
   
   /**
-   * When dragging, suppose cursor position is (x, y) relative to element
-   * When dropping, the top left corner will drop to current cursor position
-   * So we have a (x, y) distance offset relative to original cursor position
-   * Need to subtract that (x, y) offset
+   * 开始拖拽时，假设鼠标的位置是（x，y）
+   * 松开鼠标时，该元素落地的位置不是松开前的位置，而是其左上角会移动到鼠标的位置
+   * 所以我们会有一个（x，y）的坐标偏移，大家可以自己去试一下
+   * 所以需要减掉那个（x，y）的坐标偏移
    */
   node.style.left = e.offsetX - offsetX + 'px';
   node.style.top = e.offsetY - offsetY + 'px';
@@ -222,19 +222,18 @@ function dropInContainer(e) {
 
 function dropInBox(e) {
   /**
-   * Prevent propagation, otherwise the ondrop method attached to 
-   * outer container will also trigger
+   * 防止冒泡，不然 container 上的 ondrop 事件也会触发
    */
   e.stopPropagation();
 
-  // append node to box
+  // 在 box 上 append 该元素
   var data = e.dataTransfer.getData('text');
   var node = document.getElementById(data);
   e.target.appendChild(node);
 
   /**
-   * Set left/top to 0
-   * Because if move from outer container to box, left/right still remains same
+   * 设置 left/top = 0
+   * 因为当从 container 移动到 box 时，left/right 属性会保留
    */
   node.style.left = '0px'; 
   node.style.top = '0px';

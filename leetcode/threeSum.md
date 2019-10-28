@@ -1,27 +1,28 @@
 ---
-tags: ["LeetCode", "Top 100 Liked", "Two Pointers"]
+tags: ["LeetCode", "Top 100 Liked", "双指针", '面试问题 - 算法']
 ---
 
-# Three Sum
+# 三数之和
 > Posted: 09.18.2019
 
 <Tag />
 
-## Description
+## 描述
 
 ![three sum](/three_sum.png)
 
-## Algorithm
+## 算法
 
-- Sort first
-- During iteration, skip duplicates
-- For each number, search for target = 0 - current number
-  - Search with two pointers, start = i + 1, end = nums.length - 1
-  - If find target, increment and decrement normally with skipping duplicates
-  - Else if start + end > target, decrement end
-  - Otherwise, increment start
+- 首先对数组进行排序
+- 在遍历的过程中，如果碰见重复的元素，则跳过至重复元素中的最后一个（避免重复）
+- 在每一个元素的 index，我们所要寻找的目标就是 target = 0 - 当前元素
+    - 寻找的方法就是使用两个指针 l 和 r，一前一后（说是指针，其实就是 index）
+    - 如果这俩指针指向的元素之和 = target，那就 l++ 并且 r--
+        - 在这过程中，为了避免重复，需要跳过重复元素
+    - 如果这俩指针指向的元素之和 > target，那就 r--
+    - 如果这俩指针指向的元素之和 < target，那就 l++
 
-## Code
+## 代码
 
 ```javascript
 /**
@@ -37,18 +38,18 @@ var threeSum = function(nums) {
             const target = 0 - nums[i];
             let start = i + 1, end = nums.length - 1;
             
-            // search with two pointers
-            // since they are sorted
+            /**
+             * 因为之前已经排序过了
+             * 所以可以用前后两个指针搜索
+             */
             while (start < end) {
                 if (nums[start] + nums[end] === target) {
-                    // if equal
                     ans.push([nums[i], nums[start], nums[end]]);
                     while (start < end && nums[end - 1] === nums[end]) end--;
                     while (start < end && nums[start + 1] === nums[start]) start++;
                     end--;
                     start++;
                 } else if (nums[start] + nums[end] > target) {
-                    // should down to the index with no duplicates
                     end--;
                 } else {
                     start++;

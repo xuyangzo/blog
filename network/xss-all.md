@@ -41,15 +41,15 @@ XSS = Cross-Site Scripting（跨站脚本）
 
 然后，最重要的一点是，<span v-red>**XSS 攻击会为接下来我们要讲的 CSRF 攻击，提供执行环境！！！**</span>
 
-关于 CSRF 攻击，可以参考这篇文章：[CSRF 攻击](/zh/network/csrf.md)。
+关于 CSRF 攻击，可以参考这篇文章：[CSRF 攻击](/network/csrf.md)。
 
 ## XSS 攻击的类型
 
 主要有三种类型
 
-1. [反射型](/zh/network/xss.md)
-2. [存储型](/zh/network/xssStore.md)
-3. [DOM 型](/zh/network/xssDOM.md)
+1. [反射型](/network/xss.md)
+2. [存储型](/network/xssStore.md)
+3. [DOM 型](/network/xssDOM.md)
 
 一般文章是不会带你亲自走一遍的。
 

@@ -1,38 +1,42 @@
 ---
-tags: ['LeetCode', 'Top 100 Liked', 'Backtracking']
+tags: ['LeetCode', 'Top 100 Liked', '回溯算法', '面试问题 - 算法']
 ---
 
-# Remove Invalid Parentheses
+# 删除无效的括号
 
 > Posted: 09.20.2019
 
 <Tag />
 
-## Description
+## 描述
 
 ![Remove Invalid Parentheses](/removeInvalidParen.png)
 
-## Algorithm
+## 算法
 
-- Key idea is backtracking
-- Use `l` to denote the number of left parentheses to remove and `r` for right parentheses
-- First, we need a function to check if current str is valid
-  - During iteration, before reaching end, l >= r should always be valid
-  - At the end, l === r should be valid
-- Then, we need a function to count l and r
-  - `l += (ch === '(')`
-  - `if (l === 0) r += (ch === ')') // counts for ')('`
-  - `l -= (ch === ')')`
-- Use DFS, set start position to be 0
-  - If l = r = 0 and string is valid, push current string to answer
-  - If r > 0, remove right parentheses first
-    - Search from start for right parentheses
-      - If encoutners multiple consecutive `)`, skip to the last one
-    - Create a copy, remove that character from copy
-    - For next recursion, pass copy rather than original array, and pass start = i - 1
-  - Else if l > 0, remove left parentheses
+- 核心思想是回溯算法
+- 用 l 来表示还有多少个左括号需要移除
+- 用 r 来表示还有多少个右括号需要移除
+- 首先，我们需要一个函数来检查当前的字符串是否合法
+  - 在遍历字符串的时候
+    - 在最后一个字符之前，l 必须 >= r
+    - 在最后一个字符的时候，l 必须 === r
+  - 如果都满足，字符串就是合法的
+- 然后，我们需要一个函数来计算 l 和 r
+  - l += (ch === '(')，如果碰见左括号，就 l++
+  - if (l === 0) r += (ch === ')')，如果碰见额外的右括号，就 r++
+  - l -= (ch === ')')，如果碰见右括号，就 l--
+- 使用深度遍历的算法，将起始位置设置成 0
+  - 如果 l = r = 0，并且字符串是合法的，那么就添加到答案里
+  - 如果 r > 0，那么我们就先移除右括号（必须先移除右括号，再考虑左括号）
+    - 从起始位置开始，寻找第一个右括号
+      - 如果碰见了重复的右括号，那么则取重复的里面的最后一个
+    - 建立一个字符串的复制，然后把这个右括号从复制里移除
+    - 对于下一层遍历来说，传递复制下去，而不是原来的字符串，并且传递的起始位置为 i - 1
+      - 传递 i - 1 的目的，是因为刚才我们跳到了重复的右括号的最后一个的位置，如果传递 i，那么该部分重复的右括号就会被忽视，也就是说只会被处理一次，而这显然是不对的
+  - 如果 l > 0，做同样的操作
 
-## Code
+## 代码
 
 ```javascript
 /**
@@ -43,21 +47,18 @@ var removeInvalidParentheses = function(s) {
     // edge case
     if (!s || !s.length) return [""];
     
-    // check if input string is valid
+    // 检查当前字符串是否合法
     if (isValid(s)) return [s];
     
-    // calculate left/right parens to remove 
+    // 计算 l 和 r
     let l = r = 0;
     for (let i = 0; i < s.length; ++i) {
-        // if ( simply increase l
         l += (s[i] === '(');
-        // if single ), increase r
         if (l === 0) r += (s[i] === ')');
-        // if ) with (, decrease l
         else l -= (s[i] === ')');
     }
     
-    // dfs
+    // 深度遍历
     const ans = [];
     dfs(s, l, r, ans, 0);
     
@@ -72,27 +73,22 @@ function dfs(s, l, r, ans, start) {
         return;
     }
     
-    // remove r first
+    // 先移除右括号
     if (r > 0) {
-        // find first ) and parse to end for duplicates
-        // starting from start
         for (let i = start; i < s.length; ++i) {
             if (s[i] === ')' && 
                 (i === s.length - 1 || s[i] !== s[i + 1]))
             {
-                // remove current element and continue dfs
                 const temp = s.slice(0, i).concat(s.slice(i + 1));
                 dfs(temp, l, r - 1, ans, i - 1);
             }
         }
     } else if (l > 0) {
-        // find first ( and parse to end for duplicates
-        // starting from start
+        // 再移除左括号
         for (let i = start; i < s.length; ++i) {
             if (s[i] === '(' && 
                 (i === s.length - 1 || s[i] !== s[i + 1]))
             {
-                // remove current element and continue dfs
                 const temp = s.slice(0, i).concat(s.slice(i + 1));
                 dfs(temp, l - 1, r, ans, i - 1);
             }
@@ -100,19 +96,16 @@ function dfs(s, l, r, ans, start) {
     }
 }
 
-// check if a string is valid
+// 检查字符串是否合法
 function isValid(s) {
     let l = r = 0;
     for (let i = 0; i < s.length; ++i) {
-        // at each time, number of ( should <= number of )
         if (l < r) return false;
         
-        // update after check to skip the last one
         if (s[i] === '(') l++;
         else if (s[i] === ')') r++;
     }
     
-    // check for the last one
     if (l !== r) return false;
     return true;
 }

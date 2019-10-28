@@ -1,42 +1,42 @@
 ---
-tags: ['JS Basics', 'Interview Problems']
+tags: ['JS基础', '面试问题 - JS']
 ---
 
-# THIS Keyword Binding
+# this 关键词的指向
 
 > Posted: 09.22.2019
 
 <Tag />
 
-## this Binding
+## this 的指向
 
-`this` binds to the object that contains it when it is being called as that object's method
+`this` 指向：包含它的函数，作为方法被调用时，所属的对象
 
-1. Under global environment, `this` refers to the global object (e.g. `window` in browser)
-2. Under object environment, `this` refers to the obejct, event in \_\_proto\_\_ chain
-3. Under constructor environment, `this` refers to the instance being created
-4. For DOM events, `this` refers to the DOM element that triggers the event
-5. For nested objects, `this` refers to the closest object method being called belongs to
-6. In arrow function, `this` is inherited from its parent scope
+1. 全局环境：`this` 指向全局对象（例如，浏览器中的 `window` 对象）
+2. 对象环境：`this` 指向对象本身, 在 \_\_proto\_\_ chain（原型链）中也是如此
+3. 构造函数环境：`this` 指向被生成的实例
+4. DOM 事件：`this` 指向触发事件的 DOM 元素本身
+5. 多层嵌套的对象：`this` 指向该方法被调用时，最近的包含它的对象
+6. 箭头函数：`this` 继承了其 parent 的 scope
 
-## Global Environment
+## 全局环境
 
 ```javascript
-console.log(this); // in browser, will log the window object
-console.log(this); // in node, will log empty object {}
+console.log(this); // 浏览器环境下，会打印 window 对象
+console.log(this); // Node 环境下，会打印空对象 {}
 
 function callThis() {
   console.log(this);
 }
-callThis(); // in browser, will log the window object
+callThis(); // 浏览器环境下，会打印 window 对象
 
 function callThis() {
   console.log(this);
 }
-callThis(); // in node, will log the global object
+callThis(); // Node 环境下，会打印 global 对象
 ```
 
-## Object Environment
+## 对象环境
 
 ```javascript
 const a = { 
@@ -44,36 +44,42 @@ const a = {
     console.log(this);
   }
 };
-// will log a object under both browser and node environment
+// 在浏览器与 Node 环境下，会打印对象 a
 a.test();
-// on the contrary, the following this binding will change
-// will log window object and global object respectively for browser and node
+/**
+ * 在下面这个例子中，this的指向会改变
+ * 浏览器环境下，会打印 window 对象
+ * Node 环境下，会打印 global 对象
+ */
 const b = a.test;
 b();
 ```
 
-## Constructor Environment
+## 构造函数环境
 
 ```javascript
 function Log() {
   console.log(this);
 }
-// will log Log object under both browser and node environment
+// 在浏览器与 Node 环境下，会打印对象 Log
 const log = new Log();
-// on the contrary, given examples above, under global environment
-// will log window object and global object respectively for browser and node
+/**
+ * 与之相对的，在全局环境下：
+ * 浏览器环境下，会打印 window 对象
+ * Node 环境下，会打印 global 对象
+ */
 Log();
 ```
 
-## DOM Environment
+## DOM 事件环境
 
 ```javascript
 element.addEventListener('click', function() {
-  console.log(this); // will log element
+  console.log(this); // 会打印 element 对象
 });
 ```
 
-## Nested Object
+## 多层嵌套的对象环境
 
 ```javascript
 const c = {
@@ -87,11 +93,11 @@ const c = {
   }
 }
 
-c.a.test(); // will log c.a object
-c.test2(); // will log c object
+c.a.test(); // 会打印 c.a 对象
+c.test2(); // 会打印 c 对象
 ```
 
-## Arrow Function
+## 箭头函数环境
 
 ```javascript
 const d = {
@@ -116,17 +122,17 @@ const d = {
     return this;
   }
 }
-// will log window and {} respectively in browser and node
+// 在浏览器与 Node 环境下，分别打印 window 对象和 {}
 d.test();
-// will log window and {} respectively in browser and node
+// 在浏览器与 Node 环境下，分别打印 window 对象和 {}
 d.a.test2();
-// will log window and { test3: [Function] } respectively in browser and node
+// 在浏览器与 Node 环境下，分别打印 window 对象和 { test3: [Function] }
 d.b().test3();
-// will log object d under both environment
+// 在浏览器与 Node 环境下，都会打印对象 d
 d.c().test4();
 ```
 
-## Real Interview Example
+## 面试中的例子
 
 ```javascript
 let a = {
@@ -138,10 +144,10 @@ let a = {
   }
 };
 
-a.b(); // will log a
-a.c(); // will log window and {} respectively in browser and node
+a.b(); // 会打印对象 a
+a.c(); // 在浏览器与 Node 环境下，分别打印 window 对象和 {}
 let d = a.b;
-d(); // will log window and global respectively in browser and node
+d(); // 在浏览器与 Node 环境下，分别打印 window 对象和 global 对象
 ```
 
 <Disqus />

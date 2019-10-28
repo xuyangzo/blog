@@ -1,16 +1,15 @@
 ---
-tags: ["CSS Animations"]
+tags: ["CSS动画"]
 ---
 
-# Mouseleave with Rotate Animation
+# Mouseleave 以及 Rotate
 > Posted: 09.18.2019
 
 <Tag />
 
-## Environment
+## 环境
 
-When I was creating this website, I encountered a problem with css animations.  
-The animation I decide to use is `rotateY(360deg)` when I hover over the image
+当我创建这个网站时，我碰见了一个很古怪的问题。代码如下：
 
 ```css
 img {
@@ -31,40 +30,44 @@ img {
 
 ...
 
-// written in vue
+// 环境为 vue
 methods: {
   flip: function() {
     this.doFlip = true;
   },
-  // in order to trigger the animation each time mouse enters
-  // need to flip it back after the mouse leaves
+  // 想要重新触发动画，需要设置回 false，删除对应的 class
   flipBack: function() {
     this.doFlip = false;
   }
 }
 ```
 
-## Issue
+## 问题
 
-But the problem is, when the mouse enters the image and stay hovering over the image,  
-`mouseleave` still triggers!!! It does not actually leave the edge of the image!
+但问题是，当鼠标进入图片，并且停留在图片上时，`mouseleave`依旧被触发了！！
+
+但在这个时候，鼠标根本就没有离开图片！！
 
 ![mouseleave](/mouseleave.gif)
 
-As you can see, the mouse does not leave the image at all!!
+从上图可以看出，鼠标的确没有离开图片...
 
-<span style='color: palevioletred'>Wait, are you sure? </span>
+<span v-red>等等，真的是这样吗？</span>
 
-The Problem is, the **ANIMATION**!
+真正的问题在于... **动画**!
 
-The animation is `rotateY(360deg)`, which means there will be some point during the animation  
-that the image is completely vertical to the x-axis... It is basically a line from the perspective  
-of the screen. Under such circumstance, mouse is indeed **LEAVING** the image!!
+我使用的动画是 `rotateY(360deg)`，这就意味着，在动画执行的过程中，图片会沿着Y轴旋转，并且在转到 90度 以及 270度 的时候，
+这张图片会和X轴垂直……
 
-## Solution
+明白问题了吧！在这个时候，图片本质上就只是一条线而已，因此鼠标的确离开了图片！
 
-The solution is quite simple. Just do nothing when the mouse leaves image.  
-Only toggle the animation when mouse enters image.
+## 解决方案
+
+解决方案非常简单。
+
+在鼠标离开图片时，什么都不要做。
+
+只在鼠标进入图片时，开启/取消动画。对于transition来说，取消时它会反向执行动画，可以达到和开启动画时一样的效果！
 
 ```javascript
 <img
@@ -75,7 +78,6 @@ Only toggle the animation when mouse enters image.
 
 ...
 
-// written in vue
 methods: {
   flip: function() {
     this.doFlip = !this.doFlip;

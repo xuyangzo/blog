@@ -1,31 +1,32 @@
 ---
-tags: ['LeetCode', 'Top 100 Liked', 'Tree']
+tags: ['LeetCode', 'Top 100 Liked', '树', '面试问题 - 算法']
 ---
 
-# Construct Binary Tree from Preorder and Inorder Traversal
+# 从前序与中序遍历序列构造二叉树
 
 > Posted: 09.28.2019
 
 <Tag />
 
-## Description
+## 描述
 
 ![Construct Binary Tree from Preorder and Inorder Traversal](/constructBST.png)
 
-## Algorithm
+## 算法
 
-- The key is two facts
-  - For a preorder array, the first element is the root, the rest are left and right part separately
-  - For an inorder array, elements left to root form left subtree, right to root form right subtree
-- Therefore, during each recursion
-  - Pick the first element from preorder array
-  - Find corresponding elements in inorder array
-    - Slice the array to construct inorderLeft and inorderRight, as params for next functions
-  - For preorder array, slice the length of inorderLeft starting at index 1 as preorderLeft and slice
-  the rest as preorderRight, as params for next functions
+- 核心思想一共有两点：
+  - 对于前序遍历来说，当前数组的第一个元素便是这棵树的根节点，剩下的则是左侧子树与右侧子树（分别形成一个组）
+    - 这个时候我们拿到了根节点，而这个根节点对于中序遍历来说，也是适用的
+  - 对于中序遍历来说，根节点左侧的部分便是左侧子树，根节点右侧的部分便是右侧子树
+- 因此，在每次递归的时候
+  - 从前序遍历的数组中，选择第一个元素，该元素便是当前子树的根节点
+  - 在中序遍历的数组中，找到根节点所在的位置
+    - 该位置左侧便是 inorderLeft，右侧便是 inorderRight（下一层递归的俩中序遍历数组）
+  - 然后再回到前序遍历的数组，根据 inorderLeft 的长度，可以确定 preorderLeft 的长度（这俩长度一样）
+    - 然后再根据长度进行 slice，得到 preorderLeft 和 preorderRight
+  - 最后再分别将左侧子树与右侧子树利用递归实现
 
-
-## Code
+## 代码
 
 ```javascript
 /**
@@ -50,13 +51,13 @@ var buildTree = function(preorder, inorder) {
 function constructTree(preorder, inorder) {
     if (!preorder.length) return null;
     
-    // pick rootIndex in preorder
-    // divide them into left subtree and right subtree in inorder
-    // back to preorder, find rootIndex for left and right subtree again
+    // 在中序遍历的数组中找到 rootIndex，然后分割
     const node = new TreeNode(preorder[0]);
     const rootIndex = inorder.indexOf(preorder[0]);
     const inorderLeft = inorder.slice(0, rootIndex);
     const inorderRight = inorder.slice(rootIndex + 1);
+
+    // 递归
     node.left = constructTree(preorder.slice(1, 1 + inorderLeft.length), inorderLeft);
     node.right = constructTree(preorder.slice(1 + inorderLeft.length), inorderRight);
     return node;

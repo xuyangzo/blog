@@ -1,47 +1,47 @@
 ---
-tags: ['JS Basics', 'Interview Problems']
+tags: ['JS基础', '面试问题 - JS']
 ---
 
-# What NEW Keyword Does
+# new 关键词到底做了什么
 
 > Posted: 09.23.2019
 
 <Tag />
 
-## Description
+## 问题描述
 
-What underlying process has been gone through for the following code?
+在如下的代码中，其背后运行的原理是什么？
 
 ```javascript
 var a = new B();
 ```
 
-## Create Empty Object
+## 创建空对象
 
-1. Create an empty object a
+创建一个空对象 a
 
 ```javascript
 var a = {};
 ```
 
-## Inherit prototype
+## 继承 prototype
 
-1. Set B's prototype to a's \_\_proto\_\_
+把 a 的 \_\_proto\_\_ 设置成 B 的 prototype
 
 ```javascript
 a.__proto__ = B.prototype;
 ```
 
-## Call constructor
+## 调用构造函数
 
-1. Call B's constructor with `this` points to a (change binding)
+调用 B's constructor，并主动让 `this` 指向 a
 
 ```javascript
 B.call(a);
-// same as: B.prototype.constructor.call(a);
+// 等同于: B.prototype.constructor.call(a);
 ```
 
-## In A Whole
+## 整体来看
 
 ```javascript
 function B () {
@@ -52,13 +52,13 @@ function B () {
 var a = {};
 a.__proto__ = B.prototype;
 B.call(a); 
-// same as: B.prototype.constructor.call(a);
+// 等同于: B.prototype.constructor.call(a);
 
-// will log B {name: "lynch"}
+// 会打印：B {name: "lynch"}
 console.log(a);
 ```
 
-## Reference
+## 参考资料
 
 [js中的new()到底做了些什么？](https://www.cnblogs.com/faith3/p/6209741.html)
 

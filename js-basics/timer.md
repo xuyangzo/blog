@@ -68,7 +68,7 @@ function countDown() {
 
 首先，什么是 requestAnimationFrame？以及为什么要用它？
 
-请参考我的这篇文章：[requestAnimationFrame](/zh/js-basics/raf.md)
+请参考我的这篇文章：[requestAnimationFrame](/js-basics/raf.md)
 
 总之，简单来说，如果你用 requestAnimationFrame 写，那面试官就会觉得你很牛逼。
 
