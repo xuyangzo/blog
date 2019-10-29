@@ -1,6 +1,8 @@
 ---
 tags: ['JS题目', '面试问题 - 算法']
-date: '10.01.2019'
+date: 10.01.2019
+image: /js-problem-intro.jpg
+description: 阿里笔试原题，当时我没做出来，希望能够给大家一些启发
 ---
 
 # 平铺节点数组转嵌套树

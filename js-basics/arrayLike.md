@@ -1,6 +1,8 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
-date: '09.25.2019'
+date: 09.25.2019
+image: /object-like-intro.jpeg
+description: 你当我是数组……其实我是类数组哒！
 ---
 
 # 类数组对象

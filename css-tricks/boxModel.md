@@ -1,6 +1,8 @@
 ---
 tags: ['CSS布局', '面试问题 - CSS']
-date: '10.16.2019'
+date: 10.16.2019
+image: /box-model-intro.jpg
+description: 盒模型是 CSS 的重中之重，不会就回家养猪吧
 ---
 
 # 盒模型

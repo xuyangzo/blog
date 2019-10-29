@@ -1,7 +1,8 @@
 ---
 tags: ['网络安全', '面试问题 - 网络']
-date: '10.24.2019'
-image: '/xss-beat-intro.png'
+date: 10.24.2019
+image: /xss-beat-intro.png
+description: 带你完整地演示一遍存储型 XSS 攻击
 ---
 
 # XSS 攻击 - 存储型

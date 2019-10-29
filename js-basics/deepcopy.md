@@ -1,6 +1,8 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
-date: '09.28.2019'
+date: 09.28.2019
+image: /deepcopy-intro.jpg
+description: 别的深拷贝，不够强。而我这，够强
 ---
 
 # 对象深拷贝
@@ -66,6 +68,7 @@ console.log(deepCopy(obj));
 
 - 该方法效率很高，而且对于所有对象都适用，基本上可以无脑用
 - 但还是有个问题，那就是无法获取到不可枚举的属性
+- 但注意了，这玩意儿是 ES6 的特性，因此会有少量的兼容性问题
 
 ```javascript
 function deepCopy(obj) {

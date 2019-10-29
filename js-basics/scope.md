@@ -1,6 +1,8 @@
 ---
 tags: ['ES6', '面试问题 - JS']
-date: '10.21.2019'
+date: 10.21.2019
+image: /block-intro.png
+description: 讲一下 ES5 的作用域和 ES6 的块级作用域
 ---
 
 # 块级作用域

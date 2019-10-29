@@ -1,6 +1,8 @@
 ---
 tags: ['CSS布局', '面试问题 - CSS']
-date: '09.21.2019'
+date: 09.21.2019
+image: /3col-intro.jpg
+description: 讲道理，三栏布局已经够常见了吧，哪能不会啊
 ---
 
 # 三栏布局

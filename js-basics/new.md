@@ -1,6 +1,8 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
-date: '09.23.2019'
+date: 09.23.2019
+image: /new-intro.jpeg
+description: 理解 new 关键词到底干了什么还是挺重要的
 ---
 
 # new 关键词到底做了什么

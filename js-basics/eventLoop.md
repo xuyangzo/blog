@@ -1,6 +1,8 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
-date: '09.26.2019'
+date: 09.26.2019
+image: /event-loop.png
+description: 面试必问，不会就倒闭
 ---
 
 # 浏览器的 Event Loop（事件轮询）

@@ -1,6 +1,8 @@
 ---
 tags: ['CSS小技巧', '面试问题 - CSS']
-date: '10.16.2019'
+date: 10.16.2019
+image: /triangle-intro.jpg
+description: 纯 CSS 画三角形，包学包会
 ---
 
 # 画三角形

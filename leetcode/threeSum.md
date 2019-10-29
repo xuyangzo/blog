@@ -1,6 +1,7 @@
 ---
 tags: ["LeetCode", "Top 100 Liked", "双指针", '面试问题 - 算法']
-date: '09.18.2019'
+date: 09.18.2019
+description: 来享受超越 2sum 的快感
 ---
 
 # 三数之和

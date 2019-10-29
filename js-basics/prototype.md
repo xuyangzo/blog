@@ -1,6 +1,8 @@
 ---
 tags: ['JS基础']
-date: '09.23.2019'
+date: 09.23.2019
+image: /prototype-intro.jpeg
+description: 不是面试题，但理解这玩意儿至关重要
 ---
 
 # prototype 和 \_\_proto\_\_ 的区别

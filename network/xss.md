@@ -1,7 +1,8 @@
 ---
 tags: ['网络安全', '面试问题 - 网络']
-date: '10.21.2019'
-image: '/xss-beat-intro.png'
+date: 10.21.2019
+image: /xss-beat-intro.png
+description: 带你完整地演示一遍反射型 XSS 攻击
 ---
 
 # XSS 攻击 - 反射型

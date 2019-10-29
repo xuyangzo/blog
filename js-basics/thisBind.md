@@ -1,7 +1,8 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
-date: '09.22.2019'
-image: '/es6-intro.jpeg'
+date: 09.22.2019
+image: /es6-intro.jpeg
+description: 开始了，JavaScript 从入门到放弃
 ---
 
 # this 关键词的指向

@@ -1,6 +1,8 @@
 ---
 tags: ['DOM相关', '面试问题 - JS']
-date: '10.08.2019'
+date: 10.08.2019
+image: /cross-origin-intro.png
+description: 他大爷的同源策略...
 ---
 
 # 跨域请求 - 同源策略

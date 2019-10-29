@@ -1,6 +1,8 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
-date: '09.28.2019'
+date: 09.28.2019
+image: /memory-leak.jpeg
+description: JS 的内存泄漏不常讲，但的的确确是一个问题
 ---
 
 # 内存泄漏

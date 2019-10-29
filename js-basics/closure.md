@@ -1,6 +1,8 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
-date: '10.11.2019'
+date: 10.11.2019
+image: /closure-intro.jpeg
+description: 闭包没啥复杂的，但确实需要仔细研究一下
 ---
 
 # 闭包

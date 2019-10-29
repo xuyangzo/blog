@@ -1,6 +1,8 @@
 ---
 tags: ['DOM相关', '面试问题 - JS']
-date: '09.27.2019'
+date: 09.27.2019
+image: /web-worker-intro.png
+description: Web Worker 也不算是啥新的特性了，讲道理可以学一下
 ---
 
 # Web Worker

@@ -1,6 +1,8 @@
 ---
 tags: ['DOM相关', '面试问题 - JS']
-date: '09.22.2019'
+date: 09.22.2019
+image: /drag-intro.png
+description: 虽然一般都用库，但最简单的拖拽还是得会的吧？
 ---
 
 # DOM 元素的拖拽实现

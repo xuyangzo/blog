@@ -1,6 +1,8 @@
 ---
 tags: ['ES6', '面试问题 - JS']
-date: '09.30.2019'
+date: 09.30.2019
+image: /promise-intro.png
+description: Promise 都不会就别去面试了，必挂
 ---
 
 # Promise

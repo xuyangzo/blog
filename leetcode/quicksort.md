@@ -1,6 +1,8 @@
 ---
 tags: ['排序算法', '面试问题 - 算法']
-date: '10.04.2019'
+date: 10.04.2019
+image: /quicksort-intro.jpg
+description: 和别人的菜鸡代码不一样，老子带你优化空间
 ---
 
 # 快速排序（空间优化）

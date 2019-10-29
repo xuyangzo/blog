@@ -1,6 +1,8 @@
 ---
 tags: ['设计模式', 'TypeScript', '面试问题 - 设计模式']
-date: '09.28.2019'
+date: 09.28.2019
+image: /singleton-intro.png
+description: 单例模式用得贼多，讲道理这得学吧？
 ---
 
 # TypeScript 实现单例模式

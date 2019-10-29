@@ -1,6 +1,8 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
-date: '09.25.2019'
+date: 09.25.2019
+image: /garbage-intro.jpg
+description: JS 的垃圾回收机制，对于我们接下来要讲的许多话题至关重要
 ---
 
 # JS 的垃圾回收机制

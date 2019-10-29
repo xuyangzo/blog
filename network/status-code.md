@@ -1,6 +1,8 @@
 ---
 tags: ['Http', '面试问题 - 网络']
-date: '10.26.2019'
+date: 10.26.2019
+image: /http-status-intro.png
+description: 从别人的文章里搬运来了各大 HTTP 状态码
 ---
 
 # Http 状态码

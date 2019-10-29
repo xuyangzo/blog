@@ -1,6 +1,8 @@
 ---
 tags: ["CSS动画"]
-date: '09.18.2019'
+date: 09.18.2019
+image: /rotate-intro.png
+description: 写完这篇文章才发现，我怎么老是碰见傻卵问题
 ---
 
 # Mouseleave 以及 Rotate

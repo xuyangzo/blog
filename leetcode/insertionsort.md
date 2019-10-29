@@ -1,6 +1,8 @@
 ---
 tags: ['排序算法', '面试问题 - 算法']
-date: '10.01.2019'
+date: 10.01.2019
+image: /insertionsort-intro.jpg
+description: 插入排序用得还是挺多的，学会很重要
 ---
 
 # 插入排序

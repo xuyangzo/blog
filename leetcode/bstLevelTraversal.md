@@ -1,6 +1,7 @@
 ---
 tags: ['LeetCode', 'Top 100 Liked', '树']
-date: '09.18.2019'
+date: 09.18.2019
+description: 其实不难，只是要额外多想一下
 ---
 
 # 二叉树层级遍历

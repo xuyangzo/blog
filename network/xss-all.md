@@ -1,7 +1,8 @@
 ---
 tags: ['网络安全', '面试问题 - 网络']
-date: '10.21.2019'
-image: '/xss-intro.png'
+date: 10.21.2019
+image: /xss-intro.png
+description: 大家好，这里是超凶的 XSS 攻击
 ---
 
 # XSS 攻击 - 介绍

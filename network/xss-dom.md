@@ -1,7 +1,8 @@
 ---
 tags: ['网络安全', '面试问题 - 网络']
-date: '10.24.2019'
-image: '/xss-beat-intro.png'
+date: 10.24.2019
+image: /xss-beat-intro.png
+description: 带你完整地演示一遍 DOM 型 XSS 攻击
 ---
 
 # XSS 攻击 - DOM 型
@@ -268,8 +269,6 @@ app.listen(8082, () => console.log("Attacker running on port 8082"));
 另一个请求便是 XSS 攻击的源头。
 
 再回头去看反射型 XSS 的请求数，你就会很轻松地发现两者的差异了。
-
-<Disqus />
 
 ## 参考资料
 

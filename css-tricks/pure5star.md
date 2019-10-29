@@ -1,6 +1,8 @@
 ---
 tags: ['CSS小技巧', '面试问题 - CSS']
-date: '09.22.2019'
+date: 09.22.2019
+image: /5star-intro.jpeg
+description: 一般人都会用 JS 做五星好评，不一般的人都用纯 CSS（并不）
 ---
 
 # 纯 CSS 五星好评

@@ -1,6 +1,8 @@
 ---
 tags: ['DOM相关', '面试问题 - JS']
-date: '10.09.2019'
+date: 10.09.2019
+image: /document-domain-intro.jpg
+description: 凑数的跨域方法，谁用谁sb
 ---
 
 # 跨域请求 - document.domain
