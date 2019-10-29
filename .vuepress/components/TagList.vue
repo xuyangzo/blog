@@ -30,7 +30,6 @@ export default {
       for (let page of this.$site.pages) {
         for (let index in page.frontmatter.tags) {
           const currtag = page.frontmatter.tags[index];
-          // push only if the language match
           if (currtag === this.tag) {
             articles.push(page);
             break;

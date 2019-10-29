@@ -1,6 +1,7 @@
 ---
 tags: ['网络安全', '面试问题 - 网络']
 date: '10.24.2019'
+image: '/xss-beat-intro.png'
 ---
 
 # XSS 攻击 - DOM 型

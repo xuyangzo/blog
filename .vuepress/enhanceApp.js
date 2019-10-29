@@ -1,5 +1,6 @@
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
+import '@mdi/font/css/materialdesignicons.css'
 import VueObserveVisibility from 'vue-observe-visibility';
 
 export default ({
@@ -10,7 +11,16 @@ export default ({
 }) => {
   Vue.use(Vuetify);
   Vue.use(VueObserveVisibility);
-  options.vuetify = new Vuetify({});
+
+  // scroll
+  Vue.prototype.$scrollToTop = () => window.scrollTo(0, 0)
+
+  // material icon
+  options.vuetify = new Vuetify({
+    icons: {
+      iconfont: 'mdi'
+    },
+  });
 
   // set color to be palevioletred
   Vue.directive('red', {

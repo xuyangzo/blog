@@ -22,7 +22,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: '关于我', link: '/resume' },
-      { text: '最新文章', link: '/recent.html#1' },
+      { text: '最新文章', link: '/recent.html' },
       { text: '前端面试', link: '/interview' },
       {
         text: 'JS',

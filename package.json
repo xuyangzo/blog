@@ -8,6 +8,7 @@
   },
   "main": "index.js",
   "dependencies": {
+    "@mdi/font": "^4.5.95",
     "gh-pages": "^2.1.1",
     "material-design-icons": "^3.0.1",
     "react": "^16.11.0",

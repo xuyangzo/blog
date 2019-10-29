@@ -1,16 +1,21 @@
 <!-- .vuepress/components/TagList.vue -->
 <template>
   <v-app class="recent">
-    <!-- <router-link
-    :to="{ path: page.path}">{{page.title}}</router-link>-->
     <v-row v-for="article in thisPageArticles" dense class="mt-2 mb-2 pt-2">
       <v-col cols="12">
         <v-card color="#fff" light class="custom-card" @click="goToArticle(article.path)">
           <v-card-title class="headline mb-2">{{ article.title }}</v-card-title>
           <v-card-subtitle>发表时间：{{ article.frontmatter.date }}</v-card-subtitle>
-          <v-card-actions>
-            <v-btn text>Listen Now</v-btn>
-          </v-card-actions>
+          <v-card-text>
+            {{ article.frontmatter.description }}
+            <br />
+            <br />
+            <img
+              v-if="getDefaultImage(article)"
+              :src="$withBase(getDefaultImage(article))"
+              :style="{ maxHeight: '300px'}"
+            />
+          </v-card-text>
         </v-card>
       </v-col>
     </v-row>
@@ -25,7 +30,10 @@ export default {
   data() {
     return {
       articles: [],
-      page: 0
+      page: 1,
+      images: {
+        Http: "/http.jpg"
+      }
     };
   },
   computed: {
@@ -39,6 +47,17 @@ export default {
   methods: {
     goToArticle(path) {
       this.$router.push(path);
+    },
+    getDefaultImage(page) {
+      // 如果指定了图片，就取指定的图片
+      if (page.frontmatter.image) return page.frontmatter.image;
+
+      // 否则读取默认图片
+      const tags = page.frontmatter.tags;
+      for (const tag of tags) {
+        if (this.images[tag]) return this.images[tag];
+      }
+      return null;
     }
   },
   mounted() {
@@ -62,7 +81,7 @@ export default {
     this.articles = articles.filter(page => page.frontmatter.tags);
 
     // 获取当前页数
-    this.page = parseInt(this.$route.hash.slice(1));
+    this.page = parseInt(this.$route.hash.slice(1)) || 1;
   },
   watch: {
     page: function(newPage) {
@@ -74,6 +93,9 @@ export default {
     $route: function() {
       this.page = parseInt(this.$route.hash.slice(1));
     }
+  },
+  updated() {
+    this.$scrollToTop();
   }
 };
 </script>

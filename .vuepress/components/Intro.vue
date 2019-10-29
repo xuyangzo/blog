@@ -14,7 +14,7 @@
     <v-item-group>
       <v-container>
         <v-row>
-          <v-col v-for="card in cards" :key="card.image" cols="12" md="4">
+          <v-col v-for="card in intros" :key="card.image" cols="12" md="4">
             <v-card class="d-flex align-center custom-card" height="200">
               <img :src="$withBase(card.image)" class="resume-sign" />
               <v-card-title>{{ card.title }}</v-card-title>
@@ -38,54 +38,7 @@ export default {
   data() {
     return {
       isVisible: false,
-      setFalse: false,
-      cards: [
-        {
-          title: "单身狗",
-          image: "/single-dog.png",
-          text: "不是，你们都是怎么找到女朋友的？"
-        },
-        {
-          title: "养生选手",
-          image: "/tea.png",
-          text: "没有什么比身体更重要，钱也不行"
-        },
-        {
-          title: "网文写手",
-          image: "/writer.jpeg",
-          text: "水平还行的半途而废型十八流写手"
-        },
-        {
-          title: "不喝酒",
-          image: "/no-drink.jpg",
-          text: "讲道理，酒又没有肥宅快乐水好喝"
-        },
-        {
-          title: "不抽烟",
-          image: "/no-smoke.png",
-          text: "讲道理，抽烟只会加速肥宅的死亡"
-        },
-        {
-          title: "不玩多人游戏",
-          image: "/no-game.png",
-          text: "只喜欢能随时暂停或者投降的游戏"
-        },
-        {
-          title: "会做饭",
-          image: "/cook.png",
-          text: "讲道理，没有哪个留学生不会做饭"
-        },
-        {
-          title: "整理癖",
-          image: "/clean.png",
-          text: "看见乱或者脏的东西就会暴起整理"
-        },
-        {
-          title: "死宅",
-          image: "/house.jpeg",
-          text: "喜欢待在家里，尤其是晚上9:00后"
-        }
-      ]
+      setFalse: false
     };
   },
   methods: {

@@ -1,6 +1,8 @@
 ---
 tags: ['ES6', '面试问题 - JS']
-date: '10.24.2019'
+date: 10.24.2019
+image: /weak-intro.jpeg
+description: 介绍一下（并给出证据）为啥 WeakSet 和 WeakMap 是 weak 的
 ---
 
 # WeakMap 和 WeakSet
