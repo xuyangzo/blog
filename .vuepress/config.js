@@ -24,7 +24,7 @@ module.exports = {
     [
       '@vuepress/medium-zoom',
       {
-        selector: '.theme-default-content p img'
+        selector: '.theme-default-content p img, .cat-image'
       }
     ]
   ],
