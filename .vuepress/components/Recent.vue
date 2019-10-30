@@ -1,36 +1,76 @@
 <!-- .vuepress/components/TagList.vue -->
 <template>
   <v-app class="recent">
-    <v-row v-for="article in thisPageArticles" dense class="mt-2 mb-2 pt-2">
-      <v-col cols="12">
-        <v-card color="#fff" light class="custom-card" @click="goToArticle(article.path)">
-          <v-card-title class="headline mb-2">{{ article.title }}</v-card-title>
-          <v-card-subtitle>发表时间：{{ article.frontmatter.date }}</v-card-subtitle>
-          <v-card-text>
-            {{ article.frontmatter.description }}
-            <br />
-            <br />
-            <img
-              v-if="getDefaultImage(article)"
-              :src="$withBase(getDefaultImage(article))"
-              :style="{ maxHeight: '300px'}"
-            />
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-    <div class="text-center">
-      <v-pagination v-model="page" :length="paginationLength" :total-visible="7" circle></v-pagination>
+    <div v-if="isMobile">
+      <v-row
+        dense
+        class="article-block mt-2 mb-2 pt-2"
+        v-for="(article, index) in articles"
+        :key="articles.title"
+        v-observe-visibility="{
+          callback: (isVisible) => { visibilityChanged(isVisible, index) },
+          intersection: {
+            threshold: 0.2
+          },
+          once: true
+        }"
+        :class="{ 'article-block-appear': index <= visibleIndex }"
+      >
+        <v-col cols="12">
+          <v-card color="#fff" light class="custom-card" @click="goToArticle(article.path)">
+            <v-card-title class="headline mb-2">{{ article.title }}</v-card-title>
+            <v-card-subtitle>发表时间：{{ article.frontmatter.date }}</v-card-subtitle>
+            <v-card-text>
+              {{ article.frontmatter.description }}
+              <br />
+              <br />
+              <img
+                v-if="getDefaultImage(article)"
+                :src="$withBase(getDefaultImage(article))"
+                :style="{ maxHeight: '300px'}"
+              />
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </div>
+    <div v-else>
+      <v-row v-for="article in thisPageArticles" dense class="mt-2 mb-2 pt-2" :key="articles.title">
+        <v-col cols="12">
+          <v-card color="#fff" light class="custom-card" @click="goToArticle(article.path)">
+            <v-card-title class="headline mb-2">{{ article.title }}</v-card-title>
+            <v-card-subtitle>发表时间：{{ article.frontmatter.date }}</v-card-subtitle>
+            <v-card-text>
+              {{ article.frontmatter.description }}
+              <br />
+              <br />
+              <img
+                v-if="getDefaultImage(article)"
+                :src="$withBase(getDefaultImage(article))"
+                :style="{ maxHeight: '300px'}"
+              />
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+      <br />
+      <div class="text-center">
+        <v-pagination v-model="page" :length="paginationLength" :total-visible="7" circle></v-pagination>
+      </div>
     </div>
   </v-app>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+import Vue from "vue";
+
 export default {
   data() {
     return {
       articles: [],
       page: 1,
+      visibleIndex: 0,
       images: {
         Http: "/http.jpg",
         ES6: "/es6-intro.jpg",
@@ -43,6 +83,7 @@ export default {
     };
   },
   computed: {
+    ...mapGetters(["isMobile"]),
     paginationLength() {
       return Math.ceil(this.articles.length / 5);
     },
@@ -64,6 +105,9 @@ export default {
         if (this.images[tag]) return this.images[tag];
       }
       return null;
+    },
+    visibilityChanged(isVisible, index) {
+      if (isVisible) this.visibleIndex = index;
     }
   },
   mounted() {
@@ -89,6 +133,9 @@ export default {
     // 获取当前页数
     this.page = parseInt(this.$route.hash.slice(1)) || 1;
   },
+  created() {
+    this.$store.commit("setMobile");
+  },
   watch: {
     page: function(newPage) {
       this.$router.push(
@@ -101,12 +148,22 @@ export default {
     }
   },
   updated() {
-    this.$scrollToTop();
+    if (!this.isMobile) this.$scrollToTop();
   }
 };
 </script>
 
 <style lang="stylus">
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .recent {
   .custom-card {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -117,6 +174,25 @@ export default {
       color: mediumpurple;
       transform: scale(1.05);
       -webkit-transform: scale(1.05);
+    }
+  }
+
+  .article-block {
+    transform: scale(0);
+  }
+
+  .article-block-appear {
+    animation: scale 1s forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+@media (max-width: 400px) {
+  .recent {
+    .custom-card {
+      &:hover {
+        transform: none;
+        -webkit-transform: none;
+      }
     }
   }
 }

@@ -14,7 +14,19 @@ module.exports = {
   ],
   plugins: [
     ['vuepress-plugin-code-copy', true],
-    ['demo-code']
+    ['demo-code'],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-151185835-1'
+      }
+    ],
+    [
+      '@vuepress/medium-zoom',
+      {
+        selector: 'img'
+      }
+    ]
   ],
   themeConfig: {
     logo: '/logo.png',
