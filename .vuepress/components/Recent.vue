@@ -1,4 +1,3 @@
-<!-- .vuepress/components/TagList.vue -->
 <template>
   <v-app class="recent">
     <div v-if="isMobile">

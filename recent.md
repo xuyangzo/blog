@@ -1,1 +1,3 @@
-<Recent />
+<ClientOnly>
+  <Recent /> 
+</ClientOnly>
