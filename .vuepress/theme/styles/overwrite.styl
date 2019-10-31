@@ -1,6 +1,14 @@
+/* overwrite plugin css */
 .code-wrapper,
 .code-control {
   display none !important
+}
+
+/* overwrite vuepress css */
+.home {
+  .footer {
+    border-top: none !important;
+  }
 }
 
 /* overwrite vuetify css */
@@ -11,4 +19,60 @@
 .v-pagination__navigation,
 .v-pagination__item {
   outline: none;
+}
+
+/* loading animation, from: https://www.cnblogs.com/lhb25/p/loading-spinners-animated-with-css3.html */
+.spinner {
+  margin: auto;
+  position: relative;
+  top: 40%;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  font-size: 10px;
+}
+ 
+.spinner > div {
+  background-color: mediumseagreen;
+  height: 100%;
+  width: 16px;
+  display: inline-block;
+   
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+ 
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+ 
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+ 
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+ 
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+ 
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) } 
+  20% { -webkit-transform: scaleY(1.0) }
+}
+ 
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
 }

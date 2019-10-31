@@ -1,11 +1,11 @@
 <template>
-  <div class="theme-container">
+  <div class="theme-container fof-container">
     <v-app>
       <v-container fluid class="text-center">
         <br />
         <br />
         <v-row align="center" justify="center">
-          <img :src="$withBase('/ah.png')" />
+          <img :src="$withBase('/ah.png')" class="ah-image" />
           <v-alert
             dense
             text
@@ -16,7 +16,7 @@
           >既然都 404 了，为什么不来吸猫呢？</v-alert>
         </v-row>
         <br />
-        <div class="cat-displayer mx-auto" :style="{ width: '50%', padding: '10px 20px' }">
+        <div class="cat-displayer mx-auto">
           <v-row justify="center" v-for="row in currImages()">
             <v-col cols="4" xs="12" v-for="image in row" :style="{ padding: '5px'  }">
               <v-card elevation="0" min-width="120" min-height="120">
@@ -213,6 +213,7 @@ export default {
     updateIndex() {
       const range = Math.floor(this.allImages.length / 9);
       this.currIndex = Math.floor(Math.random() * range);
+      this.$scrollToTop();
     },
     currImages() {
       const images = this.allImages.slice(
@@ -244,6 +245,8 @@ export default {
 .cat-displayer {
   border-radius: 5px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  width: 50%;
+  padding: 10px 20px;
 
   .cat-image {
     max-width: 100%;
@@ -254,6 +257,41 @@ export default {
   .cat-image-scale {
     transform: scale(1);
     animation: myscale 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+@media (max-width: 400px) {
+  .fof-container {
+    .ah-image {
+      margin-bottom: 20px;
+    }
+
+    /* overwrite vuepress css */
+    .ml-6 {
+      margin-left: 0 !important;
+    }
+
+    .col-4, .col-3 {
+      flex-basis: 95% !important;
+      max-width: 95%;
+    }
+
+    .v-btn {
+      height: 50px !important;
+    }
+
+    .v-card {
+      min-height: 200px !important;
+      min-width: 200px !important;
+    }
+
+    .cat-displayer {
+      width: 95%;
+
+      .cat-image {
+        max-height: 100%;
+      }
+    }
   }
 }
 </style>

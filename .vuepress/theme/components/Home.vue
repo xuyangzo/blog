@@ -1,89 +1,71 @@
 <template>
   <main class="home" aria-labelledby="main-title">
     <header class="hero">
-      <img
-        v-bind:class="{ 'do-flip': doFlip }"
-        v-if="data.heroImage"
-        :src="$withBase(heroImage)"
-        :alt="data.heroAlt || 'hero'"
-        @mouseenter="randomFlip"
-      />
-      <p class="description">{{ intro }}</p>
-      <h1 v-if="data.heroText !== null" id="main-title">{{ data.heroText || $title || 'Hello' }}</h1>
+      <div class="blocker" @click.stop v-if="!shouldAnimate">
+        <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+      </div>
+      <div class="tv-displayer">
+        <img :src="$withBase('/screen.gif')" alt="tv" class="tv" @load="imageLoad" />
+        <img :src="$withBase('/warning.gif')" alt="warning" class="warning" @load="imageLoad" />
+        <img
+          :src="$withBase('/target.gif')"
+          alt="target"
+          class="target"
+          @load="imageLoad"
+          :class="{'target-animation': shouldAnimate}"
+        />
+        <img
+          :src="$withBase('/earth.gif')"
+          alt="earth"
+          class="earth"
+          @click="$router.push(data.actionLink)"
+          @load="imageLoad"
+          :class="{'earth-animation': shouldAnimate}"
+        />
+        <img
+          :src="$withBase(data.heroImage)"
+          alt="cry"
+          class="cry"
+          @load="imageLoad"
+          :class="{'cry-animation': shouldAnimate}"
+        />
+        <img
+          :src="$withBase('/dialog.png')"
+          alt="dialog"
+          class="dialog"
+          @load="imageLoad"
+          :class="{'dialog-animation': shouldAnimate}"
+        />
+        <span
+          class="dialog-text"
+          :class="{'dialog-text-animation': shouldAnimate}"
+        >{{ data.dialogText }}</span>
+      </div>
+    </header>
 
+    <header class="hero mobile-hero">
+      <br />
+      <br />
+      <br />
+      <img v-if="data.heroImage" :src="$withBase(heroImage)" />
+      <br />
       <p class="action" v-if="data.actionText && data.actionLink">
         <NavLink class="action-button" :item="actionLink" />
       </p>
     </header>
 
-    <div class="features" v-if="data.features && data.features.length">
-      <div class="feature" v-for="(feature, index) in data.features" :key="index">
-        <h2>{{ feature.title }}</h2>
-        <p>{{ feature.details }}</p>
-      </div>
-    </div>
-
-    <Content class="theme-default-content custom" />
-
-    <div class="footer" v-if="data.footer">{{ data.footer }}</div>
+    <!-- <div class="footer" v-if="data.footer">{{ data.footer }}</div> -->
   </main>
 </template>
 
 <script>
 import NavLink from "@theme/components/NavLink.vue";
-
-const intro = {
-  1: "I'm single...",
-  2: "What the fuck???",
-  3: "So many stuff in front-end...",
-  4: "So many fucking stuff in front-end...",
-  5: "Great. Interesting.",
-  6: "Am I cute?",
-  7: "Hello nice to meet you.",
-  8: "Dalao!!!",
-  9: "Fuck LeetCode!!!",
-  10: "emmm...",
-  11: "OK...",
-  12: "I am not surprised at all (true)",
-  13: "Come fuck me if you can~",
-  14: "Go fuck yourself.",
-  15: "What the hack did I see!!!",
-  16: "I am done.",
-  17: "Heiheiheihei...",
-  18: "Go on. I am listening.",
-  19: "You scared me.",
-  20: "Handsome!",
-  21: "How is this possible???",
-  22: "I am not happy at all",
-  23: "Fine.",
-  24: "Yi~~~",
-  25: "I am sure.",
-  26: "I am HAPPYYYY!!!",
-  27: "TO BE ADDED.",
-  28: "Nothing special.",
-  29: "You gotta coax me.",
-  30: "Nothing works fine for me.",
-  31: "Fight on!",
-  32: "Great!",
-  33: "Why are you so cold?",
-  34: "It's normal...",
-  35: "No one loves in this world...",
-  36: "Shitttt!!!",
-  37: "Hahahahaha~",
-  38: "You deserve this.",
-  39: "Got it! Thank you so much!",
-  40: "...",
-  41: "Heng!",
-  42: "It should not come...",
-  43: "xswl",
-  44: "You cannot beat me~~~",
-  45: "You really think so???",
-  46: "Too bad.",
-  47: "OK. Continue your performance.",
-  48: "Let's not tell him how stupid he is.",
-  49: "Fuck algorithms!!!",
-  50: "There's something..."
-};
 
 export default {
   components: { NavLink },
@@ -92,7 +74,8 @@ export default {
       heroImage: "/01.png",
       doFlip: false,
       prevTime: null,
-      intro: intro[1]
+      imagesLoaded: 0,
+      shouldAnimate: false
     };
   },
   computed: {
@@ -107,19 +90,12 @@ export default {
       };
     }
   },
-
   methods: {
-    randomFlip: function() {
-      const time = new Date();
-      if (!this.prevTime || time - this.prevTime > 500) {
-        // throttle
-        let num = Math.floor(Math.random() * 50) + 1;
-        this.intro = intro[num];
-        if (num < 10) num = "/0".concat(num.toString());
-        else num = "/".concat(num.toString());
-        this.heroImage = num.concat(".png");
-        this.doFlip = !this.doFlip;
-        this.prevTime = time;
+    imageLoad() {
+      this.imagesLoaded++;
+      // 如果图片全部加载完，添加动画
+      if (this.imagesLoaded === 6) {
+        this.shouldAnimate = true;
       }
     }
   }
@@ -129,21 +105,225 @@ export default {
 <style lang="stylus">
 @import url('https://fonts.googleapis.com/css?family=Caveat|Permanent+Marker&display=swap');
 
+@keyframes appear {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes myscale {
+  0% {
+    transform: scale(0);
+    top: 35%;
+    oapcity: 1;
+    left: 40%;
+  }
+
+  66% {
+    transform: scale(1);
+    top: 35%;
+    oapcity: 1;
+    left: 40%;
+  }
+
+  74% {
+    transform: scale(1);
+    top: 32%;
+    oapcity: 1;
+    left: 40%;
+  }
+
+  76% {
+    transform: scale(1);
+    top: 35%;
+    oapcity: 1;
+    left: 40%;
+  }
+
+  84% {
+    transform: scale(1);
+    top: 32%;
+    oapcity: 1;
+    left: 40%;
+  }
+
+  86% {
+    transform: scale(1);
+    top: 35%;
+    oapcity: 1;
+    left: 40%;
+  }
+
+  100% {
+    transform: scale(1);
+    top: 35%;
+    left: 110%;
+    opacity: 1;
+  }
+}
+
+@keyframes dialog {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes search {
+  0% {
+    top: 25%;
+    left: 35%;
+    transform: scale(1);
+  }
+
+  20% {
+    top: 55%;
+    left: 50%;
+    transform: scale(1);
+  }
+
+  40% {
+    top: 60%;
+    left: 35%;
+    transform: scale(1);
+  }
+
+  60% {
+    top: 40%;
+    left: 40%;
+    transform: scale(1);
+  }
+
+  90% {
+    top: 40%;
+    left: 40%;
+    transform: scale(1);
+  }
+
+  100% {
+    top: 40%;
+    left: 40%;
+    transform: scale(0);
+  }
+}
+
 .home {
-  padding: $navbarHeight 2rem 0;
-  max-width: 960px;
+  padding: 0 2rem 0;
+  max-width: 100%;
+  min-height: 100vh;
   margin: 0px auto;
   display: block;
+  background: ghostwhite;
+
+  .mobile-hero {
+    display: none;
+  }
 
   .hero {
     text-align: center;
+    position: relative;
+
+    .blocker {
+      width: 100%;
+      height: 100%;
+      background: ghostwhite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      transition: opacity;
+    }
 
     img {
-      max-width: 150px;
       display: block;
-      margin: 3rem auto 1.5rem;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .tv-displayer {
+      .dialog-animation, .dialog-text-animation {
+        animation: dialog 1.5s 6.5s forwards ease-in-out;
+      }
+
+      .cry-animation {
+        animation: myscale 3s 5s forwards ease-in-out;
+      }
+
+      .target-animation {
+        animation: search 8s forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      .earth-animation {
+        animation: appear 1s 8s forwards ease-in-out;
+      }
+
+      .tv {
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+      }
+
+      .dialog {
+        width: 150px;
+        position: absolute;
+        top: 25%;
+        left: 55%;
+        opacity: 0;
+      }
+
+      .dialog-text {
+        width: 150px;
+        position: absolute;
+        top: 29%;
+        left: 55.5%;
+        opacity: 0;
+      }
+
+      .cry {
+        width: 200px;
+        position: absolute;
+        top: 35%;
+        left: 40%;
+        transform: scale(0);
+      }
+
+      .earth {
+        width: 200px;
+        position: absolute;
+        top: 42%;
+        left: 43%;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .target {
+        width: 200px;
+        position: absolute;
+        top: 25%;
+        left: 35%;
+        filter: invert(100%);
+      }
+
+      .warning {
+        width: 500px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-60%);
+        top: -60px;
+        z-index: 100;
+      }
     }
 
     h1 {
@@ -173,10 +353,10 @@ export default {
       background-color: white;
       padding: 0.8rem 1.6rem;
       border-radius: 4px;
-      border: 1px solid black;
       transition: all 0.8s ease;
       box-sizing: border-box;
       font-family: 'Caveat', cursive;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
       &:hover {
         background-color: lighten(black, 20%);
@@ -239,8 +419,17 @@ export default {
   .home {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    background: white;
+
+    .mobile-hero {
+      display: block;
+    }
 
     .hero {
+      .tv-displayer, .blocker {
+        display: none;
+      }
+
       img {
         max-height: 210px;
         margin: 2rem auto 1.2rem;

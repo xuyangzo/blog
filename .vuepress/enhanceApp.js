@@ -21,7 +21,7 @@ export default ({
   options.vuetify = new Vuetify({
     icons: {
       iconfont: 'mdi'
-    },
+    }
   });
 
   // set color to be palevioletred
@@ -58,5 +58,5 @@ export default ({
         } else state.isMobile = false;
       }
     }
-  })
+  });
 }
