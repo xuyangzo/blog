@@ -31,6 +31,13 @@ export default ({
     }
   });
 
+  // set color to be mediumpurple
+  Vue.directive('p', {
+    bind(el) {
+      el.style.color = 'mediumpurple';
+    }
+  });
+
   // set line through
   Vue.directive('line', {
     bind(el, binding) {

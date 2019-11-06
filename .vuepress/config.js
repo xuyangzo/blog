@@ -163,6 +163,7 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 1,
         children: [
+          '/network/osi',
           '/network/status-code',
           '/network/301vs302',
           '/network/xss-all',
