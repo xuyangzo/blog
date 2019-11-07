@@ -164,6 +164,7 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           '/network/osi',
+          '/network/hybrid-model',
           '/network/status-code',
           '/network/301vs302',
           '/network/xss-all',
