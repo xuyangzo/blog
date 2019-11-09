@@ -126,6 +126,7 @@ module.exports = {
           '/js-basics/scope',
           '/js-basics/promise',
           '/js-basics/weakMapSet',
+          '/js-basics/invsof',
           '/js-basics/pq'
         ]
       },
