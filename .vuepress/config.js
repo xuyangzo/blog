@@ -106,6 +106,7 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 1,
         children: [
+          '/js-basics/bubble',
           '/js-basics/crossOrigin',
           '/js-basics/coJSONP',
           '/js-basics/coDomain',
