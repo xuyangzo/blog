@@ -1,8 +1,8 @@
 ---
-tags: ['JS基础']
+tags: ['JS基础', '面试问题 - JS']
 date: 09.23.2019
 image: /prototype-intro.jpeg
-description: 不是面试题，但理解这玩意儿至关重要
+description: 极少出现的面试题，但理解这玩意儿至关重要
 ---
 
 # prototype 和 \_\_proto\_\_ 的区别

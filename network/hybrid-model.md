@@ -1,5 +1,5 @@
 ---
-tags: ['面试问题 - 网络']
+tags: ['网络基础', '面试问题 - 网络']
 date: 11.06.2019
 image: /hybrid-model-intro.jpg
 description: 之前讲了 OSI 七层模型，这次讲一下具体应用的模型

@@ -1,5 +1,5 @@
 ---
-tags: ['面试问题 - 网络']
+tags: ['网络基础', '面试问题 - 网络']
 date: 11.06.2019
 image: /osi-intro.jpg
 description: 简单讲一下 OSI 七层模型（其实主要靠背）

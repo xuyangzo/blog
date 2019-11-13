@@ -56,9 +56,8 @@ module.exports = {
       {
         text: '网络',
         items: [
-          { text: 'Http', link: '/tags.html#Http' },
-          { text: 'TCP', link: '/tags.html#TCP' },
-          { text: 'UDP', link: '/tags.html#UDP' },
+          { text: '网络基础', link: '/tags.html#网络基础' },
+          { text: '网络协议', link: '/tags.html#网络协议' },
           { text: '网络安全', link: '/tags.html#网络安全' }
         ]
       },
@@ -160,15 +159,32 @@ module.exports = {
         ]
       },
       {
-        title: '网络',
+        title: '网络基础',
         path: '/network/',
         collapsable: false,
         sidebarDepth: 1,
         children: [
           '/network/osi',
-          '/network/hybrid-model',
+          '/network/hybrid-model'
+        ]
+      },
+      {
+        title: '网络协议',
+        path: '/network/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/network/tcp-intro',
           '/network/status-code',
-          '/network/301vs302',
+          '/network/301vs302'
+        ]
+      },
+      {
+        title: '网络安全',
+        path: '/network/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
           '/network/xss-all',
           '/network/xss',
           '/network/xss-stored',
