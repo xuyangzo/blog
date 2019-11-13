@@ -5,7 +5,7 @@ image: /http-status-intro.png
 description: 从别人的文章里搬运来了各大 HTTP 状态码
 ---
 
-# Http 状态码
+# HTTP 状态码
 
 > Posted: 10.26.2019
 

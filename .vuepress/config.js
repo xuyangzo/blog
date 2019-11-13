@@ -126,7 +126,15 @@ module.exports = {
           '/js-basics/scope',
           '/js-basics/promise',
           '/js-basics/weakMapSet',
-          '/js-basics/invsof',
+          '/js-basics/invsof'
+        ]
+      },
+      {
+        title: '数据结构',
+        path: '/js-basics/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
           '/js-basics/pq'
         ]
       },
@@ -175,6 +183,7 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           '/network/tcp-intro',
+          '/network/tcp-rely',
           '/network/status-code',
           '/network/301vs302'
         ]
@@ -212,7 +221,15 @@ module.exports = {
           '/leetcode/insertionsort',
           '/leetcode/quicksort',
           '/leetcode/mergesort',
-          '/leetcode/arrayToTree',
+          '/leetcode/arrayToTree'
+        ]
+      },
+      {
+        title: 'LEETCODE',
+        path: '/leetcode/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
           '/leetcode/threeSum',
           '/leetcode/LVP',
           '/leetcode/bstLevelTraversal',
@@ -230,7 +247,7 @@ module.exports = {
           '/leetcode/serializeBST',
           '/leetcode/invertBT'
         ]
-      },
+      }
     ]
   }
 }

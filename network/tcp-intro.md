@@ -37,9 +37,9 @@ TCP 是连接导向的（connection oriented），因此在传输数据前，需
 
 `Reserved` 则是保留起来，未来可能会用到，也和握手挥手没关系，不细讲了。
 
-接下来，非常重要的是七个 flag 里面的，ACK 和 SYN 这俩 flag（flag 的意思就是设置为 true 或者 false，中文是标志）。
+接下来，非常重要的是六个 flag 里面的，ACK 和 SYN 这俩 flag（flag 的意思就是设置为 true 或者 false，中文是标志）。
 
-我们经常可以看到有的文章在讲三次握手的时候，一会儿用大写的 ACK，一会儿又用小写的 ack，是不是很奇怪。是他们弄错了吗？其实不是，大写的 ACK 指的是这七个 flag，而小写的 ack 则是指的上面那个 32 bit 大小的确认号。如果大小写 SYN 和 ACK 分开用，说明那个人其实是很懂的。
+我们经常可以看到有的文章在讲三次握手的时候，一会儿用大写的 ACK，一会儿又用小写的 ack，是不是很奇怪。是他们弄错了吗？其实不是，大写的 ACK 指的是这六个 flag，而小写的 ack 则是指的上面那个 32 bit 大小的确认号。如果大小写 SYN 和 ACK 分开用，说明那个人其实是很懂的。
 
 ACK 这个 flag 如果设置成 true，说明确认序号有效。
 
@@ -140,5 +140,7 @@ MSL（Maximum Segment Lifetime），最大报文段生存时间。2MSL 就是一
 [TCP/IP 数据包报文格式（IP包、TCP报头、UDP报头）](https://blog.51cto.com/lyhbwwk/2162568)
 
 [TCP三次握手和四次挥手过程](https://www.cnblogs.com/Andya/p/7272462.html)
+
+[TCP三次握手及四次挥手详解及常见面试题](https://blog.csdn.net/ZWE7616175/article/details/80432486)
 
 <Disqus />
