@@ -169,11 +169,27 @@ module.exports = {
           '/css-tricks/3col',
           '/css-tricks/verticalCenter',
           '/css-tricks/clearFloat',
+        ]
+      },
+      {
+        title: 'CSS小技巧',
+        path: '/css-tricks/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/css-tricks/selectors',
           '/css-tricks/triangle',
           '/css-tricks/pure5star',
           '/css-tricks/textOverflow',
-          '/css-tricks/hide',
-          '/css-tricks/mouse-leave',
+        ]
+      },
+      {
+        title: 'CSS动画',
+        path: '/css-tricks/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/css-tricks/mouse-leave'
         ]
       },
       {
