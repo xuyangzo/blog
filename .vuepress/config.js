@@ -88,6 +88,7 @@ module.exports = {
           '/js-basics/checkArray',
           '/js-basics/arrayLike',
           '/js-basics/thisBind',
+          '/js-basics/call',
           '/js-basics/prototype',
           '/js-basics/new',
           '/js-basics/es5inheritance',
