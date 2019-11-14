@@ -1,5 +1,5 @@
 ---
-tags: ['DOM相关', '面试问题 - JS']
+tags: ['浏览器', '面试问题 - JS']
 date: 10.08.2019
 image: /cross-origin-intro.png
 description: 他大爷的同源策略...

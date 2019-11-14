@@ -1,5 +1,5 @@
 ---
-tags: ['DOM相关', '工具的使用']
+tags: ['浏览器']
 date: 09.23.2019
 image: /console-intro.png
 description: 不是面试题，大家看着图个乐子

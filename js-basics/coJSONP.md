@@ -1,5 +1,5 @@
 ---
-tags: ['DOM相关', '面试问题 - JS']
+tags: ['浏览器', '面试问题 - JS']
 date: 10.08.2019
 image: /jsonp-intro.jpeg
 description: 讲道理，确实很简单，就是有些细节得搞懂

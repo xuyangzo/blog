@@ -41,6 +41,7 @@ module.exports = {
         items: [
           { text: 'JS基础', link: '/tags.html#JS基础' },
           { text: 'DOM相关', link: '/tags.html#DOM相关' },
+          { text: '浏览器', link: '/tags.html#浏览器' },
           { text: 'ES6', link: '/tags.html#ES6' },
           { text: 'Vue', link: '/tags.html#Vue' }
         ]
@@ -107,14 +108,22 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           '/js-basics/bubble',
-          '/js-basics/crossOrigin',
-          '/js-basics/coJSONP',
-          '/js-basics/coDomain',
           '/js-basics/dragDrop',
           '/js-basics/throttle',
           '/js-basics/timer',
           '/js-basics/webWorker',
-          '/js-basics/ajax',
+          '/js-basics/ajax'
+        ]
+      },
+      {
+        title: '浏览器',
+        path: '/js-basics/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/js-basics/crossOrigin',
+          '/js-basics/coJSONP',
+          '/js-basics/coDomain',
           '/js-basics/consolelog'
         ]
       },
