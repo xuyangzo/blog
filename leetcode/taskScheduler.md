@@ -12,7 +12,7 @@ description: 你看，这不是用到优先队列了吗？
 
 ## 描述
 
-![Task Scheduler](/taskScheduler.png)
+![Task Scheduler](/images/taskScheduler.png)
 
 ## 算法
 

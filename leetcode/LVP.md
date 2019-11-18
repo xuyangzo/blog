@@ -12,7 +12,7 @@ description: 目前为止，我认为的最难理解的题之一，理解的话�
 
 ## 描述
 
-![Longest Valid Parentheses](/LVP.png)
+![Longest Valid Parentheses](/images/LVP.png)
 
 ## 算法
 

@@ -12,7 +12,7 @@ description: 这道题需要对前序和中序遍历有一个极为清楚的认�
 
 ## 描述
 
-![Construct Binary Tree from Preorder and Inorder Traversal](/constructBST.png)
+![Construct Binary Tree from Preorder and Inorder Traversal](/images/constructBST.png)
 
 ## 算法
 

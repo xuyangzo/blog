@@ -12,7 +12,7 @@ description: 这道题我有自己的算法，和别人的答案不一样，牛�
 
 ## 描述
 
-![Maximum Product Subarray](/maxProductSubarr.png)
+![Maximum Product Subarray](/images/maxProductSubarr.png)
 
 ## 算法
 

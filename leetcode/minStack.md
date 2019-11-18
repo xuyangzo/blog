@@ -12,7 +12,7 @@ description: 这道题代码部分不难，关键还是理解的问题
 
 ## 描述
 
-![Min Stack](/minStack.png)
+![Min Stack](/images/minStack.png)
 
 ## 算法
 

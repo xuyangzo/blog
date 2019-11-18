@@ -12,7 +12,7 @@ description: 懂不懂什么叫反向后序遍历？不懂的话这题也太难�
 
 ## 描述
 
-![Flatten Binary Tree to Linked List](/flattenBT.png)
+![Flatten Binary Tree to Linked List](/images/flattenBT.png)
 
 ## 算法
 

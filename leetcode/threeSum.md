@@ -11,7 +11,7 @@ description: 来享受超越 2sum 的快感
 
 ## 描述
 
-![three sum](/three_sum.png)
+![three sum](/images/three_sum.png)
 
 ## 算法
 

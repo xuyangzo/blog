@@ -12,7 +12,7 @@ description: 经典的算法题，思想不难，但是代码写起来不简单�
 
 ## 描述
 
-![Median of Two Sorted Arrays](/medianOfSA.png)
+![Median of Two Sorted Arrays](/images/medianOfSA.png)
 
 ## 算法
 

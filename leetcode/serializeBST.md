@@ -12,7 +12,7 @@ description: 这道题需要你对前序遍历和深度遍历的概念比较熟�
 
 ## 描述
 
-![Serialize and Deserialize Binary Tree](/serializeBST.png)
+![Serialize and Deserialize Binary Tree](/images/serializeBST.png)
 
 ## 算法
 

@@ -12,7 +12,7 @@ description: 算法不是很难，但是真的写起来很容易出 bug
 
 ## 描述
 
-![Remove Invalid Parentheses](/removeInvalidParen.png)
+![Remove Invalid Parentheses](/images/removeInvalidParen.png)
 
 ## 算法
 

@@ -11,17 +11,22 @@
         </div>
       </div>
       <div class="tv-displayer">
-        <img :src="$withBase('/screen.gif')" alt="tv" class="tv" @load="imageLoad" />
-        <img :src="$withBase('/warning.gif')" alt="warning" class="warning" @load="imageLoad" />
+        <img :src="$withBase('/images/screen.gif')" alt="tv" class="tv" @load="imageLoad" />
         <img
-          :src="$withBase('/target.gif')"
+          :src="$withBase('/images/warning.gif')"
+          alt="warning"
+          class="warning"
+          @load="imageLoad"
+        />
+        <img
+          :src="$withBase('/images/target.gif')"
           alt="target"
           class="target"
           @load="imageLoad"
           :class="{'target-animation': shouldAnimate}"
         />
         <img
-          :src="$withBase('/earth.gif')"
+          :src="$withBase('/images/earth.gif')"
           alt="earth"
           class="earth"
           @click="$router.push(data.actionLink)"
@@ -36,7 +41,7 @@
           :class="{'cry-animation': shouldAnimate}"
         />
         <img
-          :src="$withBase('/dialog.png')"
+          :src="$withBase('/images/dialog.png')"
           alt="dialog"
           class="dialog"
           @load="imageLoad"
@@ -71,7 +76,7 @@ export default {
   components: { NavLink },
   data() {
     return {
-      heroImage: "/01.png",
+      heroImage: "/images/01.png",
       doFlip: false,
       prevTime: null,
       imagesLoaded: 0,

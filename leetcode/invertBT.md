@@ -12,7 +12,7 @@ description: 不是啥难题，就是我脑子有时候会转不过来
 
 ## 描述
 
-![Invert Binary Tree](/invertBT.png)
+![Invert Binary Tree](/images/invertBT.png)
 
 ## 算法
 

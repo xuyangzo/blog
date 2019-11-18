@@ -12,7 +12,7 @@ description: 稍微想一下就明白了，除了我这种菜鸡
 
 ## 描述
 
-![Jump Game ||](/jump2.png)
+![Jump Game ||](/images/jump2.png)
 
 ## 算法
 

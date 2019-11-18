@@ -12,7 +12,7 @@ description: 其实不难，只是要额外多想一下
 
 ## 描述
 
-![Binary Tree Level Order Traversal](/bstLevel.png)
+![Binary Tree Level Order Traversal](/images/bstLevel.png)
 
 ## 算法
 

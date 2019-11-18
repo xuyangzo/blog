@@ -12,7 +12,7 @@ description: 这才是典型的滑动窗口的题目，用两个指针，一前�
 
 ## 描述
 
-![Minimum Window Substring](/minWindowStr.png)
+![Minimum Window Substring](/images/minWindowStr.png)
 
 ## 算法
 

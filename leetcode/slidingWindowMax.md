@@ -12,7 +12,7 @@ description: 说是滑动窗口，但和一般滑动窗口题用两个指针的�
 
 ## 描述
 
-![Sliding Window Maximum](/slidingWindowMax.png)
+![Sliding Window Maximum](/images/slidingWindowMax.png)
 
 ## 算法
 

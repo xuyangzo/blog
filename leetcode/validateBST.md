@@ -12,7 +12,7 @@ description: 这道题不难，但还是要多想一下的
 
 ## 描述
 
-![Validate Binary Search Tree](/validateBST.png)
+![Validate Binary Search Tree](/images/validateBST.png)
 
 ## 算法
 
