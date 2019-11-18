@@ -1,7 +1,7 @@
 ---
 tags: ['网络协议', 'TCP', '面试问题 - 网络']
 date: 11.13.2019
-image: /tcp-rely-intro.jpg
+image: /images/tcp-rely-intro.jpg
 description: 讲一下 TCP 协议为什么是可靠的
 ---
 
@@ -32,7 +32,7 @@ description: 讲一下 TCP 协议为什么是可靠的
 
 这个时候就又要请出这张图了：
 
-![TCP header](/tcp-header.png)
+![TCP header](/images/tcp-header.png)
 
 我们可以看见，校验和就在左下角，一共 16 bit。
 
@@ -44,11 +44,11 @@ description: 讲一下 TCP 协议为什么是可靠的
 
 我们知道，IP 与 TCP 这两个协议之间，整个 TCP 的报头+数据 = IP 的数据。如下图：
 
-![tcp ip](/ip-tcp.png)
+![tcp ip](/images/ip-tcp.png)
 
 如果把两个协议完整展示出来的话，如下：
 
-![ip tcp whole](/ip-tcp-whole.gif)
+![ip tcp whole](/images/ip-tcp-whole.gif)
 
 这里就不细讲了，感兴趣的小伙伴自己去了解吧。
 
@@ -58,13 +58,13 @@ description: 讲一下 TCP 协议为什么是可靠的
 
 并且还会额外加上 0s，协议，以及 TCP 协议的长度。如下图：
 
-![tcp pseudoheader](/tcp-pseudo-header.png)
+![tcp pseudoheader](/images/tcp-pseudo-header.png)
 
 添加了伪首部后，我们才能够开始计算校验和。
 
 计算校验和的方式就是，我们把从伪首部开始，所有的内容都切分成 16 bit 长度的片段（因为校验和的长度为 16 bit），然后把这些片段都加起来，如果有进位的话，最后再 +1，然后再取反。
 
-![checksum](/checksum.png)
+![checksum](/images/checksum.png)
 
 在上面的图里，我们每次都取 16 个 bit 的数据（也就是 4 个 hex 字符），然后相加：
 
@@ -135,7 +135,7 @@ TCP在解决这个问题的时候引入了一个新的机制，叫做超时重�
 
 这个时候就又要请出这张图了：
 
-![TCP header](/tcp-header.png)
+![TCP header](/images/tcp-header.png)
 
 我们可以看见，TCP 首部右下角有一个窗口大小（Window Size），一共 16 bit。
 
@@ -153,7 +153,7 @@ TCP在解决这个问题的时候引入了一个新的机制，叫做超时重�
 
 其过程如下图所示：
 
-![flow control](/flow-control.png)
+![flow control](/images/flow-control.png)
 
 ## 拥塞控制
 
@@ -169,7 +169,7 @@ TCP在解决这个问题的时候引入了一个新的机制，叫做超时重�
 
 整体来看就是下面这张图：
 
-![slow-start](/slow-start.png)
+![slow-start](/images/slow-start.png)
 
 究竟在什么时间该用什么部分，这是由慢开始门限来决定的
 
@@ -210,7 +210,7 @@ TCP在解决这个问题的时候引入了一个新的机制，叫做超时重�
 
 在 TCP Tahoe 的版本（现在已经不用了），超时出现后（也就是窗口过大，开始出现丢包以后），我们会直接用慢开始算法，从 1 开始。也就是图片里指出来的部分。
 
-![tcp-congestion](/tcp-congestion.png)
+![tcp-congestion](/images/tcp-congestion.png)
 
 我们可以看见，在这个版本，是没有快重传与快恢复的。
 
@@ -234,7 +234,7 @@ TCP在解决这个问题的时候引入了一个新的机制，叫做超时重�
 
 所以此时不执行慢开始算法，而是将 cwnd 设置为 ssthresh 的大小，然后执行拥塞避免算法。如下图：
 
-![tcp-quick](/tcp-quick.jpg)
+![tcp-quick](/images/tcp-quick.jpg)
 
 
 ## 参考资料

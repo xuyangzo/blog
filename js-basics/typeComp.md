@@ -1,7 +1,7 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
 date: 09.21.2019
-image: /type-intro.png
+image: /images/type-intro.png
 description: sb 才用 ==，但你好歹得会 == 的原理吧
 ---
 

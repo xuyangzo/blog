@@ -1,7 +1,7 @@
 ---
 tags: ['CSS布局', '面试问题 - CSS']
 date: 10.15.2019
-image: /float-intro.png
+image: /images/float-intro.png
 description: 清除浮动嘛，没啥难的，包学包会
 ---
 

@@ -1,7 +1,7 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
 date: 09.26.2019
-image: /event-loop.png
+image: /images/event-loop.png
 description: 面试必问，不会就倒闭
 ---
 
@@ -25,7 +25,7 @@ description: 面试必问，不会就倒闭
 
 这里放一张从别人那里偷来的图。（详见参考资料部分）
 
-![event loop](/event-loop.png)
+![event loop](/images/event-loop.png)
 
 其实浏览器的事件轮询看上去还是比较简单的。
 
@@ -58,7 +58,7 @@ description: 面试必问，不会就倒闭
 2. 执行所有微任务
 3. 重复1~2直到没有宏任务需要执行（这就是一个 Loop）
 
-![microtask and macrotask](/microtask.png)
+![microtask and macrotask](/images/microtask.png)
 
 ## 事件执行顺序
 

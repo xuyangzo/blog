@@ -1,7 +1,7 @@
 ---
 tags: ['浏览器', '面试问题 - JS']
 date: 10.08.2019
-image: /cross-origin-intro.png
+image: /images/cross-origin-intro.png
 description: 他大爷的同源策略...
 ---
 
@@ -52,7 +52,7 @@ app.post("/login", (req, res) => {
 app.listen(8081, () => console.log("App running on port 8081"));
 ```
 
-![Cross Origin](/co.png)
+![Cross Origin](/images/co.png)
 
 然后在客户端对服务器发出一个请求
 
@@ -87,7 +87,7 @@ app.listen(8081, () => console.log("App running on port 8081"));
 </html>
 ```
 
-![block](/block.png)
+![block](/images/block.png)
 
 喜闻乐见地被拦截了。
 

@@ -1,7 +1,7 @@
 ---
 tags: ['排序算法', '面试问题 - 算法']
 date: 10.04.2019
-image: /quicksort-intro.jpg
+image: /images/quicksort-intro.jpg
 description: 和别人的菜鸡代码不一样，老子带你优化空间
 ---
 
@@ -204,7 +204,7 @@ quickSort(arr);
 
 我的算法所花费的时间：
 
-![quicksort nb](/quicksort-nb.png)
+![quicksort nb](/images/quicksort-nb.png)
 
 这里加上了初始化数组的时间。
 
@@ -212,7 +212,7 @@ emmm...但看这个好像也不知道表现怎么样。
 
 我们再来看看一般人的算法。
 
-![quicksort cai](/quicksort-cai.png)
+![quicksort cai](/images/quicksort-cai.png)
 
 <span v-red>**卧槽！！内存溢出了！！**</span>
 

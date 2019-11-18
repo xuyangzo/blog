@@ -1,7 +1,7 @@
 ---
 tags: ['CSS小技巧', '面试问题 - CSS']
 date: 11.07.2019
-image: /hide-intro.jpg
+image: /images/hide-intro.jpg
 description: 讲一下 opacity，display，visibility 三者的区别
 ---
 
@@ -230,7 +230,7 @@ opacity 是可以继承的，这个从上个例子中就能看出来。
 
 但是，这个节点还存在与文档中，而不是和 React/Vue 的条件渲染一样，直接从文档里移除。
 
-![display none](/display-none.png)
+![display none](/images/display-none.png)
 
 ### 事件
 

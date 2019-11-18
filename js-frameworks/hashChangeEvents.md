@@ -1,7 +1,7 @@
 ---
 tags: ['Vue']
 date: 09.19.2019
-image: /hash-intro.png
+image: /images/hash-intro.png
 description: 刚开始学 Vue 时候写的傻卵文章，大家随便看看
 ---
 

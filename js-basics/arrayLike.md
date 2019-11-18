@@ -1,7 +1,7 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
 date: 09.25.2019
-image: /object-like-intro.jpeg
+image: /images/object-like-intro.jpeg
 description: 你当我是数组……其实我是类数组哒！
 ---
 
@@ -77,7 +77,7 @@ arrayLike('test', 1, [-1, 0]);
 
 我们来看一下它有哪些属性：
 
-![arguments](/arguments.png)
+![arguments](/images/arguments.png)
 
 本质上，arguments 具有以下的属性：
 
@@ -100,7 +100,7 @@ const arguments = {
 
 我们可以看一下 `__proto__` 对象具体的属性（也就是 Object.prototype 的属性）
 
-![arguments __proto__](/args-proto.png)
+![arguments __proto__](/images/args-proto.png)
 
 <br />
 
@@ -116,7 +116,7 @@ const arguments = {
 
 真正的数组的 `__proto__` 对象指向了 Array.prototype
 
-![array __proto__](/array-proto.png)
+![array __proto__](/images/array-proto.png)
 
 ## 类数组转化成数组
 

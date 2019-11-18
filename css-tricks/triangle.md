@@ -1,7 +1,7 @@
 ---
 tags: ['CSS小技巧', '面试问题 - CSS']
 date: 10.16.2019
-image: /triangle-intro.jpg
+image: /images/triangle-intro.jpg
 description: 纯 CSS 画三角形，包学包会
 ---
 
@@ -17,7 +17,7 @@ description: 纯 CSS 画三角形，包学包会
 
 首先，我们先来看一下 CSS 的盒模型。
 
-![box](/box.png)
+![box](/images/box.png)
 
 这张图如果看不懂的话，可以参考：[CSS 盒模型](/css-tricks/cssBox.md)
 

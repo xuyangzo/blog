@@ -1,7 +1,7 @@
 ---
 tags: ['DOM相关', '面试问题 - JS']
 date: 09.27.2019
-image: /web-worker-intro.png
+image: /images/web-worker-intro.png
 description: Web Worker 也不算是啥新的特性了，讲道理可以学一下
 ---
 
@@ -93,7 +93,7 @@ primes.forEach(prime => {
 
 这是实现的效果：
 
-![prime 100](/prime-100.gif)
+![prime 100](/images/prime-100.gif)
 
 我们可以看见，动画并没有变得卡顿（图片看上去可能有点卡，但那是因为fps不足，页面本身没有卡顿）。
 
@@ -102,7 +102,7 @@ primes.forEach(prime => {
 那么，接下来，如果我们把数字从 100 提升到 60万 呢？  
 （这里只计算，取消了粘贴到 DOM 上的操作）
 
-![prime 60w](/prime-60w.gif)
+![prime 60w](/images/prime-60w.gif)
 
 我们可以看见，一开始动画是正常的，但当我们把数字从 100 提升到 60万 后，页面直接卡住了。
 
@@ -160,7 +160,7 @@ this.onmessage = function (e) {
 
 #### 结果
 
-![worker 60w](/worker-60w.gif)
+![worker 60w](/images/worker-60w.gif)
 
 我们可以看见，一开始是求 100 以内的质数，然后我们改成 60w。
 

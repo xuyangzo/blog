@@ -1,7 +1,7 @@
 ---
 tags: ['排序算法', '面试问题 - 算法']
 date: 10.01.2019
-image: /bubblesort-intro.jpeg
+image: /images/bubblesort-intro.jpeg
 description: 这年头还有人不会冒泡排序？（对，就是我）
 ---
 

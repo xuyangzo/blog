@@ -1,7 +1,7 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
 date: 10.12.2019
-image: /iife-intro.png
+image: /images/iife-intro.png
 description: 都是立即执行函数了，那不得快嘛
 ---
 

@@ -1,7 +1,7 @@
 ---
 tags: ['数据结构', 'ES6']
 date: 09.20.2019
-image: /pq-intro.jpg
+image: /images/pq-intro.jpg
 description: 虽然不是面试题，但刷题会用到优先队列，JS 的话只能自己写了不是吗？
 ---
 

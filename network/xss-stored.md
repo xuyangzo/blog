@@ -1,7 +1,7 @@
 ---
 tags: ['网络安全', '面试问题 - 网络']
 date: 10.24.2019
-image: /xss-beat-intro.png
+image: /images/xss-beat-intro.png
 description: 带你完整地演示一遍存储型 XSS 攻击
 ---
 
@@ -26,7 +26,7 @@ description: 带你完整地演示一遍存储型 XSS 攻击
 3. 浏览器发现有XSS代码，就当做正常的HTML和JS解析执行
 4. XSS攻击就发生了
 
-![xss-stored](/xss-stored.png)
+![xss-stored](/images/xss-stored.png)
 
 和反射型 XSS 攻击不同的是，<span v-red>**存储型 XSS 直接攻击了具有漏洞的网站本身！**</span>
 
@@ -146,7 +146,7 @@ app.listen(8081, () => console.log("SB server running on port 8081"));
 
 最终实现的效果是这样的：
 
-![xss-stored-pro](/xss-store-pro.gif)
+![xss-stored-pro](/images/xss-store-pro.gif)
 
 ### 攻击者寻找目标
 
@@ -154,7 +154,7 @@ app.listen(8081, () => console.log("SB server running on port 8081"));
 
 能够帮助攻击者定位的，就是在结果页面，攻击代码被执行。
 
-![xss stored attack](/xss-stored-attack.gif)
+![xss stored attack](/images/xss-stored-attack.gif)
 
 这个时候，攻击已经开始了，攻击者可以进行一些大胆的想法了。
 
@@ -217,7 +217,7 @@ app.listen(8082, () => console.log("Attacker running on port 8082"));
 
 当用户进入 result 页面时，我们成功地获取到了他的 cookie
 
-![xss-stored-attack-result](/xss-stored-attack-result.png)
+![xss-stored-attack-result](/images/xss-stored-attack-result.png)
 
 ## 参考资料
 

@@ -1,7 +1,7 @@
 ---
 tags: ['DOM相关', '面试问题 - JS']
 date: 11.11.2019
-image: /bubble-intro.png
+image: /images/bubble-intro.png
 description: 讲一下事件冒泡与事件委托
 ---
 
@@ -13,7 +13,7 @@ description: 讲一下事件冒泡与事件委托
 
 ## 介绍
 
-![bubble + capture](/bubble.png)
+![bubble + capture](/images/bubble.png)
 
 我们经常会看见这一张图。
 
@@ -93,7 +93,7 @@ document.getElementById('btn').onclick = function() { ... };
 
 冒泡的过程，就是当子元素的某个事件被触发后，该事件会从子元素一直冒泡到父元素，导致父元素的该事件被触发，一直冒泡到最外层的 Document 元素，如下图：
 
-![event bubbling](/event-bubbling.png)
+![event bubbling](/images/event-bubbling.png)
 
 但是，并不是所有的事件都支持冒泡。并且有一点需要澄清的是：<span v-red>**某种事件是否冒泡，与该事件的定义方式是 DOM0 还是 DOM2 是无关的！某种事件是够冒泡，是由该事件自己规定的！例如点击事件可以冒泡，失焦事件不行，这和怎么定义事件无关！onclick 和 addEventListener('click') 的核心是 click！**</span>
 
@@ -122,7 +122,7 @@ DOM2 的规范定义了事件模型，但是并没有否定 DOM0 的事件定义
 
 先于冒泡触发，从最外层的 DOM 一直向下捕获。
 
-![event capture](/event-capture.png)
+![event capture](/images/event-capture.png)
 
 <span v-p>**处于目标阶段**：</span>
 
@@ -132,7 +132,7 @@ DOM2 的规范定义了事件模型，但是并没有否定 DOM0 的事件定义
 
 和 DOM0 事件的冒泡一样，从最里层的 DOM 向外冒泡。
 
-![event bubbling](/event-bubbling.png)
+![event bubbling](/images/event-bubbling.png)
 
 而 DOM2 定义事件的方式，就是使用 addEventListener。
 

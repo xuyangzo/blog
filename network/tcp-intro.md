@@ -1,7 +1,7 @@
 ---
 tags: ['网络协议', 'TCP', '面试问题 - 网络']
 date: 11.12.2019
-image: /tcp-intro.png
+image: /images/tcp-intro.png
 description: 讲一下 TCP 协议本身与三次握手/四次挥手
 ---
 
@@ -27,7 +27,7 @@ TCP 是连接导向的（connection oriented），因此在传输数据前，需
 
 ## TCP 报文格式
 
-![TCP header](/tcp-header.png)
+![TCP header](/images/tcp-header.png)
 
 `Source Port` 和 `Destination Port` 分别指明了发送和接受数据的端口。
 
@@ -56,7 +56,7 @@ FIN 这个 flag，指明了发送方已经没有数据需要发送了，要结�
 
 我们先来看一下三次握手的流程：
 
-![TCP HANDSHAKE](/tcp-handshake.png)
+![TCP HANDSHAKE](/images/tcp-handshake.png)
 
 1. 首先，要建立 TCP 连接，于是发送方给接收方发送了一个报文，这个报文的 SYN 标志被设置成了 1，说明要开始握手了
 2. 我们假设这个时候的序列号为 x（这说明发送方的数据是从 x 的位置开始发送的）
@@ -103,7 +103,7 @@ FIN 这个 flag，指明了发送方已经没有数据需要发送了，要结�
 
 ### 流程
 
-![TCP 4-way handshake](/tcp-handshake4.png)
+![TCP 4-way handshake](/images/tcp-handshake4.png)
 
 1. 首先，客户端要通知服务器，咱俩拜拜了，因此停止发送数据，发送了一个报文，并且把 FIN 标志设置成 1
 2. 并且在这个报文里，客户端指定了序列号为 u（等于前面已经传送过来的数据的最后一个字节的序列号+1）

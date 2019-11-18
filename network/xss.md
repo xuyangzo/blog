@@ -1,7 +1,7 @@
 ---
 tags: ['网络安全', '面试问题 - 网络']
 date: 10.21.2019
-image: /xss-beat-intro.png
+image: /images/xss-beat-intro.png
 description: 带你完整地演示一遍反射型 XSS 攻击
 ---
 
@@ -31,7 +31,7 @@ description: 带你完整地演示一遍反射型 XSS 攻击
 4. 服务器返回 HTML 文档，此时该文档已经包含了那个恶意字符串
 5. 客服端执行了植入的恶意脚本，XSS攻击就发生了
 
-![xss](/xss.png)
+![xss](/images/xss.png)
 
 有一点非常重要的是：
 
@@ -144,7 +144,7 @@ html
 
 （图片就复用 DOM 型 XSS 的图片了，反正这俩对于用户来说是一样的）
 
-![xss-vic](/xss-victim.gif)
+![xss-vic](/images/xss-victim.gif)
 
 ### 攻击者寻找目标
 
@@ -154,11 +154,11 @@ html
 
 1. query string 里出现攻击的代码
 
-![xss error1](/xss-error1.png)
+![xss error1](/images/xss-error1.png)
 
 2. 在结果页面，攻击代码被执行
 
-![xss attack](/xss-attack.gif)
+![xss attack](/images/xss-attack.gif)
 
 这个时候攻击还没开始，因为这一切都只是发生在攻击者的电脑上而已。
 
@@ -170,7 +170,7 @@ html
 
 如下：
 
-![xss email](/xss-email.png)
+![xss email](/images/xss-email.png)
 
 我们可以发现，这封邮件其实就是钓鱼邮件，但和真的邮件非常像。
 
@@ -178,7 +178,7 @@ html
 
 而他们提供的链接，究竟去到哪里呢？
 
-![xss link](/xss-link.png)
+![xss link](/images/xss-link.png)
 
 我们可以看见，这里真实的 url 为刚才那个防御薄弱的网站。
 
@@ -247,19 +247,19 @@ app.listen(8082, () => console.log("Attacker running on port 8082"));
 
 当用户点击我们的沙雕邮件时，我们成功获取到了用户的 cookie。
 
-![xss-cookie](/xss-cookie.png)
+![xss-cookie](/images/xss-cookie.png)
 
 客户端报错了，但这已经不重要了。
 
 （出于伪装目的，可以使用 CORS 来避免报错）
 
-![xss-error](/xss-finalerror.png)
+![xss-error](/images/xss-finalerror.png)
 
 ## 反射型 XSS 的请求数
 
 在反射型 XSS 执行的过程中，一共只发送了一个请求。
 
-![xss-network](/xss-network.png)
+![xss-network](/images/xss-network.png)
 
 恶意的代码已经被植入到了返回的 HTML 文档中。
 

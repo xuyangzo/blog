@@ -1,7 +1,7 @@
 <template>
   <div class="resume-header">
     <img v-if="profile.photo" :src="$withBase(profile.photo)" class="profile-image" />
-    <img v-else :src="$withBase('/anonymous.jpg')" class="profile-image" />
+    <img v-else :src="$withBase('/images/anonymous.jpg')" class="profile-image" />
     <div class="right">
       <h2>{{ profile.name }}</h2>
       <div v-if="profile.email" class="resume-header-info">

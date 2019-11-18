@@ -1,7 +1,7 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
 date: 09.21.2019
-image: /array-intro.jpeg
+image: /images/array-intro.jpeg
 description: 检查一个对象是否为数组是很场景的情景哦
 ---
 

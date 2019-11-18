@@ -1,7 +1,7 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
 date: 09.25.2019
-image: /garbage-intro.jpg
+image: /images/garbage-intro.jpg
 description: JS 的垃圾回收机制，对于我们接下来要讲的许多话题至关重要
 ---
 
@@ -32,7 +32,7 @@ JS也有。JS的垃圾回收机制一共有两种算法。
 3. 在遍历结束时，所有被引用的对象都被标记，而<span v-red>**无法触达**</span>的对象则没有被标记
 4. 清除所有没有标记的对象
 
-![mark and sweep](/mark-sweep.png)
+![mark and sweep](/images/mark-sweep.png)
 
 如果两个对象互相引用，而且没有其余指针指向它们，它们就无法被访问，因此会被清除，其占用的内存被释放。就像是上图的红圈。
 

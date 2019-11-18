@@ -1,7 +1,7 @@
 ---
 tags: ["CSS动画"]
 date: 09.18.2019
-image: /rotate-intro.png
+image: /images/rotate-intro.png
 description: 写完这篇文章才发现，我怎么老是碰见傻卵问题
 ---
 
@@ -51,7 +51,7 @@ methods: {
 
 但在这个时候，鼠标根本就没有离开图片！！
 
-![mouseleave](/mouseleave.gif)
+![mouseleave](/images/mouseleave.gif)
 
 从上图可以看出，鼠标的确没有离开图片...
 

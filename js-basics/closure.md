@@ -1,7 +1,7 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
 date: 10.11.2019
-image: /closure-intro.jpeg
+image: /images/closure-intro.jpeg
 description: 闭包没啥复杂的，但确实需要仔细研究一下
 ---
 
@@ -90,7 +90,7 @@ hasA(); // 会打印 sb
 
 我们反复调用 hasA，然后看看结果。
 
-![hasA](/hasa.png)
+![hasA](/images/hasa.png)
 
 我们可以看见 sb 一直在被打印，这就说明 a 一直停留在内存中。
 
@@ -175,7 +175,7 @@ console.log(a);
 
 打印的结果如下：
 
-![closure-2](/closure-2.png)
+![closure-2](/images/closure-2.png)
 
 发现了吧，hasA 获取的，是对 a 的引用。
 

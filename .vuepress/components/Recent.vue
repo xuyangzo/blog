@@ -71,13 +71,13 @@ export default {
       page: 1,
       visibleIndex: 0,
       images: {
-        Http: "/http.jpg",
-        ES6: "/es6-intro.jpg",
-        排序算法: "/sort-intro.jpg",
-        CSS小技巧: "/css-tricks-intro.jpg",
-        CSS布局: "/css-layout-intro.jpg",
-        JS基础: "/js-intro.png",
-        LeetCode: "/leetcode-intro.png"
+        Http: "/images/http.jpg",
+        ES6: "/images/es6-intro.jpg",
+        排序算法: "/images/sort-intro.jpg",
+        CSS小技巧: "/images/css-tricks-intro.jpg",
+        CSS布局: "/images/css-layout-intro.jpg",
+        JS基础: "/images/js-intro.png",
+        LeetCode: "/images/leetcode-intro.png"
       }
     };
   },

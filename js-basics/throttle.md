@@ -1,7 +1,7 @@
 ---
 tags: ['DOM相关', '面试问题 - JS']
 date: 09.23.2019
-image: /throttle-intro.png
+image: /images/throttle-intro.png
 description: 节流和防抖在日常情况下用得挺多的，这还能不会？
 ---
 

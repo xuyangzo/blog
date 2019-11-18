@@ -1,7 +1,7 @@
 ---
 tags: ['ES6', '面试问题 - JS']
 date: 09.30.2019
-image: /promise-intro.png
+image: /images/promise-intro.png
 description: Promise 都不会就别去面试了，必挂
 ---
 
@@ -394,7 +394,7 @@ Promise
 
 最终的结果：
 
-![Promise.all](/promise-all.png)
+![Promise.all](/images/promise-all.png)
 
 我们可以看见，每个 Promise 执行的时间不一样，但是它们返回的顺序，还是原来数组的顺序。
 

@@ -1,7 +1,7 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
 date: 09.28.2019
-image: /deepcopy-intro.jpg
+image: /images/deepcopy-intro.jpg
 description: 别的深拷贝，不够强。而我这，够强
 ---
 

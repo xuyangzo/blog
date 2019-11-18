@@ -1,7 +1,7 @@
 ---
 tags: ['CSS布局', '面试问题 - CSS']
 date: 10.16.2019
-image: /box-model-intro.jpg
+image: /images/box-model-intro.jpg
 description: 盒模型是 CSS 的重中之重，不会就回家养猪吧
 ---
 
@@ -27,7 +27,7 @@ CSS 有两种盒模型。
 
 我们知道，CSS 的盒模型具有如下的结构：
 
-![box](/box.png)
+![box](/images/box.png)
 
 从外到内分别是：
 
@@ -441,7 +441,7 @@ html {
 
 Vuetify 就是这么做的。
 
-![vuetify](/vuetify.png)
+![vuetify](/images/vuetify.png)
 
 而且 border-box 几乎没有兼容性的问题，除了 IE 6~7。放心用。
 

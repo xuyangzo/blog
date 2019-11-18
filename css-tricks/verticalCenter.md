@@ -1,7 +1,7 @@
 ---
 tags: ['CSS布局', '面试问题 - CSS']
 date: 09.22.2019
-image: /vertical-align-intro.png
+image: /images/vertical-align-intro.png
 description: 一个成熟的前端程序员，做垂直居中不需要去 Stack Overflow 搜
 ---
 

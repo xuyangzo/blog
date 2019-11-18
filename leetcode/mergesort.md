@@ -1,7 +1,7 @@
 ---
 tags: ['排序算法', '面试问题 - 算法']
 date: 10.21.2019
-image: /mergesort-intro.jpg
+image: /images/mergesort-intro.jpg
 description: 和别的文章里的妖艳贱货不一样，我的归并排序朴实无华且枯燥
 ---
 
@@ -100,7 +100,7 @@ slice 和 concat 非常消耗时间与空间，所以我们这里就不看了。
 
 等等，是不是不大对？好像每层都花了 O(n) 的空间啊？
 
-![merge sort](/mergesort.png)
+![merge sort](/images/mergesort.png)
 
 这张图比较直观哈。
 
@@ -114,7 +114,7 @@ slice 和 concat 非常消耗时间与空间，所以我们这里就不看了。
 
 我们就拿这一层为例：
 
-![merge level](/merge-level.png)
+![merge level](/images/merge-level.png)
 
 在递归的过程中，这一层实现的顺序是从左往右的。
 

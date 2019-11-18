@@ -1,7 +1,7 @@
 ---
 tags: ['网络基础', '面试问题 - 网络']
 date: 11.06.2019
-image: /hybrid-model-intro.jpg
+image: /images/hybrid-model-intro.jpg
 description: 之前讲了 OSI 七层模型，这次讲一下具体应用的模型
 ---
 
@@ -19,7 +19,7 @@ description: 之前讲了 OSI 七层模型，这次讲一下具体应用的模�
 
 废话不多说，看图：
 
-![hybrid model](/hybrid-model.png)
+![hybrid model](/images/hybrid-model.png)
 
 最左侧的是 OSI 七层模型，而在中间的是…… TCP/IP 的四层模型。
 

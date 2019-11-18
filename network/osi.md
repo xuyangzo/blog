@@ -1,7 +1,7 @@
 ---
 tags: ['网络基础', '面试问题 - 网络']
 date: 11.06.2019
-image: /osi-intro.jpg
+image: /images/osi-intro.jpg
 description: 简单讲一下 OSI 七层模型（其实主要靠背）
 ---
 
@@ -31,7 +31,7 @@ description: 简单讲一下 OSI 七层模型（其实主要靠背）
 
 并且在七层模型中，层与层之间是对等通信的。也就是说应用层和应用层通信，表示层和表示层通信等等。
 
-![equal communication](/equal-commu.png)
+![equal communication](/images/equal-commu.png)
 
 ## 分类
 
@@ -55,7 +55,7 @@ description: 简单讲一下 OSI 七层模型（其实主要靠背）
 
 我们可以简单地认为，七层模型里的每一层都是由协议组成的。
 
-![osi](/osi.jpg)
+![osi](/images/osi.jpg)
 
 接下来，我尽量用最简单的语言，将七层模型讲一遍。
 

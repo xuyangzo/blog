@@ -1,7 +1,7 @@
 ---
 tags: ['浏览器']
 date: 09.23.2019
-image: /console-intro.png
+image: /images/console-intro.png
 description: 不是面试题，大家看着图个乐子
 ---
 
@@ -29,17 +29,17 @@ console.log(obj);
 
 当然，在 Node 环境下确实是这么打印的：
 
-![node](/node.png)
+![node](/images/node.png)
 
 但在浏览器环境下，包括 Chrome，Firefox 等一系列浏览器，其控制台打印的东西似乎不太对...
 
 Chrome:
 
-![chrome](/chrome.png)
+![chrome](/images/chrome.png)
 
 Firefox:
 
-![firefox](/firefox.png)
+![firefox](/images/firefox.png)
 
 ## 问题和解释
 
@@ -82,11 +82,11 @@ console.log(obj);
 
 Chrome:
 
-![chrome-2](/chrome2.png)
+![chrome-2](/images/chrome2.png)
 
 Firefox:
 
-![firefox-2](/firefox2.png)
+![firefox-2](/images/firefox2.png)
 
 
 <Disqus />

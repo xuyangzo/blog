@@ -1,7 +1,7 @@
 ---
 tags: ['CSS小技巧', '面试问题 - CSS']
 date: 09.23.2019
-image: /text-overflow-intro.jpeg
+image: /images/text-overflow-intro.jpeg
 description: 文本溢出还是挺常见的，但其中的原理可不简单...
 ---
 

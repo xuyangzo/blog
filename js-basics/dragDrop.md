@@ -1,7 +1,7 @@
 ---
 tags: ['DOM相关', '面试问题 - JS']
 date: 09.22.2019
-image: /drag-intro.png
+image: /images/drag-intro.png
 description: 虽然一般都用库，但最简单的拖拽还是得会的吧？
 ---
 

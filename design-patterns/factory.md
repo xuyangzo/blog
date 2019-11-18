@@ -1,7 +1,7 @@
 ---
 tags: ['设计模式', 'TypeScript', '面试问题 - 设计模式']
 date: 10.10.2019
-image: /factory-intro.jpg
+image: /images/factory-intro.jpg
 description: 简单工厂那么简单，学一下又不花什么时间
 ---
 

@@ -1,7 +1,7 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
 date: 09.23.2019
-image: /prototype-intro.jpeg
+image: /images/prototype-intro.jpeg
 description: 极少出现的面试题，但理解这玩意儿至关重要
 ---
 
@@ -55,7 +55,7 @@ console.log(a.__proto__);
 
 最终的输出如下: 
 
-![constructor](/constructor.png)
+![constructor](/images/constructor.png)
 
 这张图里第一次打印的值其实是有问题的。  
 可以参考这篇文章：[浏览器中console.log的打印问题](/js-basics/consolelog.md)
@@ -103,7 +103,7 @@ console.log(b.__proto__);
 
 这是最终的输出:
 
-![__proto__](/proto.png)
+![__proto__](/images/proto.png)
 
 ## Reference
 

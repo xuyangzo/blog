@@ -1,7 +1,7 @@
 ---
 tags: ['ES6', '面试问题 - JS']
 date: 10.21.2019
-image: /block-intro.png
+image: /images/block-intro.png
 description: 讲一下 ES5 的作用域和 ES6 的块级作用域
 ---
 
@@ -32,7 +32,7 @@ var a = 'test';
 
 打印出来的结果是这样：
 
-![hoist](/hoist.png)
+![hoist](/images/hoist.png)
 
 等一下，很奇怪，不是应该报错吗？为什么会打印 undefined？
 
@@ -64,7 +64,7 @@ function test() {
 }
 ```
 
-![hoist](/hoist-2.png)
+![hoist](/images/hoist-2.png)
 
 对了，还有一道经典的面试题。
 
@@ -94,7 +94,7 @@ function test() {
 test();
 ```
 
-![hoist](/hoist-3.png)
+![hoist](/images/hoist-3.png)
 
 ## 块级作用域的概念
 
@@ -121,7 +121,7 @@ if (true) {
 console.log(test);
 ```
 
-![scope](/scope.png)
+![scope](/images/scope.png)
 
 上面注释掉的两行，会报错。
 
@@ -218,7 +218,7 @@ let a = 0;
 
 ### 兼容性
 
-![compatibility let](/comp-let.png)
+![compatibility let](/images/comp-let.png)
 
 ## const 关键词
 
@@ -265,7 +265,7 @@ console.log(obj); // 会打印 {}
 
 ### 兼容性
 
-![compatibility let](/comp-let.png)
+![compatibility let](/images/comp-let.png)
 
 ## 参考资料
 

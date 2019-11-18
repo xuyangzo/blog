@@ -1,7 +1,7 @@
 ---
 tags: ['ES6', '面试问题 - JS']
 date: 11.09.2019
-image: /invsof-intro.jpg
+image: /images/invsof-intro.jpg
 description: 讲一下 for...in 与 for...of 之间的区别
 ---
 
@@ -45,7 +45,7 @@ for (const key in obj) {
 
 答案是：
 
-![for..in](/for-in.png)
+![for..in](/images/for-in.png)
 
 也就是说，如果我们需要的是值，我们需要这么写：
 
@@ -57,7 +57,7 @@ for (const key in obj) {
 
 结果如下：
 
-![for..in-value](/for-in-val.png)
+![for..in-value](/images/for-in-val.png)
 
 那么问题来了，什么是 `可枚举` 的 key？
 
@@ -95,7 +95,7 @@ for (const key in obj) {
 
 猜一下结果是怎样的？如下：
 
-![for-in-all](/for-in-all.png)
+![for-in-all](/images/for-in-all.png)
 
 很显然，no 这个属性是不可枚举的，因此无法被 for...in 获取到。
 
@@ -111,7 +111,7 @@ for (const key in obj) {
 
 MDN 上是这么说的：
 
-![mdn-for-in](/mdn-for-in.png)
+![mdn-for-in](/images/mdn-for-in.png)
 
 举个小例子：
 
@@ -130,7 +130,7 @@ for...of 返回的是 `可迭代` 的对象的属性的值。
 
 MDN 是这么说的：
 
-![mdn-for-of](/mdn-for-of.png)
+![mdn-for-of](/images/mdn-for-of.png)
 
 我们可以看见，能够迭代的数据结构，基本上就是数组与类数组。
 
@@ -138,7 +138,7 @@ MDN 是这么说的：
 
 如果我们尝试用 for...of 去迭代上面的 obj，会报错：
 
-![for-of-err](/for-of-err.png)
+![for-of-err](/images/for-of-err.png)
 
 但是我们可以迭代一个 Set 对象：
 
@@ -151,7 +151,7 @@ for (const value of set) {
 
 结果如下：
 
-![for-of-set](/for-of-set.png)
+![for-of-set](/images/for-of-set.png)
 
 那么问题来了，究竟什么是 `可迭代` 的呢？
 
@@ -184,7 +184,7 @@ for (const value of arr) {
 
 最终的结果如下：
 
-![for-of-set](/for-of-set.png)
+![for-of-set](/images/for-of-set.png)
 
 ## Bonus: forEach
 
@@ -205,7 +205,7 @@ arr.forEach(item => console.log(item));
 
 结果如下：
 
-![for-of-set](/for-of-set.png)
+![for-of-set](/images/for-of-set.png)
 
 由此可见，数组的 forEach 方法也只会考虑可以迭代的属性。
 

@@ -1,7 +1,7 @@
 ---
 tags: ['DOM相关', '面试问题 - JS']
 date: 10.08.2019
-image: /counter-intro.jpeg
+image: /images/counter-intro.jpeg
 description: setInterval + requestAnimationFrame，都安排好了
 ---
 

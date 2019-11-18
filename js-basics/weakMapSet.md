@@ -1,7 +1,7 @@
 ---
 tags: ['ES6', '面试问题 - JS']
 date: 10.24.2019
-image: /weak-intro.jpeg
+image: /images/weak-intro.jpeg
 description: 介绍一下（并给出证据）为啥 WeakSet 和 WeakMap 是 weak 的
 ---
 
@@ -87,7 +87,7 @@ for (let i = 0; i < 10; ++i) {
 
 最后打印了 10 个如下的对象：
 
-![weakset result 1](/weakset-1.png)
+![weakset result 1](/images/weakset-1.png)
 
 ...等一哈，这不对啊？不是说好垃圾回收器会回收分配给这玩意儿的内存吗？
 
@@ -106,7 +106,7 @@ for (let i = 0; i < 100; ++i) {
 }
 ```
 
-![weakset-2](/weakset-2.png)
+![weakset-2](/images/weakset-2.png)
 
 看见没有，在垃圾回收器开启一个新的 cycle 后，WeakSet 里的弱引用对象被清除了。
 
@@ -124,7 +124,7 @@ for (let i = 0; i < 100; ++i) {
 
 结果如下：
 
-![set](/set.png)
+![set](/images/set.png)
 
 毫不意外，在 Set 中，对于该对象的引用还保留着。
 
@@ -157,7 +157,7 @@ setTimeout(() => {
 
 结果如下：
 
-![weakmap](/wm.png)
+![weakmap](/images/wm.png)
 
 毫不意外，该键值对从 WeakMap 里被移除了。
 
@@ -167,7 +167,7 @@ setTimeout(() => {
 
 对于普通的 Map 来说，自然是保留着引用。
 
-![map](/map.png)
+![map](/images/map.png)
 
 ## 应用场景
 

@@ -1,7 +1,7 @@
 ---
 tags: ['排序算法', '面试问题 - 算法']
 date: 10.01.2019
-image: /selectionsort-intro.png
+image: /images/selectionsort-intro.png
 description: 选择排序用得比较少，但会还是要会啊
 ---
 

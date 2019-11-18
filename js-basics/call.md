@@ -1,7 +1,7 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
 date: 11.14.2019
-image: /call-intro.png
+image: /images/call-intro.png
 description: 讲一下 call、apply 和 bind
 ---
 

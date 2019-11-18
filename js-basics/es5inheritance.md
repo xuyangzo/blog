@@ -1,7 +1,7 @@
 ---
 tags: ['JS基础', '面试问题 - JS']
 date: 09.23.2019
-image: /inheritance-intro.jpg
+image: /images/inheritance-intro.jpg
 description: 别想不开用 ES5 继承，但会还是得会的。ES6 继承也是源自于 ES5 继承的。
 ---
 

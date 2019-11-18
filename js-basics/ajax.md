@@ -1,7 +1,7 @@
 ---
 tags: ['DOM相关', '面试问题 - JS']
 date: 10.08.2019
-image: /ajax-intro.jpg
+image: /images/ajax-intro.jpg
 description: wdnmd，写篇技术文章都能想起我早已退坑的碧蓝航线（还有婚了的阿贾克斯老婆）
 ---
 

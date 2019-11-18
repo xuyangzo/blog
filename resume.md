@@ -5,44 +5,44 @@ website: https://xuyangzo.github.io
 # address: 1250 W. 37th St, LA, CA, 90007
 # phone: (+1)2137137527
 github: https://github.com/xuyangzo
-photo: /nolove.jpg
+photo: /images/nolove.jpg
 wechatQR: /wechat.jpeg
 
 intros:
 - title: 单身狗
-  image: /single-dog.png
+  image: /images/single-dog.png
   text: 不是，你们都是怎么找到女朋友的？
 
 - title: 养生选手
-  image: /tea.png
+  image: /images/tea.png
   text: 没有什么比身体更重要，钱也不行
 
 - title: 网文写手
-  image: /writer.jpeg
+  image: /images/writer.jpeg
   text: 水平还行的半途而废型十八流写手
 
 - title: 不喝酒
-  image: /no-drink.jpg
+  image: /images/no-drink.jpg
   text: 讲道理，酒又没有肥宅快乐水好喝
 
 - title: 不抽烟
-  image: /no-smoke.png
+  image: /images/no-smoke.png
   text: 讲道理，抽烟只会加速肥宅的死亡
 
 - title: 不玩多人游戏
-  image: /no-game.png
+  image: /images/no-game.png
   text: 只喜欢能随时暂停或者投降的游戏
 
 - title: 会做饭
-  image: /cook.png
+  image: /images/cook.png
   text: 讲道理，没有哪个留学生不会做饭
 
 - title: 整理癖
-  image: /clean.png
+  image: /images/clean.png
   text: 看见乱或者脏的东西就会暴起整理
 
 - title: 死宅
-  image: /house.jpeg
+  image: /images/house.jpeg
   text: 喜欢待在家里，尤其是晚上9:00后
 
 skills:
@@ -106,7 +106,7 @@ experiences:
   color: crimson
   job: 本科，CS 专业
   time: 08.2016 ~ 05.2020
-  logo: /usc-logo.png
+  logo: /images/usc-logo.png
   description: [
     '是所好学校，但学费太贵',
     '然后，也就那样吧，正常学习，正常生活',
@@ -118,7 +118,7 @@ experiences:
   color: gray
   job: SDE 实习被拒
   time: 10.2018 ~ 02.2019
-  logo: /amazon-logo.jpg
+  logo: /images/amazon-logo.jpg
   description: [
     'Amazon, Microsoft, Airbnb, Expedia, Yahoo, Cisco, Uber, Linkedin, Twitch, Bloomberg, Hulu, Netflix, Twitter 等80余家公司', 
     '简历全部被拒，一个笔试面试都没有', 
@@ -130,7 +130,7 @@ experiences:
   color: orange
   job: 前端实习
   time: 05.2019 ~ 08.2019
-  logo: /ali-logo.png
+  logo: /images/ali-logo.png
   description: [
     '2019年4月份的时候，经历了笔试 + 技术面x5 + hr面之后，终于拿到了 offer',
     '与此同时还拿了图森未来和腾讯的 offer，最后还是去了阿里，毕竟阿里前端最强',
@@ -141,7 +141,7 @@ experiences:
   color: skyblue
   job: 前端实习挂
   time: 09.2019 ~ 09.2019
-  logo: /facebook-logo.png
+  logo: /images/facebook-logo.png
   description: [
     '内推，简历被拒，笔试都没有',
     '性别歧视，男生简历几乎全挂，女生闭着眼睛拿面试。不看实力，女生就是无敌',
@@ -153,7 +153,7 @@ experiences:
   color: darkorange
   job: SDE 实习挂
   time: 09.2019 ~ 09.2019
-  logo: /amazon-logo.jpg
+  logo: /images/amazon-logo.jpg
   description: [
     '内推，简历被拒，笔试都没有',
     '招聘信息上就没写 JS 这门语言，了解下来会发现，这家公司根本看不起前端',
