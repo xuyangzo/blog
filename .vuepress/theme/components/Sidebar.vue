@@ -22,10 +22,7 @@ export default {
 
   computed: {
     showSidebar() {
-      return (
-        this.$page.regularPath !== "/resume.html" &&
-        this.$page.regularPath !== "/"
-      );
+      return this.$page.regularPath !== "/";
     }
   }
 };

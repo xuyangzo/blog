@@ -1,79 +1,15 @@
 <template>
   <main class="home" aria-labelledby="main-title">
-    <header class="hero">
-      <div class="blocker" @click.stop v-if="!shouldAnimate">
-        <div class="spinner">
-          <div class="rect1"></div>
-          <div class="rect2"></div>
-          <div class="rect3"></div>
-          <div class="rect4"></div>
-          <div class="rect5"></div>
-        </div>
-      </div>
-      <div class="tv-displayer">
-        <img :src="$withBase('/images/screen.gif')" alt="tv" class="tv" @load="imageLoad" />
-        <img
-          :src="$withBase('/images/warning.gif')"
-          alt="warning"
-          class="warning"
-          @load="imageLoad"
-        />
-        <img
-          :src="$withBase('/images/target.gif')"
-          alt="target"
-          class="target"
-          @load="imageLoad"
-          :class="{'target-animation': shouldAnimate}"
-        />
-        <img
-          :src="$withBase('/images/earth.gif')"
-          alt="earth"
-          class="earth"
-          @click="$router.push(data.actionLink)"
-          @load="imageLoad"
-          :class="{'earth-animation': shouldAnimate}"
-        />
-        <img
-          :src="$withBase(data.heroImage)"
-          alt="cry"
-          class="cry"
-          @load="imageLoad"
-          :class="{'cry-animation': shouldAnimate}"
-        />
-        <img
-          :src="$withBase('/images/dialog.png')"
-          alt="dialog"
-          class="dialog"
-          @load="imageLoad"
-          :class="{'dialog-animation': shouldAnimate}"
-        />
-        <span
-          class="dialog-text"
-          :class="{'dialog-text-animation': shouldAnimate}"
-        >{{ data.dialogText }}</span>
-      </div>
-    </header>
-
-    <header class="hero mobile-hero">
-      <br />
-      <br />
-      <br />
-      <img v-if="data.heroImage" :src="$withBase(heroImage)" />
-      <br />
-      <p class="action" v-if="data.actionText && data.actionLink">
-        <NavLink class="action-button" :item="actionLink" />
-      </p>
-    </header>
-
-    <!-- <div class="footer" v-if="data.footer">{{ data.footer }}</div> -->
+    <resume />
   </main>
 </template>
 
 <script>
 import NavLink from "@theme/components/NavLink.vue";
+import Resume from "../../components/Resume";
 
 export default {
-  components: { NavLink },
+  components: { NavLink, Resume },
   data() {
     return {
       heroImage: "/images/01.png",
