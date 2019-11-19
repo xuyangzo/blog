@@ -65,11 +65,11 @@ div[id="the-test"] {
 
 Vue style 的 scoped 属性我想大家都应该用过。这玩意儿就是靠属性选择器实现的。
 
-![vue selector](/vue-selector.png)
+![vue selector](/images/vue-selector.png)
 
 Vue 会给 scoped 的标签添加一个额外的属性，然后通过属性选择器来选择这个属性，如下：
 
-![vue selector2](/vue-selector-2.png)
+![vue selector2](/images/vue-selector-2.png)
 
 ## 子元素选择器
 
@@ -222,7 +222,7 @@ li ~ li {
 
 这个大家肯定用过，不过又有谁知道一共有多少种伪类呢？
 
-![pseudoclass selector](/pseudo-class.png)
+![pseudoclass selector](/images/pseudo-class.png)
 
 具体的链接在这里，感兴趣的朋友可以自己去看：[Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
 
@@ -236,7 +236,7 @@ li ~ li {
 
 具体的兼容性和伪元素种类，可以参考这里：[Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
 
-![pseudo-element](/pseudo-element.png)
+![pseudo-element](/images/pseudo-element.png)
 
 ## 优先级
 
