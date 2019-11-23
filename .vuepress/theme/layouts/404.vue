@@ -5,7 +5,7 @@
         <br />
         <br />
         <v-row align="center" justify="center">
-          <img :src="$withBase('/ah.png')" class="ah-image" />
+          <img :src="$withBase('/images/ah.png')" class="ah-image" />
           <v-alert
             dense
             text

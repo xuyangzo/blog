@@ -142,10 +142,14 @@ export default {
   },
   watch: {
     page: function(newPage) {
-      this.$router.push(
-        { path: "/recent.html", hash: `#${newPage}` },
-        () => {}
-      );
+      if (!Number.isNaN(newPage)) {
+        this.$router.push(
+          { path: "/recent.html", hash: `#${newPage}` },
+          () => {}
+        );
+      } else {
+        this.$router.push({ path: "/recent.html", hash: `#1` }, () => {});
+      }
     },
     $route: function() {
       this.page = parseInt(this.$route.hash.slice(1));

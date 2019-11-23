@@ -6,7 +6,7 @@ website: https://xuyangzo.github.io
 # phone: (+1)2137137527
 github: https://github.com/xuyangzo
 photo: /images/nolove.jpg
-wechatQR: /wechat.jpeg
+wechatQR: /images/wechat.jpeg
 
 intros:
 - title: 单身狗

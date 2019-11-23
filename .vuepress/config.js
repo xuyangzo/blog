@@ -12,11 +12,10 @@ module.exports = {
       }
     ],
     // following are pwa support
-    ['link', { rel: 'icon', href: '/icons/logo-icon.png' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: 'white' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }],
     ['link', { rel: 'apple-touch-icon', href: '/icons/lynch-icon-152.png' }],
     // ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
     ['meta', { name: 'msapplication-TileImage', content: '/icons/lynch-icon-144.png' }],
