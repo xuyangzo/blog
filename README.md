@@ -137,28 +137,26 @@ experiences:
     '很感谢国内的公司。在这个时候，我的简历上唯一能拿得出手的，也就只有学校了。但是头条、阿里、腾讯这些大公司还是愿意给我面试。真的很感激。那个时候我知道自己明明是有实力的，在北美却一个面试都拿不到，差一点就直接万念俱灰了'
   ]
 
-- company: Facebook
-  color: skyblue
-  job: 前端实习挂
-  time: 09.2019 ~ 09.2019
-  logo: /images/facebook-logo.png
+- company: Electronic Arts
+  color: black
+  job: 软件工程师实习
+  time: 05.2020 ~ 08.2020
+  logo: /images/ea-logo.png
   description: [
-    '内推，简历被拒，笔试都没有',
-    '性别歧视，男生简历几乎全挂，女生闭着眼睛拿面试。不看实力，女生就是无敌',
-    '看看，自由国度的 Gender Equality 多牛逼',
-    '下辈子记得要投胎当女生，而且一定要出生在美国，white female 找工作无敌'
+    '简历无限被拒，这个时候 EA 横空出世',
+    '谁不想去游戏公司呢？每天上班的任务就是打游戏（雾）',
+    '就是美国这疫情处理太sb，只能远程实习...'
   ]
 
-- company: Amazon
-  color: darkorange
-  job: SDE 实习挂
-  time: 09.2019 ~ 09.2019
-  logo: /images/amazon-logo.jpg
+- company: 南加州大学
+  color: red
+  job: 研究生，CS 专业
+  time: 08.2020 ~ 05.2021
+  logo: /images/usc-logo.png
   description: [
-    '内推，简历被拒，笔试都没有',
-    '招聘信息上就没写 JS 这门语言，了解下来会发现，这家公司根本看不起前端',
-    '我在简历上强调自己擅长前端的后果，就是简历都没过，而且我还是内推的',
-    '请问你们的页面都是运营写的吗？'
+    '一年毕业，这文凭不是相当于白给',
+    '大概学不到太多的东西，靠自学',
+    '搬家了，住 studio，超爽'
   ]
 ---
 
