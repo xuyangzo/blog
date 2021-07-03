@@ -15,7 +15,7 @@
       <v-timeline-item v-for="work in experiences" :key="work.color" :color="work.color" fill-dot>
         <template v-slot:icon>
           <v-avatar class="experience-avatar">
-            <img :src="$withBase(work.logo)" :style="{ border: `1px solid ${work.color}` }" />
+            <img :src="$withBase(work.logo)" />
           </v-avatar>
         </template>
         <v-card :color="work.color" class="overwrite-card-title">
@@ -26,7 +26,7 @@
           <span class="experience-time">{{ work.time }}</span>
           <v-card-text class="white text--primary overwrite-card-text">
             <ul>
-              <li v-for="description in work.description">{{ description }}</li>
+              <li v-for="description in work.description" v-bind:key="description">{{ description }}</li>
             </ul>
           </v-card-text>
         </v-card>

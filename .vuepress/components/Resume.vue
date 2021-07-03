@@ -6,9 +6,6 @@
     <Intro :intros="intro" />
     <br />
     <br />
-    <Skill :skills="skill" />
-    <br />
-    <br />
     <Experience :experiences="experience"></Experience>
   </div>
 </template>
@@ -16,7 +13,6 @@
 <script>
 import Header from "./Header";
 import Intro from "./Intro";
-import Skill from "./Skill";
 import Experience from "./Experience";
 
 export default {
@@ -53,10 +49,6 @@ export default {
     intro() {
       const { intros } = this.$page.frontmatter;
       return intros;
-    },
-    skill() {
-      const { skills } = this.$page.frontmatter;
-      return skills;
     },
     experience() {
       const { experiences } = this.$page.frontmatter;
