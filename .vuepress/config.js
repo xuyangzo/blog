@@ -68,6 +68,15 @@ module.exports = {
     ],
     sidebar: [
       {
+        title: '随笔',
+        path: '/essay/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/essay/illustration'
+        ]
+      },
+      {
         title: '小说',
         path: '/novels/',
         collapsable: false,
