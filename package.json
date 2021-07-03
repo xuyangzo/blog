@@ -4,7 +4,8 @@
   "author": "xuyangzo <xuyangzo@usc.edu>",
   "scripts": {
     "docs:build": "vuepress build",
-    "docs:dev": "vuepress dev"
+    "docs:dev": "vuepress dev",
+    "build": "vuepress build"
   },
   "main": "index.js",
   "dependencies": {
