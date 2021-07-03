@@ -35,4 +35,6 @@ description: 必读（并不是
 
 好耶！
 
+![crafter](/images/crafter.png)
+
 <Disqus />

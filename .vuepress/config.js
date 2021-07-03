@@ -93,6 +93,16 @@ module.exports = {
         children: [
           '/poems/wait'
         ]
+      },
+      {
+        title: '菜',
+        path: '/dishes/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/dishes/new_aoerliang',
+          '/dishes/fried_shrimp'
+        ]
       }
     ]
   }
