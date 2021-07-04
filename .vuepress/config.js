@@ -100,10 +100,12 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 1,
         children: [
+          '/dishes/roast_shrimp',
           '/dishes/new_aoerliang',
           '/dishes/beef_soup',
           '/dishes/fried_shrimp',
-          '/dishes/shrimp_tofu'
+          '/dishes/shrimp_tofu',
+          '/dishes/curry_chicken'
         ]
       }
     ]
