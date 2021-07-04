@@ -1,7 +1,7 @@
 ---
 name: 一只Lynch
 email: 1403892781@qq.com
-website: https://lynchzou0114.com
+website: https://www.lynchzou0114.com
 github: https://github.com/xuyangzo
 photo: /images/profile.png
 wechatQR: /images/wechat.jpeg

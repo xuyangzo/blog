@@ -101,7 +101,9 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           '/dishes/new_aoerliang',
-          '/dishes/fried_shrimp'
+          '/dishes/beef_soup',
+          '/dishes/fried_shrimp',
+          '/dishes/shrimp_tofu'
         ]
       }
     ]
