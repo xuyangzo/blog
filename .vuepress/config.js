@@ -73,7 +73,23 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 1,
         children: [
-          '/essay/illustration'
+          '/essay/illustration',
+          '/essay/cry'
+        ]
+      },
+      {
+        title: '菜',
+        path: '/dishes/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/dishes/total',
+          '/dishes/roast_shrimp',
+          '/dishes/new_aoerliang',
+          '/dishes/beef_soup',
+          '/dishes/fried_shrimp',
+          '/dishes/shrimp_tofu',
+          '/dishes/curry_chicken'
         ]
       },
       {
@@ -92,20 +108,6 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           '/poems/wait'
-        ]
-      },
-      {
-        title: '菜',
-        path: '/dishes/',
-        collapsable: false,
-        sidebarDepth: 1,
-        children: [
-          '/dishes/roast_shrimp',
-          '/dishes/new_aoerliang',
-          '/dishes/beef_soup',
-          '/dishes/fried_shrimp',
-          '/dishes/shrimp_tofu',
-          '/dishes/curry_chicken'
         ]
       }
     ]
