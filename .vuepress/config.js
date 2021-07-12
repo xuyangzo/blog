@@ -74,7 +74,8 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           '/essay/illustration',
-          '/essay/cry'
+          '/essay/cry',
+          '/essay/jubensha'
         ]
       },
       {

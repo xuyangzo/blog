@@ -1,5 +1,5 @@
 ---
-name: 一只Lynch
+name: Lynch
 email: 1403892781@qq.com
 website: https://www.lynchzou0114.com
 github: https://github.com/xuyangzo
