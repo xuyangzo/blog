@@ -75,7 +75,9 @@ module.exports = {
         children: [
           '/essay/illustration',
           '/essay/cry',
-          '/essay/jubensha'
+          '/essay/jubensha',
+          '/essay/work_month',
+          '/essay/web_novel_think'
         ]
       },
       {
@@ -99,7 +101,9 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 1,
         children: [
-          '/novels/ggbh'
+          '/novels/ggbh',
+          '/novels/ysqn_down',
+          '/novels/ysqn_setting'
         ]
       },
       {
