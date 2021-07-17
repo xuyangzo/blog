@@ -103,7 +103,12 @@ module.exports = {
         children: [
           '/novels/ggbh',
           '/novels/ysqn_down',
-          '/novels/ysqn_setting'
+          '/novels/ysqn_setting',
+          '/novels/dead_river1',
+          '/novels/dead_river2',
+          '/novels/dead_river3',
+          '/novels/dead_river4',
+          '/novels/dead_river5'
         ]
       },
       {
