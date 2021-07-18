@@ -91,7 +91,7 @@ experiences:
   logo: /images/ms-logo.png
   description: [
     '终于正式成为社畜，以后不再有在校园繁忙的人流中穿梭的机会了',
-    '兄弟们，干到微软倒闭！(并不是'
+    '我直接在微软待到退休！'
   ]
 
 ---
