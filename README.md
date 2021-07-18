@@ -61,7 +61,7 @@ experiences:
   logo: /images/ali-logo.png
   description: [
     '2019年4月份的时候，经历了笔试 + 技术面x5 + hr面之后，终于拿到了 offer',
-    '很感谢国内的公司。在这个时候，我的简历上唯一能拿得出手的，也就只有学校了。但是头条、阿里、腾讯这些大公司还是愿意给我面试。真的很感激。那个时候我知道自己明明是有实力的，在北美却一个面试都拿不到，差一点就直接万念俱灰了'
+    'This sentence is disabled'
   ]
 
 - company: Electronic Arts
@@ -70,7 +70,7 @@ experiences:
   time: 05.2020 ~ 08.2020
   logo: /images/ea-logo.png
   description: [
-    '简历无限被拒，这时 EA 横空出世',
+    'This sentence is disabled',
     '每天上班的任务就是打游戏（并没有）',
   ]
 
@@ -80,7 +80,7 @@ experiences:
   time: 08.2020 ~ 05.2021
   logo: /images/usc-logo.png
   description: [
-    '一年毕业，这文凭不是相当于白给',
+    'This sentence is disabled',
     '本科加研究生五年结束，连妹子的手都没牵过，什么水平！'
   ]
 
