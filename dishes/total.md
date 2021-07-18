@@ -30,9 +30,9 @@ description: 会做的菜合集
 | 茶树菇/香菇 + 炖鸡 | 排骨焖饭 | | 咖喱鲜虾粉丝煲 | 莲藕螃蟹煲 | | 醋溜白菜 |
 | 宫保鸡丁 | 蒜泥白肉 | | 蒜蓉金针菇烤虾 | | | |
 | 卤蛋 | 梅子小排 | | 番茄虾滑粉丝煲 | | | |
-| 照烧鸡腿饭 | 京酱肉丝 | | | | | |
+| 照烧鸡腿饭 | 京酱肉丝 | | 虾仁番茄豆腐汤 | | | |
 | 咖喱土豆鸡 | | | | | | |
-| <span v-p>19</span> | <span v-p>18</span> | <span v-p>11</span> | <span v-p>17</span> | <span v-p>15</span> | <span v-p>13</span> | <span v-p>15</span> |</span>
-| | | | | | | <span style="color: crimson">**108**</span> |
+| <span v-p>19</span> | <span v-p>18</span> | <span v-p>11</span> | <span v-p>18</span> | <span v-p>15</span> | <span v-p>13</span> | <span v-p>15</span> |</span>
+| | | | | | | <span style="color: crimson">**109**</span> |
 
 <Disqus />
