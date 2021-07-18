@@ -74,10 +74,10 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           '/essay/illustration',
+          '/essay/life_change',
           '/essay/cry',
           '/essay/jubensha',
-          '/essay/work_month',
-          '/essay/web_novel_think'
+          '/essay/work_month'
         ]
       },
       {
