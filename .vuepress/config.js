@@ -89,6 +89,7 @@ module.exports = {
           '/dishes/total',
           '/dishes/roast_shrimp',
           '/dishes/new_aoerliang',
+          '/dishes/tea_egg',
           '/dishes/beef_soup',
           '/dishes/fried_shrimp',
           '/dishes/shrimp_tofu',
