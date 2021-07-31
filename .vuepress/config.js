@@ -77,7 +77,8 @@ module.exports = {
           '/essay/life_change',
           '/essay/cry',
           '/essay/jubensha',
-          '/essay/work_month'
+          '/essay/work_month',
+          '/essay/love_sister'
         ]
       },
       {
