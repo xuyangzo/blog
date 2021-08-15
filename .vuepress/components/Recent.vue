@@ -34,7 +34,7 @@
       </v-row>
     </div>
     <div v-else>
-      <v-row v-for="article in thisPageArticles" dense class="mt-2 mb-2 pt-2" :key="articles.title">
+      <v-row v-for="article in thisPageArticles" dense class="mt-2 mb-2 pt-2" v-bind:key="articles.title">
         <v-col cols="12">
           <v-card color="#fff" light class="custom-card" @click="goToArticle(article.path)">
             <v-card-title class="headline mb-2">{{ article.title }}</v-card-title>
