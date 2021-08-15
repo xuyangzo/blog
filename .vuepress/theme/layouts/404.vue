@@ -260,7 +260,7 @@ export default {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .fof-container {
     .ah-image {
       margin-bottom: 20px;

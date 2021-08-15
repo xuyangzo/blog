@@ -93,7 +93,7 @@ export default {
   }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 500px) {
   .sidebar {
     display: none;
   }

@@ -108,7 +108,7 @@ export default {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .resume-experience {
     padding: 10px !important;
 

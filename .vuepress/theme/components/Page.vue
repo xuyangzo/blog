@@ -36,7 +36,7 @@ export default {
   display: block;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .page {
     padding-left: 0 !important;
   }
