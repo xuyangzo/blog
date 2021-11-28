@@ -104,6 +104,7 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 1,
         children: [
+          '/novels/nodick',
           '/novels/ggbh',
           '/novels/ysqn_down',
           '/novels/ysqn_setting',
