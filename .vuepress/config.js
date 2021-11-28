@@ -79,7 +79,8 @@ module.exports = {
           '/essay/jubensha',
           '/essay/work_month',
           '/essay/love_sister',
-          '/essay/no_love'
+          '/essay/no_love',
+          '/essay/recover'
         ]
       },
       {
