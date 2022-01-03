@@ -4,7 +4,7 @@
       <v-row
         dense
         class="article-block mt-2 mb-2 pt-2"
-        v-for="(article, index) in articles"
+        v-for="article in articles"
         :key="article.title"
         v-observe-visibility="{
           callback: (isVisible) => { visibilityChanged(isVisible, article) },
@@ -181,6 +181,7 @@ export default {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     text-align: left !important;
     transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding-top: 30px !important;
 
     &:hover {
       color: mediumpurple;
