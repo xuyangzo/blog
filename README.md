@@ -7,9 +7,9 @@ photo: /images/profile.png
 wechatQR: /images/wechat.jpeg
 
 intros:
-- title: 单身狗
-  image: /images/single-dog.png
-  text: 还在寻找女主角的旅途中
+- title: 脱单了！
+  image: /images/couple.png
+  text: 女主角找到了！
 
 - title: 养生入门
   image: /images/tea.png
