@@ -51,6 +51,7 @@ module.exports = {
       nav: [
         { text: 'Home', link: '/' },
         { text: '最新', link: '/recent.html' },
+        { text: '所有标签', link: '/all_tags.html' },
         {
           text: '文学',
           items: [
