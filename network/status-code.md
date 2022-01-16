@@ -105,4 +105,4 @@ description: 从别人的文章里搬运来了各大 HTTP 状态码
 
 [HTTP状态码详解](http://tool.oschina.net/commons?type=5)
 
-<Disqus />
+<Chirpy />

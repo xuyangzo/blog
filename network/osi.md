@@ -175,4 +175,4 @@ MAC 地址就是在这一层进行分配的。
 
 [表示层（ presentation layer）和会话层（session layer）为什么会被弃用？](https://www.zhihu.com/question/58798786)
 
-<Disqus />
+<Chirpy />

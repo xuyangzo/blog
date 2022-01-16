@@ -84,4 +84,4 @@ description: 本来想写给自己，但我觉得应该写给更多人
 
 希望你时刻保持清醒。
 
-<Disqus />
+<Chirpy />

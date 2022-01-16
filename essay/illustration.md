@@ -47,4 +47,4 @@ description: 必读（并不是
 
 ![crafter](/images/crafter.png)
 
-<Disqus />
+<Chirpy />

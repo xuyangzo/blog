@@ -180,4 +180,4 @@ console.log(fn2); // 会打印 12345678
 
 [深入理解js立即执行函数](https://www.cnblogs.com/cnfxx/p/7337889.html)
 
-<Disqus />
+<Chirpy />

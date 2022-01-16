@@ -111,4 +111,4 @@ console.log(b.__proto__);
 
 [JS原型（显式原型+隐式原型）](https://www.jianshu.com/p/79f5549fa1e7)
 
-<Disqus />
+<Chirpy />

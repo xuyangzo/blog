@@ -92,4 +92,4 @@ MinStack.prototype.getMin = function() {
  */
 ```
 
-<Disqus />
+<Chirpy />

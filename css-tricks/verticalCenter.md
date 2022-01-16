@@ -175,4 +175,4 @@ description: 一个成熟的前端程序员，做垂直居中不需要去 Stack 
 </style>
 ```
 
-<Disqus />
+<Chirpy />

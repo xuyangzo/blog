@@ -53,4 +53,4 @@ function compare(root, lower, upper) {
 }
 ```
 
-<Disqus />
+<Chirpy />

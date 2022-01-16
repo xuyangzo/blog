@@ -60,4 +60,4 @@ function invert(node) {
 }
 ```
 
-<Disqus />
+<Chirpy />

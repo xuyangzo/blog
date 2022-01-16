@@ -115,5 +115,5 @@ console.log(single2.name);
 
 [单例模式的应用场景及优缺点](https://www.cnblogs.com/shoshana-kong/p/9633144.html)
 
-<Disqus />
+<Chirpy />
 

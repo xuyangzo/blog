@@ -120,4 +120,4 @@ document.getElementById('app').onscroll = throttle(hello, 200, 1000);
 
 [JavaScript函数节流和函数防抖之间的区别](https://www.cnblogs.com/walls/p/6399837.html)
 
-<Disqus />
+<Chirpy />

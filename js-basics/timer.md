@@ -216,4 +216,4 @@ stopID = requestAnimationFrame(repeat);
 </style>
 :::
 
-<Disqus />
+<Chirpy />

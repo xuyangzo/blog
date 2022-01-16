@@ -87,4 +87,4 @@ function cleanQueue(nums, dequeue, i, k) {
 }
 ```
 
-<Disqus />
+<Chirpy />

@@ -311,4 +311,4 @@ JS 的事件委托其实就是利用了事件冒泡的原理。
 
 [UI Events](https://www.w3.org/TR/uievents/)
 
-<Disqus />
+<Chirpy />

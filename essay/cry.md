@@ -19,4 +19,4 @@ description: 如题
 
 兄弟们把泪目打在公屏上。
 
-<Disqus />
+<Chirpy />

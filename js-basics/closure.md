@@ -185,6 +185,6 @@ console.log(a);
 
 [深入理解JS闭包](https://www.cnblogs.com/duanlianjiang/p/5036671.html)
 
-<Disqus />
+<Chirpy />
 
 

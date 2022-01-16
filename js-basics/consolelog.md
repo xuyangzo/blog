@@ -89,4 +89,4 @@ Firefox:
 ![firefox-2](/images/firefox2.png)
 
 
-<Disqus />
+<Chirpy />

@@ -214,4 +214,4 @@ description: 纯 CSS 画三角形，包学包会
 
 [css如何将div画成三角形](https://www.cnblogs.com/v-weiwang/p/5057588.html)
 
-<Disqus />
+<Chirpy />

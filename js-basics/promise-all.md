@@ -161,4 +161,4 @@ reject:
 
 完美！
 
-<Disqus />
+<Chirpy />

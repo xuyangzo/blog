@@ -247,4 +247,4 @@ description: 一般人都会用 JS 做五星好评，不一般的人都用纯 CS
 
 [纯CSS的星级评价效果](https://segmentfault.com/a/1190000009755574)
 
-<Disqus />
+<Chirpy />

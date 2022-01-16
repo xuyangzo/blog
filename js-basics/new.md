@@ -65,4 +65,4 @@ console.log(a);
 
 [js中的new()到底做了些什么？](https://www.cnblogs.com/faith3/p/6209741.html)
 
-<Disqus />
+<Chirpy />

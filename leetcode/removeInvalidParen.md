@@ -113,4 +113,4 @@ function isValid(s) {
 }
 ```
 
-<Disqus />
+<Chirpy />

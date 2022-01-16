@@ -49,4 +49,4 @@ description: 曾经的得意作品，现在没有烤箱，所以...
 
 [烤箱版新奥尔良烤翅 - 下厨房](https://www.xiachufang.com/recipe/103777685/)
 
-<Disqus />
+<Chirpy />

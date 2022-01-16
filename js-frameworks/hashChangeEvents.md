@@ -77,5 +77,5 @@ methods: {
 ```
 
 
-<Disqus />
+<Chirpy />
 

@@ -207,4 +207,4 @@ function merge(left, right) {
 
 [Merge Sort](https://www.geeksforgeeks.org/merge-sort/)
 
-<Disqus />
+<Chirpy />

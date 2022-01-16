@@ -247,4 +247,4 @@ module.exports = {
 
 [@vuepress/plugin-pwa](https://vuepress.vuejs.org/plugin/official/plugin-pwa.html#install)
 
-<Disqus />
+<Chirpy />

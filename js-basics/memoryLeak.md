@@ -228,4 +228,4 @@ setInterval(replaceThing, 1000);
 
 [JavaScript内存泄露的4种方式及如何避免](https://blog.csdn.net/qappleh/article/details/80337630)
 
-<Disqus />
+<Chirpy />

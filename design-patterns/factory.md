@@ -92,4 +92,4 @@ try {
 
 [工厂模式](https://www.runoob.com/design-pattern/factory-pattern.html)
 
-<Disqus />
+<Chirpy />

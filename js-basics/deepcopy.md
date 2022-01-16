@@ -170,4 +170,4 @@ console.log(deepCopy(obj));
 console.log(deepCopy(obj).readonly); // 会打印 fuckyou
 ```
 
-<Disqus />
+<Chirpy />

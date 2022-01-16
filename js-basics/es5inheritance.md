@@ -309,4 +309,4 @@ console.log(cat instanceof Cat); // true
 
 [JS实现继承的几种方式](https://www.cnblogs.com/humin/p/4556820.html#!comments)
 
-<Disqus />
+<Chirpy />

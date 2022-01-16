@@ -174,4 +174,4 @@ Worker 的计算同样花了差不多 30 秒左右。
 
 [Web Worker 使用教程](http://www.ruanyifeng.com/blog/2018/07/web-worker.html)
 
-<Disqus />
+<Chirpy />

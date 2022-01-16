@@ -47,4 +47,4 @@ console.log(Object.prototype.toString.call([]) === '[object Array]'); // true
 console.log([].toString() === '[object Array]'); // false
 ```
 
-<Disqus />
+<Chirpy />

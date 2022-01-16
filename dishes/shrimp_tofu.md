@@ -46,4 +46,4 @@ description: 味道以鲜美为主，口感很好
 
 ![shrimp_tofu](/images/shrimp_tofu.jpeg)
 
-<Disqus />
+<Chirpy />

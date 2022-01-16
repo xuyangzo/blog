@@ -153,4 +153,4 @@ let d = a.b;
 d(); // 在浏览器与 Node 环境下，分别打印 window 对象和 global 对象
 ```
 
-<Disqus />
+<Chirpy />

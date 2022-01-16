@@ -88,4 +88,4 @@ methods: {
 }
 ```
 
-<Disqus />
+<Chirpy />

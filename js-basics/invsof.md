@@ -217,4 +217,4 @@ arr.forEach(item => console.log(item));
 
 [for...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 
-<Disqus />
+<Chirpy />

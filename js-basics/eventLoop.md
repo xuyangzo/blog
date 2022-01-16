@@ -122,4 +122,4 @@ setTimeout(function() {
 
 [这可能是2019年最全的前端面试题](https://github.com/javascriptchen/interviews)
 
-<Disqus />
+<Chirpy />

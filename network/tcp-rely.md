@@ -251,4 +251,4 @@ TCP在解决这个问题的时候引入了一个新的机制，叫做超时重�
 
 [TCP/IP详解--拥塞控制 & 慢启动 快恢复 拥塞避免](https://www.cnblogs.com/losbyday/p/5847041.html)
 
-<Disqus />
+<Chirpy />

@@ -89,4 +89,4 @@ var minWindow = function(s, t) {
 };
 ```
 
-<Disqus />
+<Chirpy />

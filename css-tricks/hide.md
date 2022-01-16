@@ -392,4 +392,4 @@ opacity 是可以继承的，这个从上个例子中就能看出来。
 
 这么看来，如果设置成 visibility: hidden，那么该元素的 click 事件就会无效。
 
-<Disqus />
+<Chirpy />

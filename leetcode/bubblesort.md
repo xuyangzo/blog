@@ -51,4 +51,4 @@ function bubbleSort(arr) {
 }
 ```
 
-<Disqus />
+<Chirpy />

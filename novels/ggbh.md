@@ -259,4 +259,4 @@ description: 玩了《鬼谷八荒》后有感而发
 ![ggbh12](/images/ggbh12.png)
 
 
-<Disqus />
+<Chirpy />

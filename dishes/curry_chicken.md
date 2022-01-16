@@ -42,4 +42,4 @@ description: 只要咖喱买的好，怎么都不可能失败
 
 ![curry_chicken](/images/curry_chicken.jpeg)
 
-<Disqus />
+<Chirpy />
