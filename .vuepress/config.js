@@ -82,7 +82,8 @@ module.exports = {
             '/essay/love_sister',
             '/essay/no_love',
             '/essay/recover',
-            '/essay/argue'
+            '/essay/argue',
+            '/essay/men_guide'
           ]
         },
         {
