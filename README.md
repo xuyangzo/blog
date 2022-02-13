@@ -7,9 +7,9 @@ photo: /images/profile.png
 wechatQR: /images/wechat.jpeg
 
 intros:
-- title: 脱单了！
-  image: /images/couple.png
-  text: 女主角找到了！
+- title: 跋涉
+  image: /images/move.jpeg
+  text: 处于新的人生旅途之中
 
 - title: 养生入门
   image: /images/tea.png
