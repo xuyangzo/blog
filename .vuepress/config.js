@@ -80,11 +80,9 @@ module.exports = {
             '/essay/jubensha',
             '/essay/work_month',
             '/essay/love_sister',
-            '/essay/no_love',
             '/essay/recover',
             '/essay/argue',
             '/essay/men_guide',
-            '/essay/break',
             '/essay/reply'
           ]
         },
