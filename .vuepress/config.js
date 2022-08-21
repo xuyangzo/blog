@@ -83,7 +83,8 @@ module.exports = {
             '/essay/recover',
             '/essay/argue',
             '/essay/men_guide',
-            '/essay/reply'
+            '/essay/reply',
+            '/essay/ephemeral'
           ]
         },
         {
