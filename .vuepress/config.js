@@ -82,7 +82,8 @@ module.exports = {
             '/essay/recover',
             '/essay/argue',
             '/essay/men_guide',
-            '/essay/ephemeral'
+            '/essay/ephemeral',
+            '/essay/new_life.md'
           ]
         },
         {
